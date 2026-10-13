@@ -221,3 +221,41 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
+/* Красивое оформление шапки баннера с логотипом */
+.hero-brand-box {
+    margin-bottom: 20px;
+}
+
+.hero-logo-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 5px;
+}
+
+.hero-title {
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.hero-subtitle {
+    font-size: 14px;
+    letter-spacing: 5px;
+    color: #a8e6cf;
+    margin: 5px 0 15px 0;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.hero-desc {
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto 25px;
+    color: #e2f0d9;
+}
