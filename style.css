@@ -1,0 +1,223 @@
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f5;
+    color: #2c3e50;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Шапка */
+.header {
+    background: #1b4d3e;
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-box h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #a8e6cf;
+}
+
+.slogan {
+    font-size: 11px;
+    color: #d1e8e2;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebd56;
+}
+
+/* Баннер */
+.hero {
+    background: linear-gradient(rgba(27, 77, 62, 0.85), rgba(27, 77, 62, 0.85)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80') center/cover;
+    color: #fff;
+    padding: 90px 0;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #e2f0d9;
+}
+
+.btn-primary {
+    background: #a8e6cf;
+    color: #1b4d3e;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #8bd3ba;
+}
+
+/* Секция Каталог */
+.catalog {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    color: #1b4d3e;
+    margin-bottom: 8px;
+}
+
+.section-title p {
+    color: #666;
+}
+
+/* Сетка карточек */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.card-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-content {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-card h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #1b4d3e;
+}
+
+.desc {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.specs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 12px;
+}
+
+.specs li {
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+.card-btn {
+    margin-top: auto;
+    display: block;
+    text-align: center;
+    background: #1b4d3e;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.card-btn:hover {
+    background: #286b57;
+}
+
+/* Подвал */
+.footer {
+    background: #113127;
+    color: #d1e8e2;
+    padding: 35px 0;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer h3 {
+    margin: 0;
+    color: #a8e6cf;
+}
+/* Стили для логотипа на главном экране */
+.hero-logo-wrapper {
+    margin-bottom: 20px;
+}
+
+.hero-logo-img {
+    max-width: 220px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
