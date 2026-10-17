@@ -35,15 +35,55 @@
         </div>
     </header>
 
-    <!-- Главный баннер -->
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-brand-box">
-                <h1 class="hero-title">NOVARTIS</h1>
-                <p class="hero-subtitle">ALMATY</p>
+    <!-- Главный баннер (Автоматический слайдер) -->
+    <section class="hero-slider">
+        <div class="slides-container">
+            <!-- Слайд 1 -->
+            <div class="slide active" style="background-image: linear-gradient(rgba(15, 45, 35, 0.75), rgba(15, 45, 35, 0.75)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80');">
+                <div class="container hero-content">
+                    <div class="hero-brand-box">
+                        <h1 class="hero-title">NOVARTIS</h1>
+                        <p class="hero-subtitle">ALMATY</p>
+                    </div>
+                    <p class="hero-desc">Строительные мембраны, агроволокно, пленки и товары для сельского хозяйства оптом и в розницу.</p>
+                    <a href="#catalog" class="btn-primary">Перейти к продукции</a>
+                </div>
             </div>
-            <p class="hero-desc">Строительные мембраны, агроволокно, пленки и товары для сельского хозяйства оптом и в розницу.</p>
-            <a href="#catalog" class="btn-primary">Перейти к продукции</a>
+
+            <!-- Слайд 2 -->
+            <div class="slide" style="background-image: linear-gradient(rgba(15, 45, 35, 0.75), rgba(15, 45, 35, 0.75)), url('membrana.jpg');">
+                <div class="container hero-content">
+                    <div class="hero-brand-box">
+                        <h1 class="hero-title">СТРОИТЕЛЬНЫЕ МЕМБРАНЫ</h1>
+                        <p class="hero-subtitle">ВЕТРО- И ПАРОИЗОЛЯЦИЯ</p>
+                    </div>
+                    <p class="hero-desc">Надежная защита конструкций от влаги, холода и конденсата.</p>
+                    <a href="#catalog" class="btn-primary">Смотреть каталог</a>
+                </div>
+            </div>
+
+            <!-- Слайд 3 -->
+            <div class="slide" style="background-image: linear-gradient(rgba(15, 45, 35, 0.75), rgba(15, 45, 35, 0.75)), url('film.jpg');">
+                <div class="container hero-content">
+                    <div class="hero-brand-box">
+                        <h1 class="hero-title">ТЕПЛИЧНЫЕ ПЛЕНКИ</h1>
+                        <p class="hero-subtitle">С УФ-СТАБИЛИЗАЦИЕЙ</p>
+                    </div>
+                    <p class="hero-desc">Идеальный микроклимат для вашего урожая в любой сезон.</p>
+                    <a href="#catalog" class="btn-primary">Узнать подробнее</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Кнопки слайдера -->
+        <button class="slider-btn prev-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="slider-btn next-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+
+        <!-- Индикаторы (точки) -->
+        <div class="slider-dots" id="sliderDots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
         </div>
     </section>
 
@@ -56,7 +96,7 @@
 
         <div class="products-grid">
             
-            <!-- Карточка 1: Строительные мембраны -->
+            <!-- Карточка 1 -->
             <div class="product-card">
                 <div class="card-image" style="background-image: url('membrana.jpg');"></div>
                 <div class="card-content">
@@ -76,7 +116,7 @@
                 </div>
             </div>
 
-            <!-- Карточка 2: Агроволокно -->
+            <!-- Карточка 2 -->
             <div class="product-card">
                 <div class="card-image" style="background-image: url('agro.jpg');"></div>
                 <div class="card-content">
@@ -88,7 +128,7 @@
                 </div>
             </div>
 
-            <!-- Карточка 3: Тепличная пленка -->
+            <!-- Карточка 3 -->
             <div class="product-card">
                 <div class="card-image" style="background-image: url('film.jpg');"></div>
                 <div class="card-content">
@@ -105,7 +145,7 @@
                 </div>
             </div>
 
-            <!-- Карточка 4: Затеняющая сетка -->
+            <!-- Карточка 4 -->
             <div class="product-card">
                 <div class="card-image" style="background-image: url('grid.jpg');"></div>
                 <div class="card-content">
@@ -117,7 +157,7 @@
                 </div>
             </div>
 
-            <!-- Карточка 5: Ограждающие сетки -->
+            <!-- Карточка 5 -->
             <div class="product-card">
                 <div class="card-image" style="background-image: url('fence.jpg');"></div>
                 <div class="card-content">
@@ -134,7 +174,7 @@
                 </div>
             </div>
 
-            <!-- Карточка 6: Полиэтиленовая пленка -->
+            <!-- Карточка 6 -->
             <div class="product-card">
                 <div class="card-image" style="background-image: url('pe-film.jpg');"></div>
                 <div class="card-content">
@@ -165,6 +205,64 @@
             </div>
         </div>
     </footer>
+
+    <!-- Скрипт автоматического слайдера -->
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentSlide = 0;
+        let slideInterval;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function startAutoSlide() {
+            slideInterval = setInterval(nextSlide, 4000);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(slideInterval);
+        }
+
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            stopAutoSlide();
+            startAutoSlide();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            stopAutoSlide();
+            startAutoSlide();
+        });
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', (e) => {
+                const slideIndex = parseInt(e.target.dataset.slide);
+                showSlide(slideIndex);
+                stopAutoSlide();
+                startAutoSlide();
+            });
+        });
+
+        startAutoSlide();
+    </script>
 
 </body>
 </html>
