@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <!-- Верхняя информационная полоса (Top Bar) -->
+    <!-- Верхняя зеленая полоса (Top Bar) -->
     <div class="top-bar">
         <div class="container top-bar-container">
             <div class="top-bar-left">
@@ -33,77 +33,81 @@
         </div>
     </div>
 
-    <!-- Основная шапка сайта -->
-    <header class="main-header">
-        <div class="container header-nav-container">
-            <!-- Логотип (только NOVARTIS) -->
-            <a href="index.html" class="nav-logo">
-                <span class="logo-text">NOVARTIS</span>
+    <!-- Основная шапка сайта (Agreen Style) -->
+    <header class="site-header">
+        <div class="container header-flex">
+            <!-- 1. Логотип NOVARTIS -->
+            <a href="index.html" class="logo-link">
+                <span class="logo-green">NOVARTIS</span>
             </a>
 
-            <!-- Центральная навигация -->
-            <nav class="nav-menu">
-                <!-- Меню Продукция -->
-                <div class="nav-item dropdown">
-                    <a href="#catalog" class="nav-link toggle-catalog-btn">
-                        <span data-i18n="nav_products">Продукция</span> <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
-                    </a>
-                    <!-- Всплывающее меню продукции -->
-                    <div class="mega-dropdown">
-                        <div class="mega-grid">
-                            <a href="#catalog" class="mega-item toggle-catalog-btn">
-                                <i class="fa-solid fa-layer-group mega-icon"></i>
-                                <span data-i18n="p1_title">Строительные мембраны</span>
-                            </a>
-                            <a href="#catalog" class="mega-item toggle-catalog-btn">
-                                <i class="fa-solid fa-seedling mega-icon"></i>
-                                <span data-i18n="p2_title">Агроволокно и агроткань</span>
-                            </a>
-                            <a href="#catalog" class="mega-item toggle-catalog-btn">
-                                <i class="fa-solid fa-warehouse mega-icon"></i>
-                                <span data-i18n="p3_title">Тепличная пленка</span>
-                            </a>
-                            <a href="#catalog" class="mega-item toggle-catalog-btn">
-                                <i class="fa-solid fa-border-all mega-icon"></i>
-                                <span data-i18n="p4_title">Затеняющая сетка</span>
-                            </a>
-                            <a href="#catalog" class="mega-item toggle-catalog-btn">
-                                <i class="fa-solid fa-shield-cat mega-icon"></i>
-                                <span data-i18n="p5_title">Ограждающие сетки</span>
-                            </a>
-                            <a href="#catalog" class="mega-item toggle-catalog-btn">
-                                <i class="fa-solid fa-box-archive mega-icon"></i>
-                                <span data-i18n="p6_title">Полиэтиленовая пленка</span>
-                            </a>
+            <!-- 2. Меню посередине -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <!-- Продукция -->
+                    <li class="nav-element has-dropdown">
+                        <a href="#catalog" class="nav-a toggle-catalog-btn">
+                            <span data-i18n="nav_products">Продукция</span>
+                            <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                        </a>
+                        <!-- Всплывающая сетка категорий (как на 2-й фотке) -->
+                        <div class="mega-box">
+                            <div class="mega-grid-2col">
+                                <a href="#catalog" class="mega-card toggle-catalog-btn">
+                                    <i class="fa-solid fa-layer-group card-ic"></i>
+                                    <span data-i18n="p1_title">Строительные мембраны</span>
+                                </a>
+                                <a href="#catalog" class="mega-card toggle-catalog-btn">
+                                    <i class="fa-solid fa-seedling card-ic"></i>
+                                    <span data-i18n="p2_title">Агроволокно и агроткань</span>
+                                </a>
+                                <a href="#catalog" class="mega-card toggle-catalog-btn">
+                                    <i class="fa-solid fa-warehouse card-ic"></i>
+                                    <span data-i18n="p3_title">Тепличная пленка</span>
+                                </a>
+                                <a href="#catalog" class="mega-card toggle-catalog-btn">
+                                    <i class="fa-solid fa-border-all card-ic"></i>
+                                    <span data-i18n="p4_title">Затеняющая сетка</span>
+                                </a>
+                                <a href="#catalog" class="mega-card toggle-catalog-btn">
+                                    <i class="fa-solid fa-shield-cat card-ic"></i>
+                                    <span data-i18n="p5_title">Ограждающие сетки</span>
+                                </a>
+                                <a href="#catalog" class="mega-card toggle-catalog-btn">
+                                    <i class="fa-solid fa-box-archive card-ic"></i>
+                                    <span data-i18n="p6_title">Полиэтиленовая пленка</span>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </li>
 
-                <!-- Меню О нас -->
-                <div class="nav-item">
-                    <a href="about.html" class="nav-link" data-i18n="nav_about">О нас</a>
-                </div>
+                    <!-- О нас -->
+                    <li class="nav-element">
+                        <a href="about.html" class="nav-a" data-i18n="nav_about">О нас</a>
+                    </li>
 
-                <!-- Меню Партнерам -->
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link">
-                        <span data-i18n="nav_partners">Партнерам</span> <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
-                    </a>
-                    <div class="simple-dropdown">
-                        <a href="wholesale.html" class="dropdown-link" data-i18n="nav_wholesale">Оптовым покупателям</a>
-                    </div>
-                </div>
+                    <!-- Партнерам -->
+                    <li class="nav-element has-dropdown">
+                        <a href="#" class="nav-a">
+                            <span data-i18n="nav_partners">Партнерам</span>
+                            <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                        </a>
+                        <div class="dropdown-box">
+                            <a href="wholesale.html" class="dropdown-item" data-i18n="nav_wholesale">Оптовым покупателям</a>
+                        </div>
+                    </li>
 
-                <!-- Меню Контакты -->
-                <div class="nav-item">
-                    <a href="contacts.html" class="nav-link" data-i18n="nav_contacts">Контакты</a>
-                </div>
+                    <!-- Контакты -->
+                    <li class="nav-element">
+                        <a href="contacts.html" class="nav-a" data-i18n="nav_contacts">Контакты</a>
+                    </li>
+                </ul>
             </nav>
 
-            <!-- Правая часть: Телефон смещен вправо -->
-            <div class="header-phone-box">
-                <a href="tel:+77053333606" class="phone-number">+7 (705) 333 36 06</a>
-                <button class="call-request-btn" id="openCallModal" data-i18n="request_call">Заказать звонок</button>
+            <!-- 3. Правый блок с телефоном -->
+            <div class="phone-block">
+                <a href="tel:+77053333606" class="phone-link">+7 (705) 333 36 06</a>
+                <button type="button" class="callback-btn" id="openCallModal" data-i18n="request_call">Заказать звонок</button>
             </div>
         </div>
     </header>
@@ -111,7 +115,7 @@
     <!-- Всплывающее окно "Заказать звонок" -->
     <div class="modal-backdrop" id="callModal">
         <div class="modal-card">
-            <button class="modal-close" id="closeCallModal">&times;</button>
+            <button type="button" class="modal-close" id="closeCallModal">&times;</button>
             <h3 data-i18n="modal_title">Связаться с нами</h3>
             <p data-i18n="modal_subtitle">Выберите удобный способ связи с отделом продаж NOVARTIS:</p>
             <div class="modal-actions">
@@ -217,8 +221,8 @@
             </div>
         </div>
 
-        <button class="slider-btn prev-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
-        <button class="slider-btn next-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+        <button type="button" class="slider-btn prev-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+        <button type="button" class="slider-btn next-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
 
         <div class="slider-dots" id="sliderDots">
             <span class="dot active" data-slide="0"></span>
@@ -230,10 +234,10 @@
 
     <!-- Кнопка перехода под баннером -->
     <div class="hero-action-bar">
-        <button class="btn-primary toggle-catalog-btn" data-i18n="btn_go_catalog">Перейти к продукции</button>
+        <button type="button" class="btn-primary toggle-catalog-btn" data-i18n="btn_go_catalog">Перейти к продукции</button>
     </div>
 
-    <!-- Каталог товаров (скрыт до клика) -->
+    <!-- Каталог товаров (скрыт по умолчанию) -->
     <main class="catalog container catalog-hidden" id="catalog">
         <div class="section-title">
             <h2 data-i18n="cat_title">Категории товаров</h2>
@@ -241,7 +245,6 @@
         </div>
 
         <div class="products-grid">
-            
             <div class="product-card">
                 <div class="card-image" style="background-image: url('membrana.jpg');"></div>
                 <div class="card-content">
@@ -250,7 +253,6 @@
                     <p class="desc" data-i18n="p1_d1">Строительная мембрана — это специализированный материал, применяемый в строительстве для защиты конструкций от внешних воздействий: влаги, холода, ультрафиолетового излучения и механических повреждений.</p>
                     <p class="desc" data-i18n="p1_d2">Кроме того, мембраны выполняют функцию пароизоляции — они ограничивают проникновение водяных паров внутрь конструкций, предотвращая образования конденсата, который может привести к повреждению материалов и развитию плесени.</p>
                     <p class="desc" style="margin-bottom: 10px;" data-i18n="p1_d3">Строительные мембраны идеально подходят для кровли, фасадов и утепления.</p>
-                    
                     <p class="desc" style="font-weight: 600; margin-bottom: 5px;" data-i18n="p1_types">Существуют 3 вида мембран:</p>
                     <ul class="specs" style="margin-bottom: 15px;">
                         <li data-i18n="p1_t1">1. Ветрозащитные</li>
@@ -326,11 +328,10 @@
                     <a href="https://wa.me/77053333606" target="_blank" class="card-btn" data-i18n="more_info">Еще больше информации</a>
                 </div>
             </div>
-
         </div>
     </main>
 
-    <!-- Подвал -->
+    <!-- Подвал сайта -->
     <footer class="footer">
         <div class="container footer-content" style="display: flex; flex-direction: column; gap: 15px; text-align: center;">
             <div class="footer-info">
@@ -346,7 +347,7 @@
         </div>
     </footer>
 
-    <!-- Скрипт поведения -->
+    <!-- Скрипт перевода и интерактивности -->
     <script>
         const translations = {
             ru: {
@@ -467,6 +468,7 @@
         }
         langSelect.addEventListener('change', (e) => changeLanguage(e.target.value));
 
+        // Модалка "Заказать звонок"
         const callModal = document.getElementById('callModal');
         const openCallModalBtn = document.getElementById('openCallModal');
         const closeCallModalBtn = document.getElementById('closeCallModal');
@@ -477,6 +479,7 @@
             if (e.target === callModal) callModal.classList.remove('active');
         });
 
+        // Слайдер
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.dot');
         const prevBtn = document.getElementById('prevBtn');
@@ -507,10 +510,12 @@
         });
         startAutoSlide();
 
+        // Показ каталога
         const catalog = document.getElementById('catalog');
         const catalogBtns = document.querySelectorAll('.toggle-catalog-btn');
         catalogBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
                 catalog.classList.remove('catalog-hidden');
                 catalog.scrollIntoView({ behavior: 'smooth' });
             });
