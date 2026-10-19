@@ -128,7 +128,21 @@
         </div>
     </div>
 
-    <!-- Главный баннер-слайдер со шторкой -->
+    <!-- ВЕРХНЯЯ ВЫЕЗЖАЮЩАЯ ШТОРКА (Как на видео) -->
+    <section class="top-curtain-section">
+        <div class="container curtain-inner">
+            <div class="curtain-text-side">
+                <h1 class="curtain-heading" data-i18n="curtain_title">Качественный материал — залог успеха</h1>
+                <p class="curtain-subtext" data-i18n="curtain_text">Продукция от ТОО "ТД Novartis" для сельского хозяйства и строительства.</p>
+            </div>
+            <div class="curtain-quality-badge">
+                <i class="fa-solid fa-circle-check badge-icon"></i>
+                <span data-i18n="badge_text">100% качество</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Главный баннер-слайдер -->
     <section class="hero-slider">
         <div class="slides-container">
             
@@ -151,19 +165,6 @@
                             <li><i class="fa-solid fa-headset"></i> <span data-i18n="feat_service">Клиентский сервис</span></li>
                         </ul>
                     </div>
-
-                    <!-- Выезжающая выпадающая белая шторка -->
-                    <div class="slide-curtain">
-                        <div class="curtain-content">
-                            <h2 class="curtain-title" data-i18n="curtain_title">Качественный материал — залог успеха</h2>
-                            <p class="curtain-text" data-i18n="curtain_text">Надежные решения от ТОО "ТД Novartis" для сельского хозяйства и строительства.</p>
-                        </div>
-                        <div class="curtain-badge">
-                            <i class="fa-solid fa-circle-check badge-icon"></i>
-                            <span data-i18n="badge_text">100% качество</span>
-                        </div>
-                    </div>
-
                     <div class="banner-image" style="background-image: url('banner-greenhouse.jpg');"></div>
                 </div>
             </div>
@@ -187,18 +188,6 @@
                             <li><i class="fa-solid fa-headset"></i> <span data-i18n="feat_service">Клиентский сервис</span></li>
                         </ul>
                     </div>
-
-                    <div class="slide-curtain">
-                        <div class="curtain-content">
-                            <h2 class="curtain-title" data-i18n="curtain_title">Качественный материал — залог успеха</h2>
-                            <p class="curtain-text" data-i18n="curtain_text">Надежные решения от ТОО "ТД Novartis" для сельского хозяйства и строительства.</p>
-                        </div>
-                        <div class="curtain-badge">
-                            <i class="fa-solid fa-circle-check badge-icon"></i>
-                            <span data-i18n="badge_text">100% качество</span>
-                        </div>
-                    </div>
-
                     <div class="banner-image" style="background-image: url('banner-roof.jpg');"></div>
                 </div>
             </div>
@@ -222,18 +211,6 @@
                             <li><i class="fa-solid fa-headset"></i> <span data-i18n="feat_service">Клиентский сервис</span></li>
                         </ul>
                     </div>
-
-                    <div class="slide-curtain">
-                        <div class="curtain-content">
-                            <h2 class="curtain-title" data-i18n="curtain_title">Качественный материал — залог успеха</h2>
-                            <p class="curtain-text" data-i18n="curtain_text">Надежные решения от ТОО "ТД Novartis" для сельского хозяйства и строительства.</p>
-                        </div>
-                        <div class="curtain-badge">
-                            <i class="fa-solid fa-circle-check badge-icon"></i>
-                            <span data-i18n="badge_text">100% качество</span>
-                        </div>
-                    </div>
-
                     <div class="banner-image" style="background-image: url('banner-greenhouse-inside.jpg');"></div>
                 </div>
             </div>
@@ -257,18 +234,6 @@
                             <li><i class="fa-solid fa-headset"></i> <span data-i18n="feat_service">Клиентский сервис</span></li>
                         </ul>
                     </div>
-
-                    <div class="slide-curtain">
-                        <div class="curtain-content">
-                            <h2 class="curtain-title" data-i18n="curtain_title">Качественный материал — залог успеха</h2>
-                            <p class="curtain-text" data-i18n="curtain_text">Надежные решения от ТОО "ТД Novartis" для сельского хозяйства и строительства.</p>
-                        </div>
-                        <div class="curtain-badge">
-                            <i class="fa-solid fa-circle-check badge-icon"></i>
-                            <span data-i18n="badge_text">100% качество</span>
-                        </div>
-                    </div>
-
                     <div class="banner-image" style="background-image: url('pe-film.jpg');"></div>
                 </div>
             </div>
@@ -291,7 +256,7 @@
         <button type="button" class="btn-primary toggle-catalog-btn" data-i18n="btn_go_catalog">Перейти к продукции</button>
     </div>
 
-    <!-- Каталог товаров (скрыт до клика) -->
+    <!-- Каталог товаров -->
     <main class="catalog container catalog-hidden" id="catalog">
         <div class="section-title">
             <h2 data-i18n="cat_title">Категории товаров</h2>
@@ -425,7 +390,7 @@
                 feat_quality: "Гарантия качества",
                 feat_service: "Клиентский сервис",
                 curtain_title: "Качественный материал — залог успеха",
-                curtain_text: "Надежные решения от ТОО \"ТД Novartis\" для сельского хозяйства и строительства.",
+                curtain_text: "Продукция от ТОО \"ТД Novartis\" для сельского хозяйства и строительства.",
                 badge_text: "100% качество",
                 btn_go_catalog: "Перейти к продукции",
                 cat_title: "Категории товаров",
@@ -463,7 +428,7 @@
                 feat_quality: "Сапа кепілдігі",
                 feat_service: "Клиенттерге қызмет",
                 curtain_title: "Сапалы материал — табыс кепілі",
-                curtain_text: "Ауыл шаруашылығы мен құрылысқа арналған ТОО \"ТД Novartis\" сенімді шешімдері.",
+                curtain_text: "Ауыл шаруашылығы мен құрылысқа арналған ТОО \"ТД Novartis\" өнімдері.",
                 badge_text: "100% сапа",
                 btn_go_catalog: "Өнімдерге өту",
                 cat_title: "Тауар санаттары",
@@ -501,7 +466,7 @@
                 feat_quality: "Quality Guarantee",
                 feat_service: "Client Service",
                 curtain_title: "Quality material is the key to success",
-                curtain_text: "Reliable solutions from Novartis Trading House for agriculture and construction.",
+                curtain_text: "Products from Novartis Trading House for agriculture and construction.",
                 badge_text: "100% Quality",
                 btn_go_catalog: "Go to Products",
                 cat_title: "Product Categories",

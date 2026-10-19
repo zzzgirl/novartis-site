@@ -17,7 +17,7 @@ body {
     padding: 0 20px;
 }
 
-/* 1. Верхняя полоса (Top Bar) */
+/* 1. Верхняя зеленая полоса (Top Bar) */
 .top-bar {
     background-color: #27ae60;
     color: #ffffff;
@@ -261,11 +261,58 @@ body {
     color: #1f8b4c;
 }
 
-/* 3. Слайдер с выезжающей шторкой */
+/* 3. БЕЛАЯ ШТОРКА (Как в референсе Agreen) */
+.top-curtain-section {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    padding: 22px 0 35px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.curtain-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.curtain-heading {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1b4d3e;
+    line-height: 1.2;
+    margin-bottom: 6px;
+}
+
+.curtain-subtext {
+    font-size: 14px;
+    color: #666666;
+}
+
+.curtain-quality-badge {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 25px;
+    padding: 8px 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    font-weight: 700;
+    font-size: 14px;
+    color: #27ae60;
+}
+
+.badge-icon {
+    font-size: 18px;
+    color: #27ae60;
+}
+
+/* 4. СЛАЙДЕР С ТЁМНО-СИНИМ БЛОКОМ И ФОТО */
 .hero-slider {
     position: relative;
     width: 100%;
-    height: 440px;
+    height: 380px;
     overflow: hidden;
     background-color: #0b1d17;
 }
@@ -303,77 +350,16 @@ body {
     display: flex; flex-direction: column; justify-content: center; color: #ffffff;
 }
 
-.banner-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
-.logo-icon { font-size: 28px; color: #ffffff; }
+.banner-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+.logo-icon { font-size: 26px; color: #ffffff; }
 .brand-name { display: block; font-size: 18px; font-weight: 800; letter-spacing: 2px; line-height: 1; }
 .brand-sub { display: block; font-size: 10px; letter-spacing: 3px; color: #80c4ff; }
-.banner-title { font-size: 30px; font-weight: 900; line-height: 1.15; margin-bottom: 25px; color: #fff; text-transform: uppercase; }
+.banner-title { font-size: 28px; font-weight: 900; line-height: 1.15; margin-bottom: 20px; color: #fff; text-transform: uppercase; }
 .banner-features { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-.banner-features li { font-size: 14px; color: #e0e0e0; display: flex; align-items: center; gap: 10px; }
+.banner-features li { font-size: 13px; color: #e0e0e0; display: flex; align-items: center; gap: 10px; }
 .banner-features i { color: #3399ff; width: 18px; }
 
 .banner-image { width: 100%; height: 100%; background-size: cover; background-position: center; }
-
-/* Белая выезжающая шторка поверх картинки */
-.slide-curtain {
-    position: absolute;
-    top: 0;
-    right: 5%;
-    width: 50%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(4px);
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    padding: 22px 30px 18px 30px;
-    z-index: 3;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transform: translateY(-100%);
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.slide.active .slide-curtain {
-    transform: translateY(0);
-}
-
-.curtain-content {
-    margin-bottom: 15px;
-}
-
-.curtain-title {
-    font-size: 22px;
-    font-weight: 800;
-    color: #1b4d3e;
-    line-height: 1.25;
-    margin-bottom: 6px;
-}
-
-.curtain-text {
-    font-size: 13px;
-    color: #555555;
-}
-
-/* Зеленый элемент "100% качество" внизу шторки */
-.curtain-badge {
-    position: absolute;
-    bottom: -18px;
-    right: 25px;
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 25px;
-    padding: 6px 16px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    font-weight: 700;
-    font-size: 13px;
-    color: #27ae60;
-}
-
-.badge-icon {
-    font-size: 16px;
-    color: #27ae60;
-}
 
 /* Переключатели слайдера */
 .hero-action-bar { text-align: center; padding: 18px 0; background-color: #113329; }
@@ -434,7 +420,7 @@ body {
 }
 
 @media (max-width: 900px) {
-    .slide-curtain { width: 90%; right: 5%; }
+    .curtain-inner { flex-direction: column; gap: 15px; text-align: center; }
     .banner-overlay { width: 100%; clip-path: none; background: rgba(9, 19, 25, 0.85); }
     .header-flex { flex-direction: column; gap: 15px; }
     .nav-list { gap: 15px; }
