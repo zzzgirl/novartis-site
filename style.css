@@ -17,6 +17,82 @@ body {
     padding: 0 20px;
 }
 
+/* Верхняя полоса Top Bar */
+.top-bar {
+    background-color: #27ae60;
+    color: #ffffff;
+    padding: 8px 0;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.top-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-left {
+    text-transform: uppercase;
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icon {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+    background-color: #ffffff;
+    color: #27ae60;
+    transform: scale(1.1);
+}
+
+.lang-select-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2px 8px;
+    border-radius: 15px;
+}
+
+.lang-select-box select {
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+}
+
+.lang-select-box select option {
+    background-color: #1b4d3e;
+    color: #ffffff;
+}
+
 /* Шапка сайта */
 .header {
     background-color: #1b4d3e;
@@ -162,7 +238,6 @@ body {
     z-index: 1;
 }
 
-/* Фирменная плашка баннера */
 .slide-banner {
     position: relative;
     width: 100%;
@@ -278,7 +353,7 @@ body {
     background-color: #219150;
 }
 
-/* Стрелки и точки управления */
+/* Элементы управления слайдера */
 .slider-btn {
     position: absolute;
     top: 50%;
@@ -329,7 +404,7 @@ body {
     transform: scale(1.3);
 }
 
-/* Скрытие каталога до нажатия кнопки */
+/* Скрытие каталога */
 .catalog-hidden {
     display: none !important;
 }
@@ -437,6 +512,9 @@ body {
 }
 
 @media (max-width: 768px) {
+    .top-bar-left {
+        font-size: 11px;
+    }
     .banner-overlay {
         width: 100%;
         clip-path: none;
