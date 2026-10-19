@@ -33,37 +33,101 @@
         </div>
     </div>
 
-    <!-- Шапка сайта -->
-    <header class="header">
-        <div class="container header-container">
-            <div class="logo-box">
-                <h1>NOVARTIS</h1>
-                <span class="slogan">ALMATY</span>
-            </div>
-            <div class="header-contacts">
-                <div class="contacts-dropdown">
-                    <button class="btn-contacts">
-                        <i class="fa-solid fa-phone"></i> <span data-i18n="our_contacts">Наши контакты</span>
-                    </button>
-                    <div class="contacts-popup">
-                        <p class="popup-title" data-i18n="sales_dept">Отдел продаж:</p>
-                        <a href="tel:+77053333606" class="popup-phone">+7 705 333 3606</a>
-                        <div class="popup-actions">
-                            <a href="https://wa.me/77053333606" target="_blank" class="popup-wa-btn">
-                                <i class="fa-brands fa-whatsapp"></i> <span data-i18n="write_wa">Написать в WhatsApp</span>
+    <!-- Основная шапка сайта -->
+    <header class="main-header">
+        <div class="container header-nav-container">
+            <!-- Логотип (только NOVARTIS) -->
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">NOVARTIS</span>
+            </a>
+
+            <!-- Центральная навигация -->
+            <nav class="nav-menu">
+                <!-- Меню Продукция -->
+                <div class="nav-item dropdown">
+                    <a href="#catalog" class="nav-link toggle-catalog-btn">
+                        <span data-i18n="nav_products">Продукция</span> <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                    </a>
+                    <!-- Всплывающее меню продукции -->
+                    <div class="mega-dropdown">
+                        <div class="mega-grid">
+                            <a href="#catalog" class="mega-item toggle-catalog-btn">
+                                <i class="fa-solid fa-layer-group mega-icon"></i>
+                                <span data-i18n="p1_title">Строительные мембраны</span>
+                            </a>
+                            <a href="#catalog" class="mega-item toggle-catalog-btn">
+                                <i class="fa-solid fa-seedling mega-icon"></i>
+                                <span data-i18n="p2_title">Агроволокно и агроткань</span>
+                            </a>
+                            <a href="#catalog" class="mega-item toggle-catalog-btn">
+                                <i class="fa-solid fa-warehouse mega-icon"></i>
+                                <span data-i18n="p3_title">Тепличная пленка</span>
+                            </a>
+                            <a href="#catalog" class="mega-item toggle-catalog-btn">
+                                <i class="fa-solid fa-border-all mega-icon"></i>
+                                <span data-i18n="p4_title">Затеняющая сетка</span>
+                            </a>
+                            <a href="#catalog" class="mega-item toggle-catalog-btn">
+                                <i class="fa-solid fa-shield-cat mega-icon"></i>
+                                <span data-i18n="p5_title">Ограждающие сетки</span>
+                            </a>
+                            <a href="#catalog" class="mega-item toggle-catalog-btn">
+                                <i class="fa-solid fa-box-archive mega-icon"></i>
+                                <span data-i18n="p6_title">Полиэтиленовая пленка</span>
                             </a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Меню О нас -->
+                <div class="nav-item">
+                    <a href="about.html" class="nav-link" data-i18n="nav_about">О нас</a>
+                </div>
+
+                <!-- Меню Партнерам -->
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link">
+                        <span data-i18n="nav_partners">Партнерам</span> <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                    </a>
+                    <div class="simple-dropdown">
+                        <a href="wholesale.html" class="dropdown-link" data-i18n="nav_wholesale">Оптовым покупателям</a>
+                    </div>
+                </div>
+
+                <!-- Меню Контакты -->
+                <div class="nav-item">
+                    <a href="contacts.html" class="nav-link" data-i18n="nav_contacts">Контакты</a>
+                </div>
+            </nav>
+
+            <!-- Правая часть: Телефон смещен вправо -->
+            <div class="header-phone-box">
+                <a href="tel:+77053333606" class="phone-number">+7 (705) 333 36 06</a>
+                <button class="call-request-btn" id="openCallModal" data-i18n="request_call">Заказать звонок</button>
             </div>
         </div>
     </header>
 
+    <!-- Всплывающее окно "Заказать звонок" -->
+    <div class="modal-backdrop" id="callModal">
+        <div class="modal-card">
+            <button class="modal-close" id="closeCallModal">&times;</button>
+            <h3 data-i18n="modal_title">Связаться с нами</h3>
+            <p data-i18n="modal_subtitle">Выберите удобный способ связи с отделом продаж NOVARTIS:</p>
+            <div class="modal-actions">
+                <a href="tel:+77053333606" class="modal-btn btn-phone">
+                    <i class="fa-solid fa-phone"></i> <span data-i18n="modal_call">Позвонить на номер</span>
+                </a>
+                <a href="https://wa.me/77053333606" target="_blank" class="modal-btn btn-wa">
+                    <i class="fa-brands fa-whatsapp"></i> <span data-i18n="modal_wa">Написать на WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Главный баннер (Автоматический слайдер) -->
     <section class="hero-slider">
         <div class="slides-container">
-            
-            <!-- Слайд 1: Вечерняя теплица -->
             <div class="slide active">
                 <div class="slide-banner">
                     <div class="banner-overlay">
@@ -86,7 +150,6 @@
                 </div>
             </div>
 
-            <!-- Слайд 2: Строительные мембраны -->
             <div class="slide">
                 <div class="slide-banner">
                     <div class="banner-overlay">
@@ -109,7 +172,6 @@
                 </div>
             </div>
 
-            <!-- Слайд 3: Агроволокно -->
             <div class="slide">
                 <div class="slide-banner">
                     <div class="banner-overlay">
@@ -132,7 +194,6 @@
                 </div>
             </div>
 
-            <!-- Слайд 4: Полиэтиленовые пленки -->
             <div class="slide">
                 <div class="slide-banner">
                     <div class="banner-overlay">
@@ -154,14 +215,11 @@
                     <div class="banner-image" style="background-image: url('pe-film.jpg');"></div>
                 </div>
             </div>
-
         </div>
 
-        <!-- Кнопки переключения -->
         <button class="slider-btn prev-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
         <button class="slider-btn next-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
 
-        <!-- Индикаторы -->
         <div class="slider-dots" id="sliderDots">
             <span class="dot active" data-slide="0"></span>
             <span class="dot" data-slide="1"></span>
@@ -170,12 +228,12 @@
         </div>
     </section>
 
-    <!-- Кнопка под слайдером -->
+    <!-- Кнопка перехода под баннером -->
     <div class="hero-action-bar">
         <button class="btn-primary toggle-catalog-btn" data-i18n="btn_go_catalog">Перейти к продукции</button>
     </div>
 
-    <!-- Каталог товаров -->
+    <!-- Каталог товаров (скрыт до клика) -->
     <main class="catalog container catalog-hidden" id="catalog">
         <div class="section-title">
             <h2 data-i18n="cat_title">Категории товаров</h2>
@@ -184,7 +242,6 @@
 
         <div class="products-grid">
             
-            <!-- Карточка 1 -->
             <div class="product-card">
                 <div class="card-image" style="background-image: url('membrana.jpg');"></div>
                 <div class="card-content">
@@ -204,25 +261,23 @@
                 </div>
             </div>
 
-            <!-- Карточка 2 -->
             <div class="product-card">
                 <div class="card-image" style="background-image: url('agro.jpg');"></div>
                 <div class="card-content">
                     <h3 data-i18n="p2_title">Агроволокно и агроткань</h3>
                     <p class="desc" data-i18n="p2_d1">Агроволокно и спанбонд NOVARTIS — современное экологичное решение для защиты растений, повышение урожайности и облегчение ухода за участком.</p>
-                    <p class="desc" data-i18n="p2_d2">Материал создает идеальный микроклимат для роста культур, активно защищая их от заморозков, перегрева, палящего солнца, порывов ветра и садовых вредителей. Агроволокно отлично пропускает воду и воздухообмен, но при этом надежно удерживает влагу в почве, избавляя от лишних поливов.</p>
+                    <p class="desc" data-i18n="p2_d2">Материал создает идеальный микроклимат для роста культур, активно защищая их от заморозков, перегрева, палящего солнца, порывов ветра и садовых вредителей.</p>
                     <p class="desc" style="margin-bottom: 15px;" data-i18n="p2_d3">Черное мульчирующее агроволокно избавляет от тяжелой ручной прополки, полностью блокируя рост сорняков.</p>
                     <a href="https://wa.me/77053333606" target="_blank" class="card-btn" data-i18n="more_info">Еще больше информации</a>
                 </div>
             </div>
 
-            <!-- Карточка 3 -->
             <div class="product-card">
                 <div class="card-image" style="background-image: url('film.jpg');"></div>
                 <div class="card-content">
                     <h3 data-i18n="p3_title">Тепличная пленка</h3>
-                    <p class="desc" data-i18n="p3_d1">Тепличная пленка «Южанка» от Novartis — это современное и надежное решение для сельскохозяйственных нужд, разработанное с учетом климатических условий. Она эффективно защищает культуры и создает идеальный микроклимат в течение всего года.</p>
-                    <p class="desc" data-i18n="p3_d2">Материал отличается высокой прочностью, долговечностью и устойчивостью к разрывам, а специальная ультрафиолетовая добавка защищает растения от палящего солнца и ожогов. Пленка обеспечивает отличную светопроницаемость для фотосинтеза, сохраняет тепло внутри теплицы, помогая экономить на отоплении, и предотвращает накопление конденсата, защищая от плесени.</p>
+                    <p class="desc" data-i18n="p3_d1">Тепличная пленка «Южанка» от Novartis — это современное и надежное решение для сельскохозяйственных нужд, разработанное с учетом климатических условий.</p>
+                    <p class="desc" data-i18n="p3_d2">Материал отличается высокой прочностью, долговечностью и устойчивостью к разрывам, а специальная ультрафиолетовая добавка защищает растения от палящего солнца.</p>
                     <p class="desc" style="font-weight: 600; margin-bottom: 5px;" data-i18n="p3_seasons">Применение пленки актуально в любой сезон:</p>
                     <ul class="specs" style="margin-bottom: 15px;">
                         <li data-i18n="p3_s1">• Весной и осенью — защищает от внезапных заморозков и перепадов температур.</li>
@@ -233,44 +288,41 @@
                 </div>
             </div>
 
-            <!-- Карточка 4 -->
             <div class="product-card">
                 <div class="card-image" style="background-image: url('grid.jpg');"></div>
                 <div class="card-content">
                     <h3 data-i18n="p4_title">Затеняющая сетка</h3>
-                    <p class="desc" data-i18n="p4_d1">Затеняющие сетки — это современный полимерный материал, создающий надежную тень и защищающий от избыточного ультрафиолета. Благодаря высокой прочности и устойчивости к погоде они служат долго и эффективно.</p>
-                    <p class="desc" data-i18n="p4_d2">Сетки активно применяются в сельском хозяйстве для защиты теплиц и растений от ожогов и перегрева. В строительстве и быту они снижают силу ветра, улавливают пыль, защищают стройплощадки и создают комфортные навесы.</p>
-                    <p class="desc" style="margin-bottom: 15px;" data-i18n="p4_d3">Главные преимущества — простота монтажа, устойчивость к погодным условиям, экологичность и выбор плотности (от 30% до 90%).</p>
+                    <p class="desc" data-i18n="p4_d1">Затеняющие сетки — это современный полимерный материал, создающий надежную тень и защищающий от избыточного ультрафиолета.</p>
+                    <p class="desc" data-i18n="p4_d2">Сетки активно применяются в сельском хозяйстве для защиты теплиц и растений от ожогов и перегрева.</p>
+                    <p class="desc" style="margin-bottom: 15px;" data-i18n="p4_d3">Главные преимущества — простота монтажа, устойчивость к погодным условиям, экологичность и выбор плотности.</p>
                     <a href="https://wa.me/77053333606" target="_blank" class="card-btn" data-i18n="more_info">Еще больше информации</a>
                 </div>
             </div>
 
-            <!-- Карточка 5 -->
             <div class="product-card">
                 <div class="card-image" style="background-image: url('fence.jpg');"></div>
                 <div class="card-content">
                     <h3 data-i18n="p5_title">Ограждающие сетки</h3>
-                    <p class="desc" data-i18n="p5_d1">Пластиковые ограждающие сетки — это эстетичное, легкое и надежное решение для защиты растений, зонирования территории и создания порядка в саду и на объектах.</p>
+                    <p class="desc" data-i18n="p5_d1">Пластиковые ограждающие сетки — это эстетичное, легкое и надежное решение для защиты растений и зонирования.</p>
                     <p class="desc" style="font-weight: 600; margin-bottom: 5px;" data-i18n="p5_usage">Благодаря своей прочности сетки находят широкое применение:</p>
                     <ul class="specs" style="margin-bottom: 15px;">
                         <li data-i18n="p5_u1">• Сад и сельское хозяйство: ограждение огородов, теплиц и пастбищ;</li>
-                        <li data-i18n="p5_u2">• Строительство и благоустройство: защита рабочих зон и дворов;</li>
-                        <li data-i18n="p5_u3">• Спорт и отдых: зонирование площадок и кортов;</li>
-                        <li data-i18n="p5_u4">• Промышленность и безопасность: разделение складских зон.</li>
+                        <li data-i18n="p5_u2">• Строительство и благоустройство: защита рабочих зон;</li>
+                        <li data-i18n="p5_u3">• Спорт и отдых: зонирование площадок;</li>
+                        <li data-i18n="p5_u4">• Промышленность и безопасность: разделение зон.</li>
                     </ul>
                     <a href="https://wa.me/77053333606" target="_blank" class="card-btn" data-i18n="more_info">Еще больше информации</a>
                 </div>
             </div>
 
-            <!-- Карточка 6 -->
             <div class="product-card">
                 <div class="card-image" style="background-image: url('pe-film.jpg');"></div>
                 <div class="card-content">
                     <h3 data-i18n="p6_title">Полиэтиленовая пленка</h3>
                     <p class="desc" data-i18n="p6_d1">Пленки бывают различных типов в зависимости от их назначения, материала и способа применения.</p>
-                    <p class="desc" data-i18n="p6_d2"><strong>Полипропиленовая пленка (PP)</strong> отличается высокой устойчивостью к влаге и химическим воздействиям, используется для упаковки товаров.</p>
-                    <p class="desc" data-i18n="p6_d3"><strong>Полиэтиленовая пленка (PE)</strong> — легкий и прочный материал для упаковки продукции и сельхоз укрытий.</p>
-                    <p class="desc" style="margin-bottom: 15px;" data-i18n="p6_d4"><strong>ПВХ пленка (PVC)</strong> — прочная и прозрачная, находит применение в строительстве и декоративных целях.</p>
+                    <p class="desc" data-i18n="p6_d2"><strong>Полипропиленовая пленка (PP)</strong> отличается высокой устойчивостью к влаге, используется для упаковки.</p>
+                    <p class="desc" data-i18n="p6_d3"><strong>Полиэтиленовая пленка (PE)</strong> — легкий и прочный материал для упаковки и теплиц.</p>
+                    <p class="desc" style="margin-bottom: 15px;" data-i18n="p6_d4"><strong>ПВХ пленка (PVC)</strong> — прочная и прозрачная, используется в строительстве.</p>
                     <a href="https://wa.me/77053333606" target="_blank" class="card-btn" data-i18n="more_info">Еще больше информации</a>
                 </div>
             </div>
@@ -278,7 +330,7 @@
         </div>
     </main>
 
-    <!-- Подвал сайта -->
+    <!-- Подвал -->
     <footer class="footer">
         <div class="container footer-content" style="display: flex; flex-direction: column; gap: 15px; text-align: center;">
             <div class="footer-info">
@@ -294,14 +346,21 @@
         </div>
     </footer>
 
-    <!-- Скрипт перевода языков и слайдера -->
+    <!-- Скрипт поведения -->
     <script>
         const translations = {
             ru: {
                 topbar_text: "ЛИДЕР НА РЫНКЕ КАЗАХСТАНА С 2013 ГОДА",
-                our_contacts: "Наши контакты",
-                sales_dept: "Отдел продаж:",
-                write_wa: "Написать в WhatsApp",
+                nav_products: "Продукция",
+                nav_about: "О нас",
+                nav_partners: "Партнерам",
+                nav_wholesale: "Оптовым покупателям",
+                nav_contacts: "Контакты",
+                request_call: "Заказать звонок",
+                modal_title: "Связаться с нами",
+                modal_subtitle: "Выберите удобный способ связи с отделом продаж NOVARTIS:",
+                modal_call: "Позвонить на номер",
+                modal_wa: "Написать на WhatsApp",
                 slide1_title: "ТОВАРЫ ДЛЯ ТЕПЛИЦ<br><span>И СЕЛЬХОЗУГОДИЙ</span>",
                 slide2_title: "ВИДЫ МЕМБРАН<br><span>ОТ NOVARTIS</span>",
                 slide3_title: "ТЕПЛИЧНЫЕ ПЛЕНКИ<br><span>И АГРОВОЛОКНО</span>",
@@ -315,41 +374,11 @@
                 cat_subtitle: "Выберите нужный раздел для просмотра подробных характеристик",
                 more_info: "Еще больше информации",
                 p1_title: "Строительные мембраны",
-                p1_sub: "Для чего нужна строительная мембрана?",
-                p1_d1: "Строительная мембрана — это специализированный материал, применяемый в строительстве для защиты конструкций от внешних воздействий: влаги, холода, ультрафиолетового излучения и механических повреждений.",
-                p1_d2: "Кроме того, мембраны выполняют функцию пароизоляции — они ограничивают проникновение водяных паров внутрь конструкций, предотвращая образования конденсата, который может привести к повреждению материалов и развитию плесени.",
-                p1_d3: "Строительные мембраны идеально подходят для кровли, фасадов и утепления.",
-                p1_types: "Существуют 3 вида мембран:",
-                p1_t1: "1. Ветрозащитные",
-                p1_t2: "2. Пароизоляционные",
-                p1_t3: "3. Отражающие",
                 p2_title: "Агроволокно и агроткань",
-                p2_d1: "Агроволокно и спанбонд NOVARTIS — современное экологичное решение для защиты растений, повышение урожайности и облегчение ухода за участком.",
-                p2_d2: "Материал создает идеальный микроклимат для роста культур, активно защищая их от заморозков, перегрева, палящего солнца, порывов ветра и садовых вредителей.",
-                p2_d3: "Черное мульчирующее агроволокно избавляет от тяжелой ручной прополки, полностью блокируя рост сорняков.",
                 p3_title: "Тепличная пленка",
-                p3_d1: "Тепличная пленка «Южанка» от Novartis — это современное и надежное решение для сельскохозяйственных нужд, разработанное с учетом климатических условий.",
-                p3_d2: "Материал отличается высокой прочностью, долговечностью и устойчивостью к разрывам, а специальная ультрафиолетовая добавка защищает растения от палящего солнца.",
-                p3_seasons: "Применение пленки актуально в любой сезон:",
-                p3_s1: "• Весной и осенью — защищает от внезапных заморозков и перепадов температур.",
-                p3_s2: "• Зимой — удерживает тепло и поддерживает стабильный микроклимат.",
-                p3_s3: "• Летом — оберегает от сильных ветров, дождей и избыточного ультрафиолета.",
                 p4_title: "Затеняющая сетка",
-                p4_d1: "Затеняющие сетки — это современный полимерный материал, создающий надежную тень и защищающий от избыточного ультрафиолета.",
-                p4_d2: "Сетки активно применяются в сельском хозяйстве для защиты теплиц и растений от ожогов и перегрева. В строительстве они снижают силу ветра и закрывают фасады.",
-                p4_d3: "Главные преимущества — простота монтажа, устойчивость к погодным условиям, экологичность и выбор плотности (от 30% до 90%).",
                 p5_title: "Ограждающие сетки",
-                p5_d1: "Пластиковые ограждающие сетки — это эстетичное, легкое и надежное решение для защиты растений, зонирования территории и порядка.",
-                p5_usage: "Благодаря своей прочности сетки находят широкое применение:",
-                p5_u1: "• Сад и сельское хозяйство: ограждение огородов, теплиц и пастбищ;",
-                p5_u2: "• Строительство и благоустройство: защита рабочих зон и дворов;",
-                p5_u3: "• Спорт и отдых: зонирование площадок и кортов;",
-                p5_u4: "• Промышленность и безопасность: разделение складских зон.",
                 p6_title: "Полиэтиленовая пленка",
-                p6_d1: "Пленки бывают различных типов в зависимости от их назначения, материала и способа применения.",
-                p6_d2: "Полипропиленовая пленка (PP) отличается высокой устойчивостью к влаге и химическим воздействиям, используется для упаковки товаров.",
-                p6_d3: "Полиэтиленовая пленка (PE) — легкий и прочный материал для упаковки продукции и сельхоз укрытий.",
-                p6_d4: "ПВХ пленка (PVC) — прочная и прозрачная, находит применение в строительстве и декоративных целях.",
                 footer_since: "Мы на рынке с 2013 года",
                 footer_motto: "Качественный материал — залог успеха.",
                 footer_regions: "Работаем по Казахстану, Киргизии и Узбекистану.",
@@ -357,9 +386,16 @@
             },
             kk: {
                 topbar_text: "2013 ЖЫЛДАН БАСТАП ҚАЗАҚСТАН НАРЫҒЫНДАҒЫ КӨШБАСШЫ",
-                our_contacts: "Байланыстарымыз",
-                sales_dept: "Сату бөлімі:",
-                write_wa: "WhatsApp-қа жазу",
+                nav_products: "Өнімдер",
+                nav_about: "Біз туралы",
+                nav_partners: "Серіктестерге",
+                nav_wholesale: "Көтерме сатып алушыларға",
+                nav_contacts: "Байланыстар",
+                request_call: "Қоңырауға тапсырыс беру",
+                modal_title: "Бізбен байланысу",
+                modal_subtitle: "NOVARTIS сату бөлімімен байланысу әдісін таңдаңыз:",
+                modal_call: "Нөмірге қоңырау шалу",
+                modal_wa: "WhatsApp-қа жазу",
                 slide1_title: "ЖЫЛЫЖАЙЛАР МЕН АУЫЛ<br><span>ШАРУАШЫЛЫҒЫ ТАУАРЛАРЫ</span>",
                 slide2_title: "NOVARTIS МЕМБРАНА<br><span>ТҮРЛЕРІ</span>",
                 slide3_title: "ЖЫЛЫЖАЙ ПЛЕНКАЛАРЫ<br><span>МЕН АГРОФИБРА</span>",
@@ -372,42 +408,12 @@
                 cat_title: "Тауар санаттары",
                 cat_subtitle: "Толық сипаттамаларды қарау үшін керекті бөлімді таңдаңыз",
                 more_info: "Толығырақ ақпарат",
-                p1_title: "Курылыс мембраналары",
-                p1_sub: "Құрылыс мембранасы не үшін қажет?",
-                p1_d1: "Құрылыс мембранасы — құрылымдарды ылғалдан, суықтан және ультракүлгін сәулелерден қорғауға арналған арнайы материал.",
-                p1_d2: "Сонымен қатар, мембраналар бу оқшаулау функциясын орындайды, кондесаттың пайда болуын болдырмайды.",
-                p1_d3: "Құрылыс мембраналары шатырлар мен фасадтарға өте қолайлы.",
-                p1_types: "Мембрананың 3 түрі бар:",
-                p1_t1: "1. Желден қорғайтын",
-                p1_t2: "2. Бу оқшаулайтын",
-                p1_t3: "3. Шағылыстыратын",
+                p1_title: "Құрылыс мембраналары",
                 p2_title: "Агроволокно және агромата",
-                p2_d1: "NOVARTIS агроволокносы — өсімдіктерді қорғауға және өнімділікті арттыруға арналған заманауи экологиялық шешім.",
-                p2_d2: "Материал өсімдіктердің өсуі үшін идеалды микроклимат жасайды, оларды үсік пен күннен қорғайды.",
-                p2_d3: "Қара агроволокно арамшөптердің өсуін толығымен бұғаттайды.",
                 p3_title: "Жылыжай пленкасы",
-                p3_d1: "Novartis-тен «Южанка» жылыжай пленкасы — ауыл шаруашылығы үшін сенімді шешім.",
-                p3_d2: "Материал жоғары беріктігімен ерекшеленеді және ультракүлгін қоспасы бар.",
-                p3_seasons: "Пленканы кез келген маусымда қолдануға болады:",
-                p3_s1: "• Көктемде және күзде — суықтан қорғайды.",
-                p3_s2: "• Қыста — жылуды сақтайды.",
-                p3_s3: "• Жазда — қатты жел мен жаңбырдан қорғайды.",
                 p4_title: "Көлеңкелейтін тор",
-                p4_d1: "Көлеңкелейтін торлар — сенімді көлеңке жасайтын заманауи полимерлі материал.",
-                p4_d2: "Торлар жылыжайлар мен өсімдіктерді қызып кетуден қорғау үшін қолданылады.",
-                p4_d3: "Негізгі артықшылықтары — монтаждау оңайлығы және ауа райына төзімділігі.",
                 p5_title: "Қоршау торлары",
-                p5_d1: "Пластикалық қоршау торлары — өсімдіктерді қорғау және аумақты зондтауға арналған оңай шешім.",
-                p5_usage: "Беріктігінің арқасында торлар кеңінен қолданылады:",
-                p5_u1: "• Бақша және ауыл шаруашылығы: бақшалар мен жайылымдарды қоршау;",
-                p5_u2: "• Құрылыс: жұмыс аймақтарын қорғау;",
-                p5_u3: "• Спорт мен демалыс: алаңдарды бөлу;",
-                p5_u4: "• Өнеркәсіп: қойма аймақтарын бөлу.",
                 p6_title: "Полиэтилендік пленка",
-                p6_d1: "Пленкалар мақсатына және қолдану тәсіліне қарай әртүрлі типтерге бөлінеді.",
-                p6_d2: "Полипропилендік пленка (PP) ылғалға төзімді, тауарларды орау үшін қолданылады.",
-                p6_d3: "Полиэтилендік пленка (PE) — өнімдерді орау мен жылыжайларға арналған берік материал.",
-                p6_d4: "ПВХ пленка (PVC) — құрылыста және сәндік мақсатта қолданылады.",
                 footer_since: "Нарықта 2013 жылдан бастап",
                 footer_motto: "Сапалы материал — табыс кепілі.",
                 footer_regions: "Қазақстан, Қырғызстан және Өзбекстан бойынша жұмыс жасаймыз.",
@@ -415,9 +421,16 @@
             },
             en: {
                 topbar_text: "LEADER IN THE MARKET OF KAZAKHSTAN SINCE 2013",
-                our_contacts: "Our Contacts",
-                sales_dept: "Sales Department:",
-                write_wa: "Write in WhatsApp",
+                nav_products: "Products",
+                nav_about: "About Us",
+                nav_partners: "Partners",
+                nav_wholesale: "Wholesale Buyers",
+                nav_contacts: "Contacts",
+                request_call: "Request a call",
+                modal_title: "Contact Us",
+                modal_subtitle: "Choose a convenient way to contact NOVARTIS sales team:",
+                modal_call: "Call by phone",
+                modal_wa: "Write in WhatsApp",
                 slide1_title: "GREENHOUSE &<br><span>AGRICULTURAL GOODS</span>",
                 slide2_title: "TYPES OF MEMBRANES<br><span>BY NOVARTIS</span>",
                 slide3_title: "GREENHOUSE FILMS<br><span>& AGROFABRIC</span>",
@@ -431,41 +444,11 @@
                 cat_subtitle: "Select a section to view detailed specifications",
                 more_info: "More Details",
                 p1_title: "Building Membranes",
-                p1_sub: "What is a building membrane used for?",
-                p1_d1: "Building membrane is a specialized material used to protect structures from moisture, cold, UV radiation and mechanical damage.",
-                p1_d2: "In addition, membranes act as vapor barriers, preventing condensation and mold development.",
-                p1_d3: "Building membranes are ideal for roofing, facades and insulation.",
-                p1_types: "There are 3 types of membranes:",
-                p1_t1: "1. Windproof",
-                p1_t2: "3. Vapor barrier",
-                p1_t3: "3. Reflective",
                 p2_title: "Agrofabric & Spunbond",
-                p2_d1: "NOVARTIS agrofabric is a modern eco-friendly solution for plant protection and yield growth.",
-                p2_d2: "Creates an ideal microclimate, protecting plants from frost, overheating, and pests.",
-                p2_d3: "Black mulching agrofabric eliminates hand weeding by blocking weed growth.",
                 p3_title: "Greenhouse Film",
-                p3_d1: "Greenhouse film 'Yuzhanka' by Novartis is a modern and reliable agricultural solution.",
-                p3_d2: "Features high strength, durability, and UV stability to protect crops.",
-                p3_seasons: "Applicable in any season:",
-                p3_s1: "• Spring and Autumn — protects against sudden frosts.",
-                p3_s2: "• Winter — retains heat and maintains stability.",
-                p3_s3: "• Summer — protects from heavy rain and excessive UV.",
                 p4_title: "Shading Net",
-                p4_d1: "Shading nets are modern polymer materials that create reliable shade and UV protection.",
-                p4_d2: "Actively used in agriculture to protect greenhouses and plants from scorching sun.",
-                p4_d3: "Main advantages — easy installation, weather resistance, and density choice (30% to 90%).",
                 p5_title: "Fencing Nets",
-                p5_d1: "Plastic fencing nets are an aesthetic and lightweight solution for territory protection and zoning.",
-                p5_usage: "Widely used across multiple domains:",
-                p5_u1: "• Agriculture: fencing gardens, greenhouses and pastures;",
-                p5_u2: "• Construction: protecting working areas;",
-                p5_u3: "• Sports & Recreation: playground zoning;",
-                p5_u4: "• Industry: warehouse separation.",
                 p6_title: "Polyethylene Film",
-                p6_d1: "Films come in various types depending on application and material.",
-                p6_d2: "Polypropylene (PP) film has high chemical resistance, used for packaging.",
-                p6_d3: "Polyethylene (PE) film — lightweight and durable for packaging and agricultural shelters.",
-                p6_d4: "PVC film — transparent and strong, used in construction and decorative purposes.",
                 footer_since: "On the market since 2013",
                 footer_motto: "Quality material is the key to success.",
                 footer_regions: "Operating in Kazakhstan, Kyrgyzstan, and Uzbekistan.",
@@ -474,7 +457,6 @@
         };
 
         const langSelect = document.getElementById('langSelect');
-
         function changeLanguage(lang) {
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
@@ -483,12 +465,18 @@
                 }
             });
         }
+        langSelect.addEventListener('change', (e) => changeLanguage(e.target.value));
 
-        langSelect.addEventListener('change', (e) => {
-            changeLanguage(e.target.value);
+        const callModal = document.getElementById('callModal');
+        const openCallModalBtn = document.getElementById('openCallModal');
+        const closeCallModalBtn = document.getElementById('closeCallModal');
+
+        openCallModalBtn.addEventListener('click', () => callModal.classList.add('active'));
+        closeCallModalBtn.addEventListener('click', () => callModal.classList.remove('active'));
+        callModal.addEventListener('click', (e) => {
+            if (e.target === callModal) callModal.classList.remove('active');
         });
 
-        // Слайдер
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.dot');
         const prevBtn = document.getElementById('prevBtn');
@@ -499,55 +487,28 @@
         function showSlide(index) {
             slides.forEach(slide => slide.classList.remove('active'));
             dots.forEach(dot => dot.classList.remove('active'));
-            
             currentSlide = (index + slides.length) % slides.length;
             slides[currentSlide].classList.add('active');
             dots[currentSlide].classList.add('active');
         }
 
-        function nextSlide() {
-            showSlide(currentSlide + 1);
-        }
+        function nextSlide() { showSlide(currentSlide + 1); }
+        function prevSlide() { showSlide(currentSlide - 1); }
+        function startAutoSlide() { slideInterval = setInterval(nextSlide, 4000); }
+        function stopAutoSlide() { clearInterval(slideInterval); }
 
-        function prevSlide() {
-            showSlide(currentSlide - 1);
-        }
-
-        function startAutoSlide() {
-            slideInterval = setInterval(nextSlide, 4000);
-        }
-
-        function stopAutoSlide() {
-            clearInterval(slideInterval);
-        }
-
-        nextBtn.addEventListener('click', () => {
-            nextSlide();
-            stopAutoSlide();
-            startAutoSlide();
-        });
-
-        prevBtn.addEventListener('click', () => {
-            prevSlide();
-            stopAutoSlide();
-            startAutoSlide();
-        });
-
+        nextBtn.addEventListener('click', () => { nextSlide(); stopAutoSlide(); startAutoSlide(); });
+        prevBtn.addEventListener('click', () => { prevSlide(); stopAutoSlide(); startAutoSlide(); });
         dots.forEach(dot => {
             dot.addEventListener('click', (e) => {
-                const slideIndex = parseInt(e.target.dataset.slide);
-                showSlide(slideIndex);
-                stopAutoSlide();
-                startAutoSlide();
+                showSlide(parseInt(e.target.dataset.slide));
+                stopAutoSlide(); startAutoSlide();
             });
         });
-
         startAutoSlide();
 
-        // Показ каталога
         const catalog = document.getElementById('catalog');
         const catalogBtns = document.querySelectorAll('.toggle-catalog-btn');
-
         catalogBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 catalog.classList.remove('catalog-hidden');
@@ -555,6 +516,5 @@
             });
         });
     </script>
-
 </body>
 </html>
