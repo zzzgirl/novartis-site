@@ -80,7 +80,7 @@ body {
     color: #ffffff;
 }
 
-/* 2. Шапка в стиле Agreen */
+/* 2. Шапка сайта */
 .site-header {
     background-color: #ffffff;
     border-bottom: 1px solid #e5e5e5;
@@ -255,7 +255,7 @@ body {
     padding: 0;
 }
 
-/* 3. БЕЛАЯ ШТОРКА СВЕРХУ (СТАТИЧНЫЙ БЛОК) */
+/* 3. БЕЛАЯ ПЛАШКА СВЕРХУ */
 .top-curtain-block {
     background-color: #ffffff;
     border-bottom: 1px solid #eaeaea;
@@ -355,8 +355,56 @@ body {
 
 .banner-image { width: 100%; height: 100%; background-size: cover; background-position: center; }
 
-/* Управление слайдером */
-.hero-action-bar { text-align: center; padding: 18px 0; background-color: #113329; }
+/* 5. БЛОК ПРЕИМУЩЕСТВ В СТИЛЕ СНИМКА (ПОД ФОТОГРАФИЯМИ) */
+.features-bar-section {
+    background-color: #ffffff;
+    padding: 45px 0;
+    border-bottom: 1px solid #eef2f5;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.feature-icon {
+    font-size: 32px;
+    color: #27ae60;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.feature-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: #111111;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.feature-desc {
+    font-size: 13px;
+    color: #555555;
+    line-height: 1.4;
+}
+
+/* Кнопка действия */
+.hero-action-bar { text-align: center; padding: 22px 0; background-color: #113329; }
 .hero-action-bar .btn-primary { padding: 14px 40px; font-size: 16px; background-color: #27ae60; color: #fff; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; }
 .hero-action-bar .btn-primary:hover { background-color: #219150; }
 
@@ -413,7 +461,12 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 992px) {
+    .features-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+}
+
+@media (max-width: 600px) {
+    .features-grid { grid-template-columns: 1fr; gap: 20px; }
     .curtain-inner { flex-direction: column; gap: 15px; text-align: center; }
     .banner-overlay { width: 100%; clip-path: none; background: rgba(9, 19, 25, 0.85); }
     .header-flex { flex-direction: column; gap: 15px; }

@@ -135,7 +135,7 @@
         </div>
     </section>
 
-    <!-- ФОТОГРАФИИ (БАННЕР-СЛАЙДЕР ПОД ПЛАШКОЙ) -->
+    <!-- ФОТОГРАФИИ (БАННЕР-СЛАЙДЕР) -->
     <section class="hero-slider">
         <div class="slides-container">
             
@@ -240,7 +240,60 @@
         </div>
     </section>
 
-    <!-- Кнопка перехода к продукции под слайдером -->
+    <!-- НОВЫЙ БЛОК ПРЕИМУЩЕСТВ ПОД ФОТОГРАФИЯМИ -->
+    <section class="features-bar-section">
+        <div class="container">
+            <div class="features-grid">
+                
+                <!-- 1. Быстрая доставка -->
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title" data-i18n="f1_title">БЫСТРАЯ ДОСТАВКА</h3>
+                        <p class="feature-desc" data-i18n="f1_desc">Бережно доставляем товары по всему Казахстану</p>
+                    </div>
+                </div>
+
+                <!-- 2. Клиентский сервис -->
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title" data-i18n="f2_title">КЛИЕНТСКИЙ СЕРВИС</h3>
+                        <p class="feature-desc" data-i18n="f2_desc">Отвечаем на вопросы покупателей в течение 10 минут</p>
+                    </div>
+                </div>
+
+                <!-- 3. Гарантия качества -->
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title" data-i18n="f3_title">ГАРАНТИЯ КАЧЕСТВА</h3>
+                        <p class="feature-desc" data-i18n="f3_desc">Соответствуем требованиям и стандартам качества</p>
+                    </div>
+                </div>
+
+                <!-- 4. Доступные цены -->
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-tag"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title" data-i18n="f4_title">ДОСТУПНЫЕ ЦЕНЫ</h3>
+                        <p class="feature-desc" data-i18n="f4_desc">Работаем напрямую с ведущими производителями</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Кнопка перехода к продукции под преимуществами -->
     <div class="hero-action-bar">
         <button type="button" class="btn-primary toggle-catalog-btn" data-i18n="btn_go_catalog">Перейти к продукции</button>
     </div>
@@ -355,7 +408,7 @@
         </div>
     </footer>
 
-    <!-- Скрипт -->
+    <!-- Скрипт перевода и слайдера -->
     <script>
         const translations = {
             ru: {
@@ -381,6 +434,14 @@
                 curtain_title: "Качественный материал — залог успеха",
                 curtain_text: "Продукция от ТОО \"ТД Novartis\" для сельского хозяйства и строительства.",
                 badge_text: "100% качество",
+                f1_title: "БЫСТРАЯ ДОСТАВКА",
+                f1_desc: "Бережно доставляем товары по всему Казахстану",
+                f2_title: "КЛИЕНТСКИЙ СЕРВИС",
+                f2_desc: "Отвечаем на вопросы покупателей в течение 10 минут",
+                f3_title: "ГАРАНТИЯ КАЧЕСТВА",
+                f3_desc: "Соответствуем требованиям и стандартам качества",
+                f4_title: "ДОСТУПНЫЕ ЦЕНЫ",
+                f4_desc: "Работаем напрямую с ведущими производителями",
                 btn_go_catalog: "Перейти к продукции",
                 cat_title: "Категории товаров",
                 cat_subtitle: "Выберите нужный раздел для просмотра подробных характеристик",
@@ -419,6 +480,14 @@
                 curtain_title: "Сапалы материал — табыс кепілі",
                 curtain_text: "Ауыл шаруашылығы мен құрылысқа арналған ТОО \"ТД Novartis\" өнімдері.",
                 badge_text: "100% сапа",
+                f1_title: "ЖЫЛДАМ ЖЕТКІЗУ",
+                f1_desc: "Тауарларды бүкіл Қазақстан бойынша ұқыпты жеткіземіз",
+                f2_title: "КЛИЕНТТЕРГЕ ҚЫЗМЕТ",
+                f2_desc: "Сатып алушылардың сұрақтарына 10 минут ішінде жауап береміз",
+                f3_title: "САПА КЕПІЛДІГІ",
+                f3_desc: "Сапа талаптары мен стандарттарына сәйкес келеміз",
+                f4_title: "ҚОЛЖЕТІМДІ БАҒАЛАР",
+                f4_desc: "Жетекші өндірушілермен тікелей жұмыс істейміз",
                 btn_go_catalog: "Өнімдерге өту",
                 cat_title: "Тауар санаттары",
                 cat_subtitle: "Толық сипаттамаларды қарау үшін керекті бөлімді таңдаңыз",
@@ -457,6 +526,14 @@
                 curtain_title: "Quality material is the key to success",
                 curtain_text: "Products from Novartis Trading House for agriculture and construction.",
                 badge_text: "100% Quality",
+                f1_title: "FAST DELIVERY",
+                f1_desc: "We carefully deliver products throughout Kazakhstan",
+                f2_title: "CLIENT SERVICE",
+                f2_desc: "We answer customer questions within 10 minutes",
+                f3_title: "QUALITY GUARANTEE",
+                f3_desc: "We comply with quality requirements and standards",
+                f4_title: "AFFORDABLE PRICES",
+                f4_desc: "We work directly with leading manufacturers",
                 btn_go_catalog: "Go to Products",
                 cat_title: "Product Categories",
                 cat_subtitle: "Select a section to view detailed specifications",
@@ -485,7 +562,7 @@
         }
         langSelect.addEventListener('change', (e) => changeLanguage(e.target.value));
 
-        // Модалка "Заказать звонок"
+        // Модалка
         const callModal = document.getElementById('callModal');
         const openCallModalBtn = document.getElementById('openCallModal');
         const closeCallModalBtn = document.getElementById('closeCallModal');
