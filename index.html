@@ -33,18 +33,15 @@
         </div>
     </div>
 
-    <!-- Основная шапка сайта (Agreen Style) -->
+    <!-- Основная шапка сайта -->
     <header class="site-header">
         <div class="container header-flex">
-            <!-- 1. Логотип NOVARTIS -->
             <a href="index.html" class="logo-link">
                 <span class="logo-green">NOVARTIS</span>
             </a>
 
-            <!-- 2. Меню по центру -->
             <nav class="main-nav">
                 <ul class="nav-list">
-                    <!-- Продукция -->
                     <li class="nav-element has-dropdown">
                         <a href="#catalog" class="nav-a toggle-catalog-btn">
                             <span data-i18n="nav_products">Продукция</span>
@@ -80,12 +77,10 @@
                         </div>
                     </li>
 
-                    <!-- О нас -->
                     <li class="nav-element">
                         <a href="about.html" class="nav-a" data-i18n="nav_about">О нас</a>
                     </li>
 
-                    <!-- Партнерам -->
                     <li class="nav-element has-dropdown">
                         <a href="#" class="nav-a">
                             <span data-i18n="nav_partners">Партнерам</span>
@@ -96,14 +91,12 @@
                         </div>
                     </li>
 
-                    <!-- Контакты -->
                     <li class="nav-element">
                         <a href="contacts.html" class="nav-a" data-i18n="nav_contacts">Контакты</a>
                     </li>
                 </ul>
             </nav>
 
-            <!-- 3. Правый блок с телефоном -->
             <div class="phone-block">
                 <a href="tel:+77053333606" class="phone-link">+7 (705) 333 36 06</a>
                 <button type="button" class="callback-btn" id="openCallModal" data-i18n="request_call">Заказать звонок</button>
@@ -128,126 +121,128 @@
         </div>
     </div>
 
-    <!-- ВЕРХНЯЯ ВЫЕЗЖАЮЩАЯ ШТОРКА (Как на видео) -->
-    <section class="top-curtain-section">
-        <div class="container curtain-inner">
-            <div class="curtain-text-side">
-                <h1 class="curtain-heading" data-i18n="curtain_title">Качественный материал — залог успеха</h1>
-                <p class="curtain-subtext" data-i18n="curtain_text">Продукция от ТОО "ТД Novartis" для сельского хозяйства и строительства.</p>
-            </div>
-            <div class="curtain-quality-badge">
-                <i class="fa-solid fa-circle-check badge-icon"></i>
-                <span data-i18n="badge_text">100% качество</span>
+    <!-- Главная секция со слайдером и выдвигающейся шторкой -->
+    <section class="hero-slider-section">
+        
+        <!-- ВЫЕЗЖАЮЩАЯ БЕЛАЯ ШТОРКА (ПОКРЫВАЕТ СЛАЙДЕР СВЕРХУ И СВОРАЧИВАЕТСЯ/РАЗВОРАЧИВАЕТСЯ) -->
+        <div class="slider-curtain" id="sliderCurtain">
+            <div class="container curtain-inner">
+                <div class="curtain-text-side">
+                    <h1 class="curtain-heading" data-i18n="curtain_title">Качественный материал — залог успеха</h1>
+                    <p class="curtain-subtext" data-i18n="curtain_text">Продукция от ТОО "ТД Novartis" для сельского хозяйства и строительства.</p>
+                </div>
+                <div class="curtain-badge-wrapper">
+                    <div class="curtain-quality-badge">
+                        <i class="fa-solid fa-circle-check badge-icon"></i>
+                        <span data-i18n="badge_text">100% качество</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
 
-    <!-- Главный баннер-слайдер -->
-    <section class="hero-slider">
-        <div class="slides-container">
-            
-            <!-- Слайд 1: Вечерняя теплица -->
-            <div class="slide active">
-                <div class="slide-banner">
-                    <div class="banner-overlay">
-                        <div class="banner-brand">
-                            <i class="fa-solid fa-cubes logo-icon"></i>
-                            <div>
-                                <span class="brand-name">NOVARTIS</span>
-                                <span class="brand-sub">ALMATY</span>
+        <!-- Контейнер слайдов -->
+        <div class="hero-slider">
+            <div class="slides-container">
+                
+                <div class="slide active">
+                    <div class="slide-banner">
+                        <div class="banner-overlay">
+                            <div class="banner-brand">
+                                <i class="fa-solid fa-cubes logo-icon"></i>
+                                <div>
+                                    <span class="brand-name">NOVARTIS</span>
+                                    <span class="brand-sub">ALMATY</span>
+                                </div>
                             </div>
+                            <h2 class="banner-title" data-i18n="slide1_title">ТОВАРЫ ДЛЯ ТЕПЛИЦ<br><span>И СЕЛЬХОЗУГОДИЙ</span></h2>
+                            <ul class="banner-features">
+                                <li><i class="fa-solid fa-truck-fast"></i> <span data-i18n="feat_delivery">Быстрая доставка</span></li>
+                                <li><i class="fa-solid fa-tag"></i> <span data-i18n="feat_prices">Доступные цены</span></li>
+                                <li><i class="fa-solid fa-shield-halved"></i> <span data-i18n="feat_quality">Гарантия качества</span></li>
+                                <li><i class="fa-solid fa-headset"></i> <span data-i18n="feat_service">Клиентский сервис</span></li>
+                            </ul>
                         </div>
-                        <h2 class="banner-title" data-i18n="slide1_title">ТОВАРЫ ДЛЯ ТЕПЛИЦ<br><span>И СЕЛЬХОЗУГОДИЙ</span></h2>
-                        <ul class="banner-features">
-                            <li><i class="fa-solid fa-truck-fast"></i> <span data-i18n="feat_delivery">Быстрая доставка</span></li>
-                            <li><i class="fa-solid fa-tag"></i> <span data-i18n="feat_prices">Доступные цены</span></li>
-                            <li><i class="fa-solid fa-shield-halved"></i> <span data-i18n="feat_quality">Гарантия качества</span></li>
-                            <li><i class="fa-solid fa-headset"></i> <span data-i18n="feat_service">Клиентский сервис</span></li>
-                        </ul>
+                        <div class="banner-image" style="background-image: url('banner-greenhouse.jpg');"></div>
                     </div>
-                    <div class="banner-image" style="background-image: url('banner-greenhouse.jpg');"></div>
                 </div>
+
+                <div class="slide">
+                    <div class="slide-banner">
+                        <div class="banner-overlay">
+                            <div class="banner-brand">
+                                <i class="fa-solid fa-cubes logo-icon"></i>
+                                <div>
+                                    <span class="brand-name">NOVARTIS</span>
+                                    <span class="brand-sub">ALMATY</span>
+                                </div>
+                            </div>
+                            <h2 class="banner-title" data-i18n="slide2_title">ВИДЫ МЕМБРАН<br><span>ОТ NOVARTIS</span></h2>
+                            <ul class="banner-features">
+                                <li><i class="fa-solid fa-truck-fast"></i> <span data-i18n="feat_delivery">Быстрая доставка</span></li>
+                                <li><i class="fa-solid fa-tag"></i> <span data-i18n="feat_prices">Доступные цены</span></li>
+                                <li><i class="fa-solid fa-shield-halved"></i> <span data-i18n="feat_quality">Гарантия качества</span></li>
+                                <li><i class="fa-solid fa-headset"></i> <span data-i18n="feat_service">Клиентский сервис</span></li>
+                            </ul>
+                        </div>
+                        <div class="banner-image" style="background-image: url('banner-roof.jpg');"></div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-banner">
+                        <div class="banner-overlay">
+                            <div class="banner-brand">
+                                <i class="fa-solid fa-cubes logo-icon"></i>
+                                <div>
+                                    <span class="brand-name">NOVARTIS</span>
+                                    <span class="brand-sub">ALMATY</span>
+                                </div>
+                            </div>
+                            <h2 class="banner-title" data-i18n="slide3_title">ТЕПЛИЧНЫЕ ПЛЕНКИ<br><span>И АГРОВОЛОКНО</span></h2>
+                            <ul class="banner-features">
+                                <li><i class="fa-solid fa-truck-fast"></i> <span data-i18n="feat_delivery">Быстрая доставка</span></li>
+                                <li><i class="fa-solid fa-tag"></i> <span data-i18n="feat_prices">Доступные цены</span></li>
+                                <li><i class="fa-solid fa-shield-halved"></i> <span data-i18n="feat_quality">Гарантия качества</span></li>
+                                <li><i class="fa-solid fa-headset"></i> <span data-i18n="feat_service">Клиентский сервис</span></li>
+                            </ul>
+                        </div>
+                        <div class="banner-image" style="background-image: url('banner-greenhouse-inside.jpg');"></div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-banner">
+                        <div class="banner-overlay">
+                            <div class="banner-brand">
+                                <i class="fa-solid fa-cubes logo-icon"></i>
+                                <div>
+                                    <span class="brand-name">NOVARTIS</span>
+                                    <span class="brand-sub">ALMATY</span>
+                                </div>
+                            </div>
+                            <h2 class="banner-title" data-i18n="slide4_title">ПОЛИЭТИЛЕНОВЫЕ<br><span>ПЛЕНКИ</span></h2>
+                            <ul class="banner-features">
+                                <li><i class="fa-solid fa-truck-fast"></i> <span data-i18n="feat_delivery">Быстрая доставка</span></li>
+                                <li><i class="fa-solid fa-tag"></i> <span data-i18n="feat_prices">Доступные цены</span></li>
+                                <li><i class="fa-solid fa-shield-halved"></i> <span data-i18n="feat_quality">Гарантия качества</span></li>
+                                <li><i class="fa-solid fa-headset"></i> <span data-i18n="feat_service">Клиентский сервис</span></li>
+                            </ul>
+                        </div>
+                        <div class="banner-image" style="background-image: url('pe-film.jpg');"></div>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- Слайд 2: Строительные мембраны -->
-            <div class="slide">
-                <div class="slide-banner">
-                    <div class="banner-overlay">
-                        <div class="banner-brand">
-                            <i class="fa-solid fa-cubes logo-icon"></i>
-                            <div>
-                                <span class="brand-name">NOVARTIS</span>
-                                <span class="brand-sub">ALMATY</span>
-                            </div>
-                        </div>
-                        <h2 class="banner-title" data-i18n="slide2_title">ВИДЫ МЕМБРАН<br><span>ОТ NOVARTIS</span></h2>
-                        <ul class="banner-features">
-                            <li><i class="fa-solid fa-truck-fast"></i> <span data-i18n="feat_delivery">Быстрая доставка</span></li>
-                            <li><i class="fa-solid fa-tag"></i> <span data-i18n="feat_prices">Доступные цены</span></li>
-                            <li><i class="fa-solid fa-shield-halved"></i> <span data-i18n="feat_quality">Гарантия качества</span></li>
-                            <li><i class="fa-solid fa-headset"></i> <span data-i18n="feat_service">Клиентский сервис</span></li>
-                        </ul>
-                    </div>
-                    <div class="banner-image" style="background-image: url('banner-roof.jpg');"></div>
-                </div>
+            <button type="button" class="slider-btn prev-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+            <button type="button" class="slider-btn next-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+
+            <div class="slider-dots" id="sliderDots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
             </div>
-
-            <!-- Слайд 3: Агроволокно -->
-            <div class="slide">
-                <div class="slide-banner">
-                    <div class="banner-overlay">
-                        <div class="banner-brand">
-                            <i class="fa-solid fa-cubes logo-icon"></i>
-                            <div>
-                                <span class="brand-name">NOVARTIS</span>
-                                <span class="brand-sub">ALMATY</span>
-                            </div>
-                        </div>
-                        <h2 class="banner-title" data-i18n="slide3_title">ТЕПЛИЧНЫЕ ПЛЕНКИ<br><span>И АГРОВОЛОКНО</span></h2>
-                        <ul class="banner-features">
-                            <li><i class="fa-solid fa-truck-fast"></i> <span data-i18n="feat_delivery">Быстрая доставка</span></li>
-                            <li><i class="fa-solid fa-tag"></i> <span data-i18n="feat_prices">Доступные цены</span></li>
-                            <li><i class="fa-solid fa-shield-halved"></i> <span data-i18n="feat_quality">Гарантия качества</span></li>
-                            <li><i class="fa-solid fa-headset"></i> <span data-i18n="feat_service">Клиентский сервис</span></li>
-                        </ul>
-                    </div>
-                    <div class="banner-image" style="background-image: url('banner-greenhouse-inside.jpg');"></div>
-                </div>
-            </div>
-
-            <!-- Слайд 4: Полиэтиленовая пленка -->
-            <div class="slide">
-                <div class="slide-banner">
-                    <div class="banner-overlay">
-                        <div class="banner-brand">
-                            <i class="fa-solid fa-cubes logo-icon"></i>
-                            <div>
-                                <span class="brand-name">NOVARTIS</span>
-                                <span class="brand-sub">ALMATY</span>
-                            </div>
-                        </div>
-                        <h2 class="banner-title" data-i18n="slide4_title">ПОЛИЭТИЛЕНОВЫЕ<br><span>ПЛЕНКИ</span></h2>
-                        <ul class="banner-features">
-                            <li><i class="fa-solid fa-truck-fast"></i> <span data-i18n="feat_delivery">Быстрая доставка</span></li>
-                            <li><i class="fa-solid fa-tag"></i> <span data-i18n="feat_prices">Доступные цены</span></li>
-                            <li><i class="fa-solid fa-shield-halved"></i> <span data-i18n="feat_quality">Гарантия качества</span></li>
-                            <li><i class="fa-solid fa-headset"></i> <span data-i18n="feat_service">Клиентский сервис</span></li>
-                        </ul>
-                    </div>
-                    <div class="banner-image" style="background-image: url('pe-film.jpg');"></div>
-                </div>
-            </div>
-
-        </div>
-
-        <button type="button" class="slider-btn prev-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
-        <button type="button" class="slider-btn next-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
-
-        <div class="slider-dots" id="sliderDots">
-            <span class="dot active" data-slide="0"></span>
-            <span class="dot" data-slide="1"></span>
-            <span class="dot" data-slide="2"></span>
-            <span class="dot" data-slide="3"></span>
         </div>
     </section>
 
@@ -366,7 +361,7 @@
         </div>
     </footer>
 
-    <!-- Перевод текста и скрипт взаимодействия -->
+    <!-- Скрипт перевода, работы слайдера и выезжающей шторки -->
     <script>
         const translations = {
             ru: {
@@ -507,25 +502,40 @@
             if (e.target === callModal) callModal.classList.remove('active');
         });
 
-        // Слайдер
+        // Слайдер с анимируемой шторкой
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.dot');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
+        const sliderCurtain = document.getElementById('sliderCurtain');
         let currentSlide = 0;
         let slideInterval;
 
+        function playCurtainEffect() {
+            // Сворачиваем шторку вверх
+            sliderCurtain.classList.add('closed');
+            
+            // Спустя паузу разворачиваем обратно вниз
+            setTimeout(() => {
+                sliderCurtain.classList.remove('closed');
+            }, 500);
+        }
+
         function showSlide(index) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-            currentSlide = (index + slides.length) % slides.length;
-            slides[currentSlide].classList.add('active');
-            dots[currentSlide].classList.add('active');
+            playCurtainEffect();
+            
+            setTimeout(() => {
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                currentSlide = (index + slides.length) % slides.length;
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+            }, 300);
         }
 
         function nextSlide() { showSlide(currentSlide + 1); }
         function prevSlide() { showSlide(currentSlide - 1); }
-        function startAutoSlide() { slideInterval = setInterval(nextSlide, 4000); }
+        function startAutoSlide() { slideInterval = setInterval(nextSlide, 5000); }
         function stopAutoSlide() { clearInterval(slideInterval); }
 
         nextBtn.addEventListener('click', () => { nextSlide(); stopAutoSlide(); startAutoSlide(); });
@@ -536,9 +546,10 @@
                 stopAutoSlide(); startAutoSlide();
             });
         });
+
         startAutoSlide();
 
-        // Открытие каталога
+        // Показ каталога
         const catalog = document.getElementById('catalog');
         const catalogBtns = document.querySelectorAll('.toggle-catalog-btn');
         catalogBtns.forEach(btn => {

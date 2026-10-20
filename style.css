@@ -17,7 +17,7 @@ body {
     padding: 0 20px;
 }
 
-/* 1. Верхняя зеленая полоса (Top Bar) */
+/* 1. Верхняя зеленая полоса */
 .top-bar {
     background-color: #27ae60;
     color: #ffffff;
@@ -95,7 +95,6 @@ body {
     justify-content: space-between;
 }
 
-/* Логотип NOVARTIS */
 .logo-link {
     text-decoration: none;
     display: inline-block;
@@ -108,7 +107,6 @@ body {
     letter-spacing: 2px;
 }
 
-/* Навигация по центру */
 .main-nav {
     display: flex;
     align-items: center;
@@ -257,17 +255,36 @@ body {
     padding: 0;
 }
 
-.callback-btn:hover {
-    color: #1f8b4c;
+/* 3. СЕКЦИЯ СЛАЙДЕРА С ВЫДВИЖНОЙ БЕЛОЙ ШТОРКОЙ */
+.hero-slider-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
-/* 3. БЕЛАЯ ШТОРКА (Как в референсе Agreen) */
-.top-curtain-section {
+/* Выезжающая шторка, перекрывающая баннер сверху */
+.slider-curtain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #ffffff;
     border-bottom: 1px solid #eaeaea;
-    padding: 22px 0 35px 0;
-    position: relative;
-    z-index: 10;
+    padding: 24px 0 38px 0;
+    z-index: 50;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    max-height: 200px;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease, padding 0.45s ease;
+}
+
+/* Состояние «свернуто» при переключении слайдов */
+.slider-curtain.closed {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+    border-bottom: none;
 }
 
 .curtain-inner {
@@ -289,15 +306,20 @@ body {
     color: #666666;
 }
 
+.curtain-badge-wrapper {
+    display: flex;
+    align-items: center;
+}
+
 .curtain-quality-badge {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
     border-radius: 25px;
-    padding: 8px 20px;
+    padding: 8px 22px;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     font-weight: 700;
     font-size: 14px;
     color: #27ae60;
@@ -308,12 +330,11 @@ body {
     color: #27ae60;
 }
 
-/* 4. СЛАЙДЕР С ТЁМНО-СИНИМ БЛОКОМ И ФОТО */
+/* Основной слайдер */
 .hero-slider {
     position: relative;
     width: 100%;
-    height: 380px;
-    overflow: hidden;
+    height: 420px;
     background-color: #0b1d17;
 }
 
@@ -346,7 +367,7 @@ body {
     position: absolute; top: 0; left: 0; width: 45%; height: 100%;
     background: linear-gradient(135deg, #091319 0%, #001a33 60%, #0a4d8c 100%);
     clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
-    z-index: 2; padding: 35px 50px;
+    z-index: 2; padding: 110px 50px 35px 50px;
     display: flex; flex-direction: column; justify-content: center; color: #ffffff;
 }
 
@@ -361,7 +382,7 @@ body {
 
 .banner-image { width: 100%; height: 100%; background-size: cover; background-position: center; }
 
-/* Переключатели слайдера */
+/* Элементы управления слайдером */
 .hero-action-bar { text-align: center; padding: 18px 0; background-color: #113329; }
 .hero-action-bar .btn-primary { padding: 14px 40px; font-size: 16px; background-color: #27ae60; color: #fff; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; }
 .hero-action-bar .btn-primary:hover { background-color: #219150; }
@@ -421,7 +442,7 @@ body {
 
 @media (max-width: 900px) {
     .curtain-inner { flex-direction: column; gap: 15px; text-align: center; }
-    .banner-overlay { width: 100%; clip-path: none; background: rgba(9, 19, 25, 0.85); }
+    .banner-overlay { width: 100%; clip-path: none; background: rgba(9, 19, 25, 0.85); padding-top: 140px; }
     .header-flex { flex-direction: column; gap: 15px; }
     .nav-list { gap: 15px; }
 }
