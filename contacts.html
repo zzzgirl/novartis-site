@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши контакты — NOVARTIS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Верхняя полоса -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="top-bar-left">
+                <span>ЛИДЕР НА РЫНКЕ КАЗАХСТАНА С 2013 ГОДА</span>
+            </div>
+            <div class="top-bar-right">
+                <div class="social-icons">
+                    <a href="https://instagram.com/novartis_almaty" target="_blank" class="social-icon" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="lang-select-box">
+                    <i class="fa-solid fa-globe"></i>
+                    <select id="langSelect">
+                        <option value="ru" selected>RU</option>
+                        <option value="kk">KK</option>
+                        <option value="en">EN</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основная шапка сайта -->
+    <header class="site-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo-link">
+                <span class="logo-green">NOVARTIS</span>
+            </a>
+
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-element has-dropdown">
+                        <a href="index.html#catalog" class="nav-a">
+                            <span>Продукция</span>
+                            <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                        </a>
+                        <div class="mega-box">
+                            <div class="mega-grid-2col">
+                                <a href="index.html#catalog" class="mega-card">
+                                    <i class="fa-solid fa-layer-group card-ic"></i>
+                                    <span>Строительные мембраны</span>
+                                </a>
+                                <a href="index.html#catalog" class="mega-card">
+                                    <i class="fa-solid fa-seedling card-ic"></i>
+                                    <span>Агроволокно и агроткань</span>
+                                </a>
+                                <a href="index.html#catalog" class="mega-card">
+                                    <i class="fa-solid fa-warehouse card-ic"></i>
+                                    <span>Тепличная пленка</span>
+                                </a>
+                                <a href="index.html#catalog" class="mega-card">
+                                    <i class="fa-solid fa-border-all card-ic"></i>
+                                    <span>Затеняющая сетка</span>
+                                </a>
+                                <a href="index.html#catalog" class="mega-card">
+                                    <i class="fa-solid fa-shield-cat card-ic"></i>
+                                    <span>Ограждающие сетки</span>
+                                </a>
+                                <a href="index.html#catalog" class="mega-card">
+                                    <i class="fa-solid fa-box-archive card-ic"></i>
+                                    <span>Полиэтиленовая пленка</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-element">
+                        <a href="about.html" class="nav-a">О нас</a>
+                    </li>
+
+                    <li class="nav-element has-dropdown">
+                        <a href="#" class="nav-a">
+                            <span>Партнерам</span>
+                            <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                        </a>
+                        <div class="dropdown-box">
+                            <a href="wholesale.html" class="dropdown-item">Оптовым покупателям</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-element">
+                        <a href="contacts.html" class="nav-a active-link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="phone-block">
+                <a href="tel:+77053333606" class="phone-link">+7 (705) 333 36 06</a>
+                <button type="button" class="callback-btn" id="openCallModal">Заказать звонок</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- СЕКЦИЯ КОНТАКТОВ -->
+    <main class="contacts-page">
+        <div class="container">
+            
+            <!-- Хлебные крошки -->
+            <nav class="breadcrumbs">
+                <a href="index.html">Главная</a> &gt; <span>Контакты</span>
+            </nav>
+
+            <!-- Заголовок -->
+            <h1 class="contacts-main-title">Наши контакты</h1>
+
+            <!-- Описание компании -->
+            <div class="contacts-description">
+                <p><strong>Novartis</strong> — ваш надежный партнер в защите и обустройстве участка!</p>
+                <p>Стабильное качество, широкий ассортимент и отличные условия для оптовиков.</p>
+                <p>Хотите стать дилером или оформить заказ? Напишите или позвоните региональному менеджеру — с радостью ответим на все вопросы!</p>
+            </div>
+
+            <!-- Блок Главного офиса -->
+            <div class="office-block">
+                <h2 class="office-title">Главный офис:</h2>
+
+                <div class="office-info-list">
+                    
+                    <!-- Режим работы и Телефон -->
+                    <div class="info-item">
+                        <div class="info-icon-circle">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="info-text">
+                            <span class="info-label">Режим работы: Пн-Пт 9:00 - 18:00</span>
+                            <a href="tel:+77053333606" class="info-value-link">+7 (705) 333 36 06</a>
+                        </div>
+                    </div>
+
+                    <!-- E-mail -->
+                    <div class="info-item">
+                        <div class="info-icon-circle">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="info-text">
+                            <span class="info-label">Официальный e-mail</span>
+                            <span class="info-value">info@novartis.kz</span> <!-- Позже сможешь легко поменять -->
+                        </div>
+                    </div>
+
+                    <!-- Адрес -->
+                    <div class="info-item">
+                        <div class="info-icon-circle">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="info-text">
+                            <span class="info-label">Главный офис</span>
+                            <span class="info-value">г. Алматы, ул. Торетай, 28г</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ИНТЕРАКТИВНАЯ КАРТА АЛМАТЫ -->
+        <div class="map-section">
+            <iframe 
+                src="https://yandex.ru/map-widget/v1/?ll=76.907000%2C43.321000&z=15&pt=76.907000%2C43.321000%2Cpm2grm" 
+                width="100%" 
+                height="450" 
+                frameborder="0" 
+                allowfullscreen="true" 
+                style="position:relative; display: block; border: 0;">
+            </iframe>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container footer-content" style="display: flex; flex-direction: column; gap: 15px; text-align: center;">
+            <div class="footer-info">
+                <h3 style="margin-bottom: 5px;">NOVARTIS ALMATY</h3>
+                <p style="color: #a8e6cf; font-weight: 600;">Мы на рынке с 2013 года</p>
+                <p style="font-style: italic; margin-top: 3px;">Качественный материал — залог успеха.</p>
+            </div>
+            <div class="footer-location" style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 12px;">
+                <p>Работаем по Казахстану, Киргизии и Узбекистану.</p>
+                <p style="margin-top: 6px; font-weight: 600; color: #ffffff;">ТОО "Торговый Дом Novartis"</p>
+                <p style="color: #d1d5db; font-size: 13px;">г. Алматы, Торетай 28г</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модалка заказа звонка -->
+    <div class="modal-backdrop" id="callModal">
+        <div class="modal-card">
+            <button type="button" class="modal-close" id="closeCallModal">&times;</button>
+            <h3>Связаться с нами</h3>
+            <p>Выберите удобный способ связи с отделом продаж NOVARTIS:</p>
+            <div class="modal-actions">
+                <a href="tel:+77053333606" class="modal-btn btn-phone">
+                    <i class="fa-solid fa-phone"></i> <span>Позвонить на номер</span>
+                </a>
+                <a href="https://wa.me/77053333606" target="_blank" class="modal-btn btn-wa">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Написать на WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const callModal = document.getElementById('callModal');
+        const openCallModalBtn = document.getElementById('openCallModal');
+        const closeCallModalBtn = document.getElementById('closeCallModal');
+
+        if (openCallModalBtn) openCallModalBtn.addEventListener('click', () => callModal.classList.add('active'));
+        if (closeCallModalBtn) closeCallModalBtn.addEventListener('click', () => callModal.classList.remove('active'));
+        if (callModal) {
+            callModal.addEventListener('click', (e) => {
+                if (e.target === callModal) callModal.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
