@@ -592,3 +592,111 @@ body {
     margin-top: 30px;
     border-top: 1px solid #e0e0e0;
 }
+/* СТИЛИ ДЛЯ СТРАНИЦЫ "О НАС" */
+.about-page {
+    padding: 25px 0 60px 0;
+    background-color: #ffffff;
+}
+
+.about-main-title {
+    font-size: 38px;
+    font-weight: 800;
+    color: #111111;
+    margin-bottom: 25px;
+}
+
+.about-intro-box {
+    font-size: 16px;
+    color: #444444;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+.about-intro-box p {
+    margin-bottom: 15px;
+}
+
+.about-block-section {
+    margin-top: 45px;
+}
+
+.about-section-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1b4d3e;
+    margin-bottom: 25px;
+}
+
+.about-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.about-card {
+    background-color: #f8f9fa;
+    border: 1px solid #eef2f5;
+    border-radius: 12px;
+    padding: 25px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.about-card-icon {
+    font-size: 28px;
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+.about-card h3 {
+    font-size: 18px;
+    color: #111111;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.about-card p {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.5;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.why-item {
+    background-color: #f0fdf4;
+    border: 1px solid #dcfce7;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.why-number {
+    font-size: 28px;
+    font-weight: 900;
+    color: #27ae60;
+    line-height: 1;
+}
+
+.why-content h3 {
+    font-size: 17px;
+    color: #111111;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.why-content p {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.5;
+}

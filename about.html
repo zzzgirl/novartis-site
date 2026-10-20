@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас — NOVARTIS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Верхняя полоса -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="top-bar-left">
+                <span>ЛИДЕР НА РЫНКЕ КАЗАХСТАНА С 2013 ГОДА</span>
+            </div>
+            <div class="top-bar-right">
+                <div class="social-icons">
+                    <a href="https://instagram.com/novartis_almaty" target="_blank" class="social-icon" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="lang-select-box">
+                    <i class="fa-solid fa-globe"></i>
+                    <select id="langSelect">
+                        <option value="ru" selected>RU</option>
+                        <option value="kk">KK</option>
+                        <option value="en">EN</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основная шапка сайта -->
+    <header class="site-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo-link">
+                <span class="logo-green">NOVARTIS</span>
+            </a>
+
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-element has-dropdown">
+                        <a href="index.html#catalog" class="nav-a">
+                            <span>Продукция</span>
+                            <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                        </a>
+                        <div class="mega-box">
+                            <div class="mega-grid-2col">
+                                <a href="index.html#catalog" class="mega-card">
+                                    <i class="fa-solid fa-layer-group card-ic"></i>
+                                    <span>Строительные мембраны</span>
+                                </a>
+                                <a href="index.html#catalog" class="mega-card">
+                                    <i class="fa-solid fa-seedling card-ic"></i>
+                                    <span>Агроволокно и агроткань</span>
+                                </a>
+                                <a href="index.html#catalog" class="mega-card">
+                                    <i class="fa-solid fa-warehouse card-ic"></i>
+                                    <span>Тепличная пленка</span>
+                                </a>
+                                <a href="index.html#catalog" class="mega-card">
+                                    <i class="fa-solid fa-border-all card-ic"></i>
+                                    <span>Затеняющая сетка</span>
+                                </a>
+                                <a href="index.html#catalog" class="mega-card">
+                                    <i class="fa-solid fa-shield-cat card-ic"></i>
+                                    <span>Ограждающие сетки</span>
+                                </a>
+                                <a href="index.html#catalog" class="mega-card">
+                                    <i class="fa-solid fa-box-archive card-ic"></i>
+                                    <span>Полиэтиленовая пленка</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-element">
+                        <a href="about.html" class="nav-a active-link">О нас</a>
+                    </li>
+
+                    <li class="nav-element has-dropdown">
+                        <a href="#" class="nav-a">
+                            <span>Партнерам</span>
+                            <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                        </a>
+                        <div class="dropdown-box">
+                            <a href="wholesale.html" class="dropdown-item">Оптовым покупателям</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-element">
+                        <a href="contacts.html" class="nav-a">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="phone-block">
+                <a href="tel:+77053333606" class="phone-link">+7 (705) 333 36 06</a>
+                <button type="button" class="callback-btn" id="openCallModal">Заказать звонок</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- СЕКЦИЯ "О НАС" -->
+    <main class="about-page">
+        <div class="container">
+            
+            <!-- Хлебные крошки -->
+            <nav class="breadcrumbs">
+                <a href="index.html">Главная</a> &gt; <span>О нас</span>
+            </nav>
+
+            <!-- Заголовок -->
+            <h1 class="about-main-title">О торговом доме «Novartis»</h1>
+
+            <!-- Основной текст -->
+            <div class="about-intro-box">
+                <p>Торговый дом <strong>«Novartis»</strong> — надежный поставщик материалов для строительства, ремонта, садоводства и обустройства участка. С 2013 года мы помогаем создавать комфорт, защищать урожай и строить на века, объединяя в своем каталоге проверенные технологии и практичные решения.</p>
+                <p>Наш постоянный ассортимент включает <strong>более 900 наименований</strong>, среди которых вы найдете всё необходимое как для крупных строительных объектов, так и для уютной дачи или ремонта квартиры.</p>
+            </div>
+
+            <!-- Направления -->
+            <section class="about-block-section">
+                <h2 class="about-section-title">Наша специализация и ключевые направления</h2>
+                
+                <div class="about-cards-grid">
+                    <div class="about-card">
+                        <div class="about-card-icon"><i class="fa-solid fa-seedling"></i></div>
+                        <h3>Укрывные материалы и агротекстиль</h3>
+                        <p>Спанбонд, геотекстиль, мульчирующие пленки и защитные полотна разной плотности и типоразмеров. Помогают защитить растения от заморозков, сорняков и палящего солнца.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-card-icon"><i class="fa-solid fa-warehouse"></i></div>
+                        <h3>Парники и теплицы</h3>
+                        <p>Готовые конструкции, комплектующие, дуги и укрытия для получения раннего и богатого урожая.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-card-icon"><i class="fa-solid fa-layer-group"></i></div>
+                        <h3>Строительные мембраны и изоляция</h3>
+                        <p>Ветро-, паро- и гидроизоляционные мембраны для кровель, фасадов и фундаментов, обеспечивающие долговечность зданий.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-card-icon"><i class="fa-solid fa-house-chimney"></i></div>
+                        <h3>Товары для дома, сада и ремонта</h3>
+                        <p>Широкий выбор материалов для декорирования, благоустройства дачных участков, загородных домов и квартир.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Почему выбирают нас -->
+            <section class="about-block-section">
+                <h2 class="about-section-title">Почему выбирают «Novartis»?</h2>
+                
+                <div class="why-grid">
+                    <div class="why-item">
+                        <div class="why-number">01</div>
+                        <div class="why-content">
+                            <h3>Экспертиза и честная консультация</h3>
+                            <p>Мы не просто продаем товары — наши специалисты помогут подобрать материалы с учетом ваших задач, условий эксплуатации и бюджета.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="why-number">02</div>
+                        <div class="why-content">
+                            <h3>Богатый выбор (900+ позиций)</h3>
+                            <p>Вся линейка типоразмеров и характеристик в одном месте — от бытовых нужд до профессионального строительства.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="why-number">03</div>
+                        <div class="why-content">
+                            <h3>Репутация, проверенная временем</h3>
+                            <p>Работаем с 2013 года. Мы ценим каждого клиента и строго соблюдаем свои обязательства по срокам и качеству поставок.</p>
+                        </div>
+                    </div>
+
+                    <div class="why-item">
+                        <div class="why-number">04</div>
+                        <div class="why-content">
+                            <h3>Опт и розница</h3>
+                            <p>Удобные условия сотрудничества как для частных покупателей и дачников, так и для строительных бригад, фермерских хозяйств и розничных магазинов.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container footer-content" style="display: flex; flex-direction: column; gap: 15px; text-align: center;">
+            <div class="footer-info">
+                <h3 style="margin-bottom: 5px;">NOVARTIS ALMATY</h3>
+                <p style="color: #a8e6cf; font-weight: 600;">Мы на рынке с 2013 года</p>
+                <p style="font-style: italic; margin-top: 3px;">Качественный материал — залог успеха.</p>
+            </div>
+            <div class="footer-location" style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 12px;">
+                <p>Работаем по Казахстану, Киргизии и Узбекистану.</p>
+                <p style="margin-top: 6px; font-weight: 600; color: #ffffff;">ТОО "Торговый Дом Novartis"</p>
+                <p style="color: #d1d5db; font-size: 13px;">г. Алматы, Торетай 28г</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модалка заказа звонка -->
+    <div class="modal-backdrop" id="callModal">
+        <div class="modal-card">
+            <button type="button" class="modal-close" id="closeCallModal">&times;</button>
+            <h3>Связаться с нами</h3>
+            <p>Выберите удобный способ связи с отделом продаж NOVARTIS:</p>
+            <div class="modal-actions">
+                <a href="tel:+77053333606" class="modal-btn btn-phone">
+                    <i class="fa-solid fa-phone"></i> <span>Позвонить на номер</span>
+                </a>
+                <a href="https://wa.me/77053333606" target="_blank" class="modal-btn btn-wa">
+                    <i class="fa-brands fa-whatsapp"></i> <span>Написать на WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const callModal = document.getElementById('callModal');
+        const openCallModalBtn = document.getElementById('openCallModal');
+        const closeCallModalBtn = document.getElementById('closeCallModal');
+
+        if (openCallModalBtn) openCallModalBtn.addEventListener('click', () => callModal.classList.add('active'));
+        if (closeCallModalBtn) closeCallModalBtn.addEventListener('click', () => callModal.classList.remove('active'));
+        if (callModal) {
+            callModal.addEventListener('click', (e) => {
+                if (e.target === callModal) callModal.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
