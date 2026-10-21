@@ -700,3 +700,337 @@ body {
     color: #555555;
     line-height: 1.5;
 }
+/* ДВУХКОЛОНОЧНЫЙ БЛОК ДЛЯ СТРАНИЦЫ "О НАС" */
+.about-hero-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.about-hero-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-hero-image {
+    flex-shrink: 0;
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.about-logo-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Адаптируем под мобильные экраны */
+@media (max-width: 768px) {
+    .about-hero-grid {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: left;
+    }
+    .about-hero-image {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+}
+/* ==========================================
+   СТИЛИ ДЛЯ СТРАНИЦЫ ОПТОВЫМ ПОКУПАТЕЛЯМ
+   ========================================== */
+
+.wholesale-page {
+    padding-bottom: 60px;
+    background-color: #fbfcfd;
+}
+
+.section-center-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #111827;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    color: #4b5563;
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 35px auto;
+    line-height: 1.6;
+}
+
+/* 1. Картинка-баннер */
+.wholesale-hero-img-sec {
+    margin-bottom: 30px;
+}
+
+.hero-img-wrapper {
+    width: 100%;
+    max-height: 480px;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.wholesale-main-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 2. Полоса Партнерство с нами */
+.partnership-bar-section {
+    margin-bottom: 50px;
+}
+
+.partnership-bar {
+    background-color: #f3f4f6;
+    border-radius: 12px;
+    padding: 25px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.partnership-text h2 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 6px;
+}
+
+.partnership-text p {
+    font-size: 15px;
+    color: #4b5563;
+    max-width: 650px;
+}
+
+.partnership-badge {
+    background-color: #dcfce7;
+    color: #15803d;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+/* 3. Предложения (4 карточки) */
+.wholesale-offers-section {
+    margin-bottom: 60px;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.offer-card {
+    background-color: #ffffff;
+    border: 1px solid #f3f4f6;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: transform 0.2s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-4px);
+}
+
+.offer-icon-circle {
+    width: 65px;
+    height: 65px;
+    background-color: #1b8a4f;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    margin: 0 auto 20px auto;
+}
+
+.offer-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.offer-card p {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* 4. Миссия */
+.mission-section {
+    margin-bottom: 60px;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.mission-card {
+    background-color: #f0fdf4;
+    border-left: 4px solid #16a34a;
+    border-radius: 8px;
+    padding: 22px;
+}
+
+.mission-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.mission-card p {
+    font-size: 14px;
+    color: #374151;
+    line-height: 1.5;
+}
+
+/* 5. Преимущества */
+.advantages-section {
+    margin-bottom: 60px;
+}
+
+.advantages-grid {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.advantages-left {
+    flex: 1;
+}
+
+.advantages-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 25px;
+}
+
+.advantages-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.advantages-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: #374151;
+    line-height: 1.6;
+}
+
+.adv-quote {
+    color: #16a34a;
+    font-size: 18px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.advantages-right {
+    width: 450px;
+    flex-shrink: 0;
+}
+
+.advantages-img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* 6. Приглашение к сотрудничеству */
+.invite-section {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.invite-box {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 40px 20px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.invite-box h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.invite-box p {
+    font-size: 15px;
+    color: #4b5563;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.partner-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #16a34a;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.partner-cta-btn:hover {
+    background-color: #15803d;
+    transform: translateY(-2px);
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 900px) {
+    .partnership-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .advantages-grid {
+        flex-direction: column;
+    }
+    .advantages-right {
+        width: 100%;
+    }
+}
