@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOVARTIS — Строительные мембраны и товары для сельского хозяйства</title>
+    <title>ТД Novartis — Официальный сайт</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Верхняя зеленая полоса (Top Bar) -->
+    <!-- Верхняя зеленая полоса -->
     <div class="top-bar">
         <div class="container top-bar-container">
             <div class="top-bar-left">
-                <span data-i18n="topbar_text">ЛИДЕР НА РЫНКЕ КАЗАХСТАНА С 2013 ГОДА</span>
+                <span>ЛИДЕР НА РЫНКЕ КАЗАХСТАНА С 2013 ГОДА</span>
             </div>
             <div class="top-bar-right">
                 <div class="social-icons">
@@ -43,557 +43,201 @@
             <nav class="main-nav">
                 <ul class="nav-list">
                     <li class="nav-element has-dropdown">
-                        <a href="#catalog" class="nav-a toggle-catalog-btn">
-                            <span data-i18n="nav_products">Продукция</span>
+                        <a href="index.html#catalog" class="nav-a">
+                            <span>Продукция</span>
                             <i class="fa-solid fa-chevron-down arrow-icon"></i>
                         </a>
                         <div class="mega-box">
                             <div class="mega-grid-2col">
-                                <a href="#catalog" class="mega-card toggle-catalog-btn">
+                                <a href="membranes.html" class="mega-card">
                                     <i class="fa-solid fa-layer-group card-ic"></i>
-                                    <span data-i18n="p1_title">Строительные мембраны</span>
+                                    <span>Строительные мембраны</span>
                                 </a>
-                                <a href="#catalog" class="mega-card toggle-catalog-btn">
+                                <a href="agrotextile.html" class="mega-card">
                                     <i class="fa-solid fa-seedling card-ic"></i>
-                                    <span data-i18n="p2_title">Агроволокно и агроткань</span>
+                                    <span>Агроволокно и агроткань</span>
                                 </a>
-                                <a href="#catalog" class="mega-card toggle-catalog-btn">
+                                <a href="greenhouse-film.html" class="mega-card">
                                     <i class="fa-solid fa-warehouse card-ic"></i>
-                                    <span data-i18n="p3_title">Тепличная пленка</span>
+                                    <span>Тепличная пленка</span>
                                 </a>
-                                <a href="#catalog" class="mega-card toggle-catalog-btn">
+                                <a href="shade-net.html" class="mega-card">
                                     <i class="fa-solid fa-border-all card-ic"></i>
-                                    <span data-i18n="p4_title">Затеняющая сетка</span>
+                                    <span>Затеняющая сетка</span>
                                 </a>
-                                <a href="#catalog" class="mega-card toggle-catalog-btn">
+                                <a href="fencing-net.html" class="mega-card">
                                     <i class="fa-solid fa-shield-cat card-ic"></i>
-                                    <span data-i18n="p5_title">Ограждающие сетки</span>
+                                    <span>Ограждающие сетки</span>
                                 </a>
-                                <a href="#catalog" class="mega-card toggle-catalog-btn">
+                                <a href="poly-film.html" class="mega-card">
                                     <i class="fa-solid fa-box-archive card-ic"></i>
-                                    <span data-i18n="p6_title">Полиэтиленовая пленка</span>
+                                    <span>Полиэтиленовая пленка</span>
                                 </a>
                             </div>
                         </div>
                     </li>
 
                     <li class="nav-element">
-                        <a href="about.html" class="nav-a" data-i18n="nav_about">О нас</a>
+                        <a href="about.html" class="nav-a">О нас</a>
                     </li>
 
                     <li class="nav-element has-dropdown">
                         <a href="#" class="nav-a">
-                            <span data-i18n="nav_partners">Партнерам</span>
+                            <span>Партнерам</span>
                             <i class="fa-solid fa-chevron-down arrow-icon"></i>
                         </a>
                         <div class="dropdown-box">
-                            <a href="wholesale.html" class="dropdown-item" data-i18n="nav_wholesale">Оптовым покупателям</a>
+                            <a href="wholesale.html" class="dropdown-item">Оптовым покупателям</a>
                         </div>
                     </li>
 
                     <li class="nav-element">
-                        <a href="contacts.html" class="nav-a" data-i18n="nav_contacts">Контакты</a>
+                        <a href="contacts.html" class="nav-a">Контакты</a>
                     </li>
                 </ul>
             </nav>
 
             <div class="phone-block">
                 <a href="tel:+77053333606" class="phone-link">+7 (705) 333 36 06</a>
-                <button type="button" class="callback-btn" id="openCallModal" data-i18n="request_call">Заказать звонок</button>
+                <button type="button" class="callback-btn" id="openCallModal">Заказать звонок</button>
             </div>
         </div>
     </header>
 
-    <!-- Модальное окно "Заказать звонок" -->
+    <!-- Секция под шапкой с заголовком и кнопкой качества -->
+    <section class="hero-top-info">
+        <div class="container hero-top-flex">
+            <div class="hero-titles">
+                <h1>Качественный материал — залог успеха</h1>
+                <p>Продукция от ТОО "ТД Novartis" для сельского хозяйства и строительства.</p>
+            </div>
+            <div class="hero-quality-badge">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>100% качество</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Слайдер / Главный баннер -->
+    <section class="hero-slider-section">
+        <div class="container slider-container">
+            <div class="slider-wrapper">
+                <div class="slide active">
+                    <div class="slide-content-left">
+                        <div class="slide-logo-mini">
+                            <span class="mini-brand">NOVARTIS</span>
+                            <span class="mini-sub">ALMATY</span>
+                        </div>
+                        <h2>ВИДЫ МЕМБРАН ОТ NOVARTIS</h2>
+                        <ul class="slide-features">
+                            <li><i class="fa-solid fa-truck-fast"></i> Быстрая доставка</li>
+                            <li><i class="fa-solid fa-tag"></i> Доступные цены</li>
+                            <li><i class="fa-solid fa-certificate"></i> Гарантия качества</li>
+                            <li><i class="fa-solid fa-headset"></i> Клиентский сервис</li>
+                        </ul>
+                    </div>
+                    <div class="slide-image-right">
+                        <!-- Здесь слайдер отображает фон/картинку -->
+                    </div>
+                </div>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <button class="slider-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="slider-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Горизонтальная плашка с иконками в один ряд -->
+    <section class="features-bar-section">
+        <div class="container">
+            <div class="features-bar-row">
+                
+                <div class="feature-col">
+                    <div class="feat-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <div class="feat-text">
+                        <h4>БЫСТРАЯ ДОСТАВКА</h4>
+                        <p>Бережно доставляем товары по всему Казахстану</p>
+                    </div>
+                </div>
+
+                <div class="feature-col">
+                    <div class="feat-icon"><i class="fa-solid fa-comments"></i></div>
+                    <div class="feat-text">
+                        <h4>КЛИЕНТСКИЙ СЕРВИС</h4>
+                        <p>Отвечаем на вопросы покупателей в течение 10 минут</p>
+                    </div>
+                </div>
+
+                <div class="feature-col">
+                    <div class="feat-icon"><i class="fa-solid fa-certificate"></i></div>
+                    <div class="feat-text">
+                        <h4>ГАРАНТИЯ КАЧЕСТВА</h4>
+                        <p>Соответствуем требованиям и стандартам качества</p>
+                    </div>
+                </div>
+
+                <div class="feature-col">
+                    <div class="feat-icon"><i class="fa-solid fa-tags"></i></div>
+                    <div class="feat-text">
+                        <h4>ДОСТУПНЫЕ ЦЕНЫ</h4>
+                        <p>Работаем напрямую с ведущими производителями</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал сайта -->
+    <footer class="footer" style="margin-top: 60px;">
+        <div class="container footer-content" style="display: flex; flex-direction: column; gap: 15px; text-align: center;">
+            <div class="footer-info">
+                <h3 style="margin-bottom: 5px;">NOVARTIS ALMATY</h3>
+                <p style="color: #a8e6cf; font-weight: 600;">Мы на рынке с 2013 года</p>
+                <p style="font-style: italic; margin-top: 3px;">Качественный материал — залог успеха.</p>
+            </div>
+            <div class="footer-location" style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 12px;">
+                <p>Работаем по Казахстану, Киргизии и Узбекистану.</p>
+                <p style="margin-top: 6px; font-weight: 600; color: #ffffff;">ТОО "Торговый Дом Novartis"</p>
+                <p style="color: #d1d5db; font-size: 13px;">г. Алматы, Торетай 28г</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модалка заказа звонка -->
     <div class="modal-backdrop" id="callModal">
         <div class="modal-card">
             <button type="button" class="modal-close" id="closeCallModal">&times;</button>
-            <h3 data-i18n="modal_title">Связаться с нами</h3>
-            <p data-i18n="modal_subtitle">Выберите удобный способ связи с отделом продаж NOVARTIS:</p>
+            <h3>Связаться с нами</h3>
+            <p>Выберите удобный способ связи с отделом продаж NOVARTIS:</p>
             <div class="modal-actions">
                 <a href="tel:+77053333606" class="modal-btn btn-phone">
-                    <i class="fa-solid fa-phone"></i> <span data-i18n="modal_call">Позвонить на номер</span>
+                    <i class="fa-solid fa-phone"></i> <span>Позвонить на номер</span>
                 </a>
                 <a href="https://wa.me/77053333606" target="_blank" class="modal-btn btn-wa">
-                    <i class="fa-brands fa-whatsapp"></i> <span data-i18n="modal_wa">Написать на WhatsApp</span>
+                    <i class="fa-brands fa-whatsapp"></i> <span>Написать на WhatsApp</span>
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- БЕЛАЯ ПЛАШКА СВЕРХУ -->
-    <section class="top-curtain-block">
-        <div class="container curtain-inner">
-            <div class="curtain-text-side">
-                <h1 class="curtain-heading" data-i18n="curtain_title">Качественный материал — залог успеха</h1>
-                <p class="curtain-subtext" data-i18n="curtain_text">Продукция от ТОО "ТД Novartis" для сельского хозяйства и строительства.</p>
-            </div>
-            <div class="curtain-quality-badge">
-                <i class="fa-solid fa-circle-check badge-icon"></i>
-                <span data-i18n="badge_text">100% качество</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- ФОТОГРАФИИ (УВЕЛИЧЕННЫЙ СЛАЙДЕР) -->
-    <section class="hero-slider">
-        <div class="slides-container">
-            
-            <div class="slide active">
-                <div class="slide-banner">
-                    <div class="banner-overlay">
-                        <div class="banner-brand">
-                            <i class="fa-solid fa-cubes logo-icon"></i>
-                            <div>
-                                <span class="brand-name">NOVARTIS</span>
-                                <span class="brand-sub">ALMATY</span>
-                            </div>
-                        </div>
-                        <h2 class="banner-title" data-i18n="slide1_title">ТОВАРЫ ДЛЯ ТЕПЛИЦ<br><span>И СЕЛЬХОЗУГОДИЙ</span></h2>
-                        <ul class="banner-features">
-                            <li><i class="fa-solid fa-truck-fast"></i> <span data-i18n="feat_delivery">Быстрая доставка</span></li>
-                            <li><i class="fa-solid fa-tag"></i> <span data-i18n="feat_prices">Доступные цены</span></li>
-                            <li><i class="fa-solid fa-shield-halved"></i> <span data-i18n="feat_quality">Гарантия качества</span></li>
-                            <li><i class="fa-solid fa-headset"></i> <span data-i18n="feat_service">Клиентский сервис</span></li>
-                        </ul>
-                    </div>
-                    <div class="banner-image" style="background-image: url('banner-greenhouse.jpg');"></div>
-                </div>
-            </div>
-
-            <div class="slide">
-                <div class="slide-banner">
-                    <div class="banner-overlay">
-                        <div class="banner-brand">
-                            <i class="fa-solid fa-cubes logo-icon"></i>
-                            <div>
-                                <span class="brand-name">NOVARTIS</span>
-                                <span class="brand-sub">ALMATY</span>
-                            </div>
-                        </div>
-                        <h2 class="banner-title" data-i18n="slide2_title">ВИДЫ МЕМБРАН<br><span>ОТ NOVARTIS</span></h2>
-                        <ul class="banner-features">
-                            <li><i class="fa-solid fa-truck-fast"></i> <span data-i18n="feat_delivery">Быстрая доставка</span></li>
-                            <li><i class="fa-solid fa-tag"></i> <span data-i18n="feat_prices">Доступные цены</span></li>
-                            <li><i class="fa-solid fa-shield-halved"></i> <span data-i18n="feat_quality">Гарантия качества</span></li>
-                            <li><i class="fa-solid fa-headset"></i> <span data-i18n="feat_service">Клиентский сервис</span></li>
-                        </ul>
-                    </div>
-                    <div class="banner-image" style="background-image: url('banner-roof.jpg');"></div>
-                </div>
-            </div>
-
-            <div class="slide">
-                <div class="slide-banner">
-                    <div class="banner-overlay">
-                        <div class="banner-brand">
-                            <i class="fa-solid fa-cubes logo-icon"></i>
-                            <div>
-                                <span class="brand-name">NOVARTIS</span>
-                                <span class="brand-sub">ALMATY</span>
-                            </div>
-                        </div>
-                        <h2 class="banner-title" data-i18n="slide3_title">ТЕПЛИЧНЫЕ ПЛЕНКИ<br><span>И АГРОВОЛОКНО</span></h2>
-                        <ul class="banner-features">
-                            <li><i class="fa-solid fa-truck-fast"></i> <span data-i18n="feat_delivery">Быстрая доставка</span></li>
-                            <li><i class="fa-solid fa-tag"></i> <span data-i18n="feat_prices">Доступные цены</span></li>
-                            <li><i class="fa-solid fa-shield-halved"></i> <span data-i18n="feat_quality">Гарантия качества</span></li>
-                            <li><i class="fa-solid fa-headset"></i> <span data-i18n="feat_service">Клиентский сервис</span></li>
-                        </ul>
-                    </div>
-                    <div class="banner-image" style="background-image: url('banner-greenhouse-inside.jpg');"></div>
-                </div>
-            </div>
-
-            <div class="slide">
-                <div class="slide-banner">
-                    <div class="banner-overlay">
-                        <div class="banner-brand">
-                            <i class="fa-solid fa-cubes logo-icon"></i>
-                            <div>
-                                <span class="brand-name">NOVARTIS</span>
-                                <span class="brand-sub">ALMATY</span>
-                            </div>
-                        </div>
-                        <h2 class="banner-title" data-i18n="slide4_title">ПОЛИЭТИЛЕНОВЫЕ<br><span>ПЛЕНКИ</span></h2>
-                        <ul class="banner-features">
-                            <li><i class="fa-solid fa-truck-fast"></i> <span data-i18n="feat_delivery">Быстрая доставка</span></li>
-                            <li><i class="fa-solid fa-tag"></i> <span data-i18n="feat_prices">Доступные цены</span></li>
-                            <li><i class="fa-solid fa-shield-halved"></i> <span data-i18n="feat_quality">Гарантия качества</span></li>
-                            <li><i class="fa-solid fa-headset"></i> <span data-i18n="feat_service">Клиентский сервис</span></li>
-                        </ul>
-                    </div>
-                    <div class="banner-image" style="background-image: url('pe-film.jpg');"></div>
-                </div>
-            </div>
-
-        </div>
-
-        <button type="button" class="slider-btn prev-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
-        <button type="button" class="slider-btn next-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
-
-        <div class="slider-dots" id="sliderDots">
-            <span class="dot active" data-slide="0"></span>
-            <span class="dot" data-slide="1"></span>
-            <span class="dot" data-slide="2"></span>
-            <span class="dot" data-slide="3"></span>
-        </div>
-    </section>
-
-    <!-- БЛОК ПРЕИМУЩЕСТВ В ЛИНИЮ НА БЕЛОМ ФОНЕ -->
-    <section class="features-bar-section">
-        <div class="container">
-            <div class="features-grid">
-                
-                <div class="feature-item">
-                    <i class="fa-solid fa-truck-fast feature-icon"></i>
-                    <div class="feature-content">
-                        <h3 class="feature-title" data-i18n="f1_title">БЫСТРАЯ ДОСТАВКА</h3>
-                        <p class="feature-desc" data-i18n="f1_desc">Бережно доставляем товары по всему Казахстану</p>
-                    </div>
-                </div>
-
-                <div class="feature-item">
-                    <i class="fa-solid fa-comments feature-icon"></i>
-                    <div class="feature-content">
-                        <h3 class="feature-title" data-i18n="f2_title">КЛИЕНТСКИЙ СЕРВИС</h3>
-                        <p class="feature-desc" data-i18n="f2_desc">Отвечаем на вопросы покупателей в течение 10 минут</p>
-                    </div>
-                </div>
-
-                <div class="feature-item">
-                    <i class="fa-solid fa-certificate feature-icon"></i>
-                    <div class="feature-content">
-                        <h3 class="feature-title" data-i18n="f3_title">ГАРАНТИЯ КАЧЕСТВА</h3>
-                        <p class="feature-desc" data-i18n="f3_desc">Соответствуем требованиям и стандартам качества</p>
-                    </div>
-                </div>
-
-                <div class="feature-item">
-                    <i class="fa-solid fa-tag feature-icon"></i>
-                    <div class="feature-content">
-                        <h3 class="feature-title" data-i18n="f4_title">ДОСТУПНЫЕ ЦЕНЫ</h3>
-                        <p class="feature-desc" data-i18n="f4_desc">Работаем напрямую с ведущими производителями</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Каталог товаров -->
-    <main class="catalog container catalog-hidden" id="catalog">
-        <div class="section-title">
-            <h2 data-i18n="cat_title">Категории товаров</h2>
-            <p data-i18n="cat_subtitle">Выберите нужный раздел для просмотра подробных характеристик</p>
-        </div>
-
-        <div class="products-grid">
-            <div class="product-card">
-                <div class="card-image" style="background-image: url('membrana.jpg');"></div>
-                <div class="card-content">
-                    <h3 data-i18n="p1_title">Строительные мембраны</h3>
-                    <p class="subtitle-text" style="font-weight: 600; color: #1b4d3e; margin-bottom: 10px; font-size: 15px;" data-i18n="p1_sub">Для чего нужна строительная мембрана?</p>
-                    <p class="desc" data-i18n="p1_d1">Строительная мембрана — это специализированный материал, применяемый в строительстве для защиты конструкций от внешних воздействий: влаги, холода, ультрафиолетового излучения и механических повреждений.</p>
-                    <p class="desc" data-i18n="p1_d2">Кроме того, мембраны выполняют функцию пароизоляции — они ограничивают проникновение водяных паров внутрь конструкций, предотвращая образования конденсата, который может привести к повреждению материалов и развитию плесени.</p>
-                    <p class="desc" style="margin-bottom: 10px;" data-i18n="p1_d3">Строительные мембраны идеально подходят для кровли, фасадов и утепления.</p>
-                    <p class="desc" style="font-weight: 600; margin-bottom: 5px;" data-i18n="p1_types">Существуют 3 вида мембран:</p>
-                    <ul class="specs" style="margin-bottom: 15px;">
-                        <li data-i18n="p1_t1">1. Ветрозащитные</li>
-                        <li data-i18n="p1_t2">2. Пароизоляционные</li>
-                        <li data-i18n="p1_t3">3. Отражающие</li>
-                    </ul>
-                    <a href="https://wa.me/77053333606" target="_blank" class="card-btn" data-i18n="more_info">Еще больше информации</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="card-image" style="background-image: url('agro.jpg');"></div>
-                <div class="card-content">
-                    <h3 data-i18n="p2_title">Агроволокно и агроткань</h3>
-                    <p class="desc" data-i18n="p2_d1">Агроволокно и спанбонд NOVARTIS — современное экологичное решение для защиты растений, повышение урожайности и облегчение ухода за участком.</p>
-                    <p class="desc" data-i18n="p2_d2">Материал создает идеальный микроклимат для роста культур, активно защищая их от заморозков, перегрева, палящего солнца, порывов ветра и садовых вредителей.</p>
-                    <p class="desc" style="margin-bottom: 15px;" data-i18n="p2_d3">Черное мульчирующее агроволокно избавляет от тяжелой ручной прополки, полностью блокируя рост сорняков.</p>
-                    <a href="https://wa.me/77053333606" target="_blank" class="card-btn" data-i18n="more_info">Еще больше информации</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="card-image" style="background-image: url('film.jpg');"></div>
-                <div class="card-content">
-                    <h3 data-i18n="p3_title">Тепличная пленка</h3>
-                    <p class="desc" data-i18n="p3_d1">Тепличная пленка «Южанка» от Novartis — это современное и надежное решение для сельскохозяйственных нужд, разработанное с учетом климатических условий.</p>
-                    <p class="desc" data-i18n="p3_d2">Материал отличается высокой прочностью, долговечностью и устойчивостью к разрывам, а специальная ультрафиолетовая добавка защищает растения от палящего солнца.</p>
-                    <p class="desc" style="font-weight: 600; margin-bottom: 5px;" data-i18n="p3_seasons">Применение пленки актуально в любой сезон:</p>
-                    <ul class="specs" style="margin-bottom: 15px;">
-                        <li data-i18n="p3_s1">• Весной и осенью — защищает от внезапных заморозков и перепадов температур.</li>
-                        <li data-i18n="p3_s2">• Зимой — удерживает тепло и поддерживает стабильный микроклимат.</li>
-                        <li data-i18n="p3_s3">• Летом — оберегает от сильных ветров, дождей и избыточного ультрафиолета.</li>
-                    </ul>
-                    <a href="https://wa.me/77053333606" target="_blank" class="card-btn" data-i18n="more_info">Еще больше информации</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="card-image" style="background-image: url('grid.jpg');"></div>
-                <div class="card-content">
-                    <h3 data-i18n="p4_title">Затеняющая сетка</h3>
-                    <p class="desc" data-i18n="p4_d1">Затеняющие сетки — это современный полимерный материал, создающий надежную тень и защищающий от избыточного ультрафиолета.</p>
-                    <p class="desc" data-i18n="p4_d2">Сетки активно применяются в сельском хозяйстве для защиты теплиц и растений от ожогов и перегрева.</p>
-                    <p class="desc" style="margin-bottom: 15px;" data-i18n="p4_d3">Главные преимущества — простота монтажа, устойчивость к погодным условиям, экологичность и выбор плотности.</p>
-                    <a href="https://wa.me/77053333606" target="_blank" class="card-btn" data-i18n="more_info">Еще больше информации</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="card-image" style="background-image: url('fence.jpg');"></div>
-                <div class="card-content">
-                    <h3 data-i18n="p5_title">Ограждающие сетки</h3>
-                    <p class="desc" data-i18n="p5_d1">Пластиковые ограждающие сетки — это эстетичное, легкое и надежное решение для защиты растений и зонирования.</p>
-                    <p class="desc" style="font-weight: 600; margin-bottom: 5px;" data-i18n="p5_usage">Благодаря своей прочности сетки находят широкое применение:</p>
-                    <ul class="specs" style="margin-bottom: 15px;">
-                        <li data-i18n="p5_u1">• Сад и сельское хозяйство: ограждение огородов, теплиц и пастбищ;</li>
-                        <li data-i18n="p5_u2">• Строительство и благоустройство: защита рабочих зон;</li>
-                        <li data-i18n="p5_u3">• Спорт и отдых: зонирование площадок;</li>
-                        <li data-i18n="p5_u4">• Промышленность и безопасность: разделение зон.</li>
-                    </ul>
-                    <a href="https://wa.me/77053333606" target="_blank" class="card-btn" data-i18n="more_info">Еще больше информации</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="card-image" style="background-image: url('pe-film.jpg');"></div>
-                <div class="card-content">
-                    <h3 data-i18n="p6_title">Полиэтиленовая пленка</h3>
-                    <p class="desc" data-i18n="p6_d1">Пленки бывают различных типов в зависимости от их назначения, материала и способа применения.</p>
-                    <p class="desc" data-i18n="p6_d2"><strong>Полипропиленовая пленка (PP)</strong> отличается высокой устойчивостью к влаге, используется для упаковки.</p>
-                    <p class="desc" data-i18n="p6_d3"><strong>Полиэтиленовая пленка (PE)</strong> — легкий и прочный материал для упаковки и теплиц.</p>
-                    <p class="desc" style="margin-bottom: 15px;" data-i18n="p6_d4"><strong>ПВХ пленка (PVC)</strong> — прочная и прозрачная, используется в строительстве.</p>
-                    <a href="https://wa.me/77053333606" target="_blank" class="card-btn" data-i18n="more_info">Еще больше информации</a>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- Подвал сайта -->
-    <footer class="footer">
-        <div class="container footer-content" style="display: flex; flex-direction: column; gap: 15px; text-align: center;">
-            <div class="footer-info">
-                <h3 style="margin-bottom: 5px;">NOVARTIS ALMATY</h3>
-                <p style="color: #a8e6cf; font-weight: 600;" data-i18n="footer_since">Мы на рынке с 2013 года</p>
-                <p style="font-style: italic; margin-top: 3px;" data-i18n="footer_motto">Качественный материал — залог успеха.</p>
-            </div>
-            <div class="footer-location" style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 12px;">
-                <p data-i18n="footer_regions">Работаем по Казахстану, Киргизии и Узбекистану.</p>
-                <p style="margin-top: 6px; font-weight: 600; color: #ffffff;">ТОО "Торговый Дом Novartis"</p>
-                <p style="color: #d1d5db; font-size: 13px;" data-i18n="footer_address">г. Алматы, Торетай 28г</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Скрипт -->
     <script>
-        const translations = {
-            ru: {
-                topbar_text: "ЛИДЕР НА РЫНКЕ КАЗАХСТАНА С 2013 ГОДА",
-                nav_products: "Продукция",
-                nav_about: "О нас",
-                nav_partners: "Партнерам",
-                nav_wholesale: "Оптовым покупателям",
-                nav_contacts: "Контакты",
-                request_call: "Заказать звонок",
-                modal_title: "Связаться с нами",
-                modal_subtitle: "Выберите удобный способ связи с отделом продаж NOVARTIS:",
-                modal_call: "Позвонить на номер",
-                modal_wa: "Написать на WhatsApp",
-                slide1_title: "ТОВАРЫ ДЛЯ ТЕПЛИЦ<br><span>И СЕЛЬХОЗУГОДИЙ</span>",
-                slide2_title: "ВИДЫ МЕМБРАН<br><span>ОТ NOVARTIS</span>",
-                slide3_title: "ТЕПЛИЧНЫЕ ПЛЕНКИ<br><span>И АГРОВОЛОКНО</span>",
-                slide4_title: "ПОЛИЭТИЛЕНОВЫЕ<br><span>ПЛЕНКИ</span>",
-                feat_delivery: "Быстрая доставка",
-                feat_prices: "Доступные цены",
-                feat_quality: "Гарантия качества",
-                feat_service: "Клиентский сервис",
-                curtain_title: "Качественный материал — залог успеха",
-                curtain_text: "Продукция от ТОО \"ТД Novartis\" для сельского хозяйства и строительства.",
-                badge_text: "100% качество",
-                f1_title: "БЫСТРАЯ ДОСТАВКА",
-                f1_desc: "Бережно доставляем товары по всему Казахстану",
-                f2_title: "КЛИЕНТСКИЙ СЕРВИС",
-                f2_desc: "Отвечаем на вопросы покупателей в течение 10 минут",
-                f3_title: "ГАРАНТИЯ КАЧЕСТВА",
-                f3_desc: "Соответствуем требованиям и стандартам качества",
-                f4_title: "ДОСТУПНЫЕ ЦЕНЫ",
-                f4_desc: "Работаем напрямую с ведущими производителями",
-                cat_title: "Категории товаров",
-                cat_subtitle: "Выберите нужный раздел для просмотра подробных характеристик",
-                more_info: "Еще больше информации",
-                p1_title: "Строительные мембраны",
-                p2_title: "Агроволокно и агроткань",
-                p3_title: "Тепличная пленка",
-                p4_title: "Затеняющая сетка",
-                p5_title: "Ограждающие сетки",
-                p6_title: "Полиэтиленовая пленка",
-                footer_since: "Мы на рынке с 2013 года",
-                footer_motto: "Качественный материал — залог успеха.",
-                footer_regions: "Работаем по Казахстану, Киргизии и Узбекистану.",
-                footer_address: "г. Алматы, Торетай 28г"
-            },
-            kk: {
-                topbar_text: "2013 ЖЫЛДАН БАСТАП ҚАЗАҚСТАН НАРЫҒЫНДАҒЫ КӨШБАСШЫ",
-                nav_products: "Өнімдер",
-                nav_about: "Біз туралы",
-                nav_partners: "Серіктестерге",
-                nav_wholesale: "Көтерме сатып алушыларға",
-                nav_contacts: "Байланыстар",
-                request_call: "Қоңырауға тапсырыс беру",
-                modal_title: "Бізбен байланысу",
-                modal_subtitle: "NOVARTIS сату бөлімімен байланысу әдісін таңдаңыз:",
-                modal_call: "Нөмірге қоңырау шалу",
-                modal_wa: "WhatsApp-қа жазу",
-                slide1_title: "ЖЫЛЫЖАЙЛАР МЕН АУЫЛ<br><span>ШАРУАШЫЛЫҒЫ ТАУАРЛАРЫ</span>",
-                slide2_title: "NOVARTIS МЕМБРАНА<br><span>ТҮРЛЕРІ</span>",
-                slide3_title: "ЖЫЛЫЖАЙ ПЛЕНКАЛАРЫ<br><span>МЕН АГРОФИБРА</span>",
-                slide4_title: "ПОЛИЭТИЛЕНДІК<br><span>ПЛЕНКАЛАР</span>",
-                feat_delivery: "Жылдам жеткізу",
-                feat_prices: "Қолжетімді бағалар",
-                feat_quality: "Сапа кепілдігі",
-                feat_service: "Клиенттерге қызмет",
-                curtain_title: "Сапалы материал — табыс кепілі",
-                curtain_text: "Ауыл шаруашылығы мен құрылысқа арналған ТОО \"ТД Novartis\" өнімдері.",
-                badge_text: "100% сапа",
-                f1_title: "ЖЫЛДАМ ЖЕТКІЗУ",
-                f1_desc: "Тауарларды бүкіл Қазақстан бойынша ұқыпты жеткіземіз",
-                f2_title: "КЛИЕНТТЕРГЕ ҚЫЗМЕТ",
-                f2_desc: "Сатып алушылардың сұрақтарына 10 минут ішінде жауап береміз",
-                f3_title: "САПА КЕПІЛДІГІ",
-                f3_desc: "Сапа талаптары мен стандарттарына сәйкес келеміз",
-                f4_title: "ҚОЛЖЕТІМДІ БАҒАЛАР",
-                f4_desc: "Жетекші өндірушілермен тікелей жұмыс істейміз",
-                cat_title: "Тауар санаттары",
-                cat_subtitle: "Толық сипаттамаларды қарау үшін керекті бөлімді таңдаңыз",
-                more_info: "Толығырақ ақпарат",
-                p1_title: "Құрылыс мембраналары",
-                p2_title: "Агроволокно және агромата",
-                p3_title: "Жылыжай пленкасы",
-                p4_title: "Көлеңкелейтін тор",
-                p5_title: "Қоршау торлары",
-                p6_title: "Полиэтилендік пленка",
-                footer_since: "Нарықта 2013 жылдан бастап",
-                footer_motto: "Сапалы материал — табыс кепілі.",
-                footer_regions: "Қазақстан, Қырғызстан және Өзбекстан бойынша жұмыс жасаймыз.",
-                footer_address: "Алматы қ., Төретай 28г"
-            },
-            en: {
-                topbar_text: "LEADER IN THE MARKET OF KAZAKHSTAN SINCE 2013",
-                nav_products: "Products",
-                nav_about: "About Us",
-                nav_partners: "Partners",
-                nav_wholesale: "Wholesale Buyers",
-                nav_contacts: "Contacts",
-                request_call: "Request a call",
-                modal_title: "Contact Us",
-                modal_subtitle: "Choose a convenient way to contact NOVARTIS sales team:",
-                modal_call: "Call by phone",
-                modal_wa: "Write in WhatsApp",
-                slide1_title: "GREENHOUSE &<br><span>AGRICULTURAL GOODS</span>",
-                slide2_title: "TYPES OF MEMBRANES<br><span>BY NOVARTIS</span>",
-                slide3_title: "GREENHOUSE FILMS<br><span>& AGROFABRIC</span>",
-                slide4_title: "POLYETHYLENE<br><span>FILMS</span>",
-                feat_delivery: "Fast Delivery",
-                feat_prices: "Affordable Prices",
-                feat_quality: "Quality Guarantee",
-                feat_service: "Client Service",
-                curtain_title: "Quality material is the key to success",
-                curtain_text: "Products from Novartis Trading House for agriculture and construction.",
-                badge_text: "100% Quality",
-                f1_title: "FAST DELIVERY",
-                f1_desc: "We carefully deliver products throughout Kazakhstan",
-                f2_title: "CLIENT SERVICE",
-                f2_desc: "We answer customer questions within 10 minutes",
-                f3_title: "QUALITY GUARANTEE",
-                f3_desc: "We comply with quality requirements and standards",
-                f4_title: "AFFORDABLE PRICES",
-                f4_desc: "We work directly with leading manufacturers",
-                cat_title: "Product Categories",
-                cat_subtitle: "Select a section to view detailed specifications",
-                more_info: "More Details",
-                p1_title: "Building Membranes",
-                p2_title: "Agrofabric & Spunbond",
-                p3_title: "Greenhouse Film",
-                p4_title: "Shading Net",
-                p5_title: "Fencing Nets",
-                p6_title: "Polyethylene Film",
-                footer_since: "On the market since 2013",
-                footer_motto: "Quality material is the key to success.",
-                footer_regions: "Operating in Kazakhstan, Kyrgyzstan, and Uzbekistan.",
-                footer_address: "Almaty, Toretai 28g"
-            }
-        };
-
-        const langSelect = document.getElementById('langSelect');
-        function changeLanguage(lang) {
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                if (translations[lang] && translations[lang][key]) {
-                    element.innerHTML = translations[lang][key];
-                }
-            });
-        }
-        langSelect.addEventListener('change', (e) => changeLanguage(e.target.value));
-
-        // Модалка
         const callModal = document.getElementById('callModal');
         const openCallModalBtn = document.getElementById('openCallModal');
         const closeCallModalBtn = document.getElementById('closeCallModal');
 
-        openCallModalBtn.addEventListener('click', () => callModal.classList.add('active'));
-        closeCallModalBtn.addEventListener('click', () => callModal.classList.remove('active'));
-        callModal.addEventListener('click', (e) => {
-            if (e.target === callModal) callModal.classList.remove('active');
-        });
-
-        // Слайдер
-        const slides = document.querySelectorAll('.slide');
-        const dots = document.querySelectorAll('.dot');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        let currentSlide = 0;
-        let slideInterval;
-
-        function showSlide(index) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-            currentSlide = (index + slides.length) % slides.length;
-            slides[currentSlide].classList.add('active');
-            dots[currentSlide].classList.add('active');
+        if (openCallModalBtn) openCallModalBtn.addEventListener('click', () => callModal.classList.add('active'));
+        if (closeCallModalBtn) closeCallModalBtn.addEventListener('click', () => callModal.classList.remove('active'));
+        if (callModal) {
+            callModal.addEventListener('click', (e) => {
+                if (e.target === callModal) callModal.classList.remove('active');
+            });
         }
-
-        function nextSlide() { showSlide(currentSlide + 1); }
-        function prevSlide() { showSlide(currentSlide - 1); }
-        function startAutoSlide() { slideInterval = setInterval(nextSlide, 4500); }
-        function stopAutoSlide() { clearInterval(slideInterval); }
-
-        nextBtn.addEventListener('click', () => { nextSlide(); stopAutoSlide(); startAutoSlide(); });
-        prevBtn.addEventListener('click', () => { prevSlide(); stopAutoSlide(); startAutoSlide(); });
-        dots.forEach(dot => {
-            dot.addEventListener('click', (e) => {
-                showSlide(parseInt(e.target.dataset.slide));
-                stopAutoSlide(); startAutoSlide();
-            });
-        });
-        startAutoSlide();
-
-        // Открытие каталога
-        const catalog = document.getElementById('catalog');
-        const catalogBtns = document.querySelectorAll('.toggle-catalog-btn');
-        catalogBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                catalog.classList.remove('catalog-hidden');
-                catalog.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
     </script>
 </body>
 </html>
