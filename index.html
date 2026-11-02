@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ТД Novartis — Официальный сайт</title>
+    <title>NOVARTIS — Главная страница</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Верхняя зеленая полоса -->
+    <!-- Верхняя полоса -->
     <div class="top-bar">
         <div class="container top-bar-container">
             <div class="top-bar-left">
@@ -33,7 +33,7 @@
         </div>
     </div>
 
-    <!-- Основная шапка сайта -->
+    <!-- Шапка сайта -->
     <header class="site-header">
         <div class="container header-flex">
             <a href="index.html" class="logo-link">
@@ -43,7 +43,7 @@
             <nav class="main-nav">
                 <ul class="nav-list">
                     <li class="nav-element has-dropdown">
-                        <a href="index.html#catalog" class="nav-a">
+                        <a href="#catalog" class="nav-a">
                             <span>Продукция</span>
                             <i class="fa-solid fa-chevron-down arrow-icon"></i>
                         </a>
@@ -104,7 +104,7 @@
         </div>
     </header>
 
-    <!-- Секция под шапкой с заголовком и кнопкой качества -->
+    <!-- Секция приветствия -->
     <section class="hero-top-info">
         <div class="container hero-top-flex">
             <div class="hero-titles">
@@ -118,72 +118,66 @@
         </div>
     </section>
 
-    <!-- Слайдер / Главный баннер -->
+    <!-- Главный баннер / Слайдер -->
     <section class="hero-slider-section">
         <div class="container slider-container">
             <div class="slider-wrapper">
-                <div class="slide active">
-                    <div class="slide-content-left">
-                        <div class="slide-logo-mini">
-                            <span class="mini-brand">NOVARTIS</span>
-                            <span class="mini-sub">ALMATY</span>
-                        </div>
+                <div class="slide-card">
+                    <div class="slide-left-text">
+                        <div class="slide-brand">NOVARTIS ALMATY</div>
                         <h2>ВИДЫ МЕМБРАН ОТ NOVARTIS</h2>
-                        <ul class="slide-features">
+                        <ul class="slide-bullets">
                             <li><i class="fa-solid fa-truck-fast"></i> Быстрая доставка</li>
-                            <li><i class="fa-solid fa-tag"></i> Доступные цены</li>
-                            <li><i class="fa-solid fa-certificate"></i> Гарантия качества</li>
+                            <li><i class="fa-solid fa-tags"></i> Доступные цены</li>
+                            <li><i class="fa-solid fa-shield-halved"></i> Гарантия качества</li>
                             <li><i class="fa-solid fa-headset"></i> Клиентский сервис</li>
                         </ul>
                     </div>
-                    <div class="slide-image-right">
-                        <!-- Здесь слайдер отображает фон/картинку -->
-                    </div>
                 </div>
             </div>
+            <button class="slider-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="slider-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
             <div class="slider-dots">
                 <span class="dot active"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
             </div>
-            <button class="slider-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="slider-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
     </section>
 
-    <!-- Горизонтальная плашка с иконками в один ряд -->
+    <!-- Полоса с преимуществами -->
     <section class="features-bar-section">
         <div class="container">
-            <div class="features-bar-row">
+            <div class="features-grid">
                 
-                <div class="feature-col">
+                <div class="feature-card">
                     <div class="feat-icon"><i class="fa-solid fa-truck-fast"></i></div>
-                    <div class="feat-text">
+                    <div class="feat-info">
                         <h4>БЫСТРАЯ ДОСТАВКА</h4>
                         <p>Бережно доставляем товары по всему Казахстану</p>
                     </div>
                 </div>
 
-                <div class="feature-col">
+                <div class="feature-card">
                     <div class="feat-icon"><i class="fa-solid fa-comments"></i></div>
-                    <div class="feat-text">
+                    <div class="feat-info">
                         <h4>КЛИЕНТСКИЙ СЕРВИС</h4>
                         <p>Отвечаем на вопросы покупателей в течение 10 минут</p>
                     </div>
                 </div>
 
-                <div class="feature-col">
-                    <div class="feat-icon"><i class="fa-solid fa-certificate"></i></div>
-                    <div class="feat-text">
+                <div class="feature-card">
+                    <div class="feat-icon"><i class="fa-solid fa-award"></i></div>
+                    <div class="feat-info">
                         <h4>ГАРАНТИЯ КАЧЕСТВА</h4>
                         <p>Соответствуем требованиям и стандартам качества</p>
                     </div>
                 </div>
 
-                <div class="feature-col">
+                <div class="feature-card">
                     <div class="feat-icon"><i class="fa-solid fa-tags"></i></div>
-                    <div class="feat-text">
+                    <div class="feat-info">
                         <h4>ДОСТУПНЫЕ ЦЕНЫ</h4>
                         <p>Работаем напрямую с ведущими производителями</p>
                     </div>
@@ -194,22 +188,22 @@
     </section>
 
     <!-- Подвал сайта -->
-    <footer class="footer" style="margin-top: 60px;">
-        <div class="container footer-content" style="display: flex; flex-direction: column; gap: 15px; text-align: center;">
+    <footer class="footer">
+        <div class="container footer-content">
             <div class="footer-info">
-                <h3 style="margin-bottom: 5px;">NOVARTIS ALMATY</h3>
-                <p style="color: #a8e6cf; font-weight: 600;">Мы на рынке с 2013 года</p>
-                <p style="font-style: italic; margin-top: 3px;">Качественный материал — залог успеха.</p>
+                <h3>NOVARTIS ALMATY</h3>
+                <p class="footer-sub">Мы на рынке с 2013 года</p>
+                <p class="footer-motto">Качественный материал — залог успеха.</p>
             </div>
-            <div class="footer-location" style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 12px;">
+            <div class="footer-location">
                 <p>Работаем по Казахстану, Киргизии и Узбекистану.</p>
-                <p style="margin-top: 6px; font-weight: 600; color: #ffffff;">ТОО "Торговый Дом Novartis"</p>
-                <p style="color: #d1d5db; font-size: 13px;">г. Алматы, Торетай 28г</p>
+                <p class="footer-company">ТОО "Торговый Дом Novartis"</p>
+                <p class="footer-address">г. Алматы, Торетай 28г</p>
             </div>
         </div>
     </footer>
 
-    <!-- Модалка заказа звонка -->
+    <!-- Модалка -->
     <div class="modal-backdrop" id="callModal">
         <div class="modal-card">
             <button type="button" class="modal-close" id="closeCallModal">&times;</button>
