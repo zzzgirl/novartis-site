@@ -19,31 +19,40 @@
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             min-height: 420px;
+            background-color: #0b192c;
         }
         .slide {
             display: none;
             width: 100%;
             height: 420px;
-            background-size: cover !important;
-            background-position: center !important;
-            background-repeat: no-repeat !important;
             position: relative;
         }
         .slide.active {
             display: block;
         }
+        .slide-bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: 1;
+        }
         .slide-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(90deg, rgba(11, 25, 44, 0.88) 0%, rgba(11, 25, 44, 0.25) 100%);
+            background: linear-gradient(90deg, rgba(11, 25, 44, 0.9) 0%, rgba(11, 25, 44, 0.3) 100%);
             display: flex;
             align-items: center;
             padding: 50px;
+            z-index: 2;
         }
         .slide-content {
             color: #ffffff;
             max-width: 600px;
-            z-index: 2;
+            z-index: 3;
         }
         .slide-brand {
             font-size: 14px;
@@ -224,12 +233,13 @@
         </div>
     </section>
 
-    <!-- ИНТЕРАКТИВНЫЙ СЛАЙДЕР -->
+    <!-- СЛАЙДЕР С КАРТИНКАМИ ЧЕРЕЗ IMG -->
     <section class="hero-slider-section">
         <div class="slider-container">
             
             <!-- Слайд 1 -->
-            <div class="slide active" style="background-image: url('./slide1.jpg');">
+            <div class="slide active">
+                <img src="slide1.jpg" alt="Виды мембран" class="slide-bg-img">
                 <div class="slide-overlay">
                     <div class="slide-content">
                         <div class="slide-brand">TDN.KZ ALMATY</div>
@@ -245,7 +255,8 @@
             </div>
 
             <!-- Слайд 2 -->
-            <div class="slide" style="background-image: url('./slide2.jpg');">
+            <div class="slide">
+                <img src="slide2.jpg" alt="Агроволокно и агроткань" class="slide-bg-img">
                 <div class="slide-overlay">
                     <div class="slide-content">
                         <div class="slide-brand">TDN.KZ ALMATY</div>
@@ -260,7 +271,8 @@
             </div>
 
             <!-- Слайд 3 -->
-            <div class="slide" style="background-image: url('./slide3.jpg');">
+            <div class="slide">
+                <img src="slide3.jpg" alt="Тепличная пленка" class="slide-bg-img">
                 <div class="slide-overlay">
                     <div class="slide-content">
                         <div class="slide-brand">TDN.KZ ALMATY</div>
@@ -356,7 +368,7 @@
         </div>
     </div>
 
-    <!-- Скрипт слайдера (4 сек) -->
+    <!-- Скрипт авто-слайдера (4 сек) и модалки -->
     <script>
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.dot');
@@ -387,7 +399,7 @@
         }
 
         function startAutoSlide() {
-            slideTimer = setInterval(nextSlide, 4000);
+            slideTimer = setInterval(nextSlide, 4000); // 4 секунды
         }
 
         function resetAutoSlide() {
