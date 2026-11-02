@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Дополнительные стили для точного отображения слайдера с фоновыми фото */
+        /* Стили авто-слайдера и баннеров */
         .hero-slider-section {
             position: relative;
             max-width: 1200px;
@@ -36,7 +36,7 @@
         .slide-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(90deg, rgba(11, 25, 44, 0.85) 0%, rgba(11, 25, 44, 0.4) 100%);
+            background: linear-gradient(90deg, rgba(11, 25, 44, 0.88) 0%, rgba(11, 25, 44, 0.35) 100%);
             display: flex;
             align-items: center;
             padding: 50px;
@@ -126,7 +126,7 @@
 </head>
 <body>
 
-    <!-- Верхняя полоса -->
+    <!-- Верхняя зеленая полоса -->
     <div class="top-bar">
         <div class="container top-bar-container">
             <div class="top-bar-left">
@@ -150,7 +150,7 @@
         </div>
     </div>
 
-    <!-- Шапка сайта -->
+    <!-- Основная шапка сайта -->
     <header class="site-header">
         <div class="container header-flex">
             <a href="index.html" class="logo-link">
@@ -160,7 +160,7 @@
             <nav class="main-nav">
                 <ul class="nav-list">
                     <li class="nav-element has-dropdown">
-                        <a href="#catalog" class="nav-a">
+                        <a href="index.html#catalog" class="nav-a">
                             <span>Продукция</span>
                             <i class="fa-solid fa-chevron-down arrow-icon"></i>
                         </a>
@@ -235,7 +235,7 @@
         </div>
     </section>
 
-    <!-- Слайдер с перелистыванием фотографий -->
+    <!-- ИНТЕРАКТИВНЫЙ СЛАЙДЕР С АВТОПЕРЕЛИСТЫВАНИЕМ (4 СЕК) -->
     <section class="hero-slider-section">
         <div class="slider-container">
             
@@ -299,7 +299,7 @@
         </div>
     </section>
 
-    <!-- Полоса с преимуществами -->
+    <!-- Полоса преимуществ -->
     <section class="features-bar-section" style="margin: 30px auto; max-width: 1200px; padding: 0 15px;">
         <div style="background-color: #ffffff; padding: 25px 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-radius: 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
             
@@ -354,7 +354,7 @@
         </div>
     </footer>
 
-    <!-- Модалка -->
+    <!-- Модалка заказа звонка -->
     <div class="modal-backdrop" id="callModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:1000;">
         <div class="modal-card" style="background:#fff; padding:30px; border-radius:12px; position:relative; max-width:400px; width:100%;">
             <button type="button" class="modal-close" id="closeCallModal" style="position:absolute; top:10px; right:15px; background:none; border:none; font-size:24px; cursor:pointer;">&times;</button>
@@ -367,14 +367,14 @@
         </div>
     </div>
 
-    <!-- Скрипт для работы слайдера и модалки -->
+    <!-- Скрипт авто-слайдера (4 секунды) -->
     <script>
-        // Слайдер
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.dot');
         const nextBtn = document.getElementById('nextSlide');
         const prevBtn = document.getElementById('prevSlide');
         let currentSlide = 0;
+        let slideTimer;
 
         function showSlide(index) {
             slides.forEach(slide => slide.classList.remove('active'));
@@ -387,17 +387,48 @@
             dots[currentSlide].classList.add('active');
         }
 
-        if (nextBtn && prevBtn) {
-            nextBtn.addEventListener('click', () => { currentSlide++; showSlide(currentSlide); });
-            prevBtn.addEventListener('click', () => { currentSlide--; showSlide(currentSlide); });
-            dots.forEach((dot, idx) => {
-                dot.addEventListener('click', () => { currentSlide = idx; showSlide(currentSlide); });
-            });
-            // Автопрокрутка каждые 5 секунд
-            setInterval(() => { currentSlide++; showSlide(currentSlide); }, 5000);
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
         }
 
-        // Модалка
+        function prevSlide() {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+
+        function startAutoSlide() {
+            slideTimer = setInterval(nextSlide, 4000); // 4 секунды
+        }
+
+        function resetAutoSlide() {
+            clearInterval(slideTimer);
+            startAutoSlide();
+        }
+
+        if (nextBtn && prevBtn) {
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                resetAutoSlide();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                resetAutoSlide();
+            });
+
+            dots.forEach((dot, idx) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = idx;
+                    showSlide(currentSlide);
+                    resetAutoSlide();
+                });
+            });
+
+            startAutoSlide();
+        }
+
+        // Модальное окно
         const callModal = document.getElementById('callModal');
         const openCallModalBtn = document.getElementById('openCallModal');
         const closeCallModalBtn = document.getElementById('closeCallModal');
