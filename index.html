@@ -6,6 +6,123 @@
     <title>NOVARTIS — Главная страница</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Дополнительные стили для точного отображения слайдера с фоновыми фото */
+        .hero-slider-section {
+            position: relative;
+            max-width: 1200px;
+            margin: 20px auto 40px auto;
+            padding: 0 15px;
+        }
+        .slider-container {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            background-color: #0b192c;
+            min-height: 420px;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            height: 420px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .slide.active {
+            display: block;
+        }
+        .slide-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(90deg, rgba(11, 25, 44, 0.85) 0%, rgba(11, 25, 44, 0.4) 100%);
+            display: flex;
+            align-items: center;
+            padding: 50px;
+        }
+        .slide-content {
+            color: #ffffff;
+            max-width: 600px;
+        }
+        .slide-brand {
+            font-size: 14px;
+            font-weight: 700;
+            color: #4ade80;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .slide-content h2 {
+            font-size: 34px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .slide-features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .slide-features-list li {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #f3f4f6;
+        }
+        .slide-features-list i {
+            color: #22c55e;
+        }
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: background 0.2s;
+            z-index: 10;
+        }
+        .slider-btn:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        .prev-btn { left: 25px; }
+        .next-btn { right: 25px; }
+
+        .slider-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+        .slider-dots .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .slider-dots .dot.active {
+            background: #22c55e;
+            width: 25px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
 
@@ -105,28 +222,30 @@
     </header>
 
     <!-- Секция приветствия -->
-    <section class="hero-top-info">
-        <div class="container hero-top-flex">
+    <section class="hero-top-info" style="padding: 30px 0 15px 0;">
+        <div class="container hero-top-flex" style="display: flex; justify-content: space-between; align-items: center;">
             <div class="hero-titles">
-                <h1>Качественный материал — залог успеха</h1>
-                <p>Продукция от ТОО "ТД Novartis" для сельского хозяйства и строительства.</p>
+                <h1 style="font-size: 28px; font-weight: 800; color: #111827; margin-bottom: 5px;">Качественный материал — залог успеха</h1>
+                <p style="font-size: 15px; color: #6b7280;">Продукция от ТОО "ТД Novartis" для сельского хозяйства и строительства.</p>
             </div>
-            <div class="hero-quality-badge">
+            <div class="hero-quality-badge" style="background-color: #dcfce7; color: #15803d; padding: 10px 18px; border-radius: 20px; font-weight: 700; display: flex; align-items: center; gap: 8px;">
                 <i class="fa-solid fa-circle-check"></i>
                 <span>100% качество</span>
             </div>
         </div>
     </section>
 
-    <!-- Главный баннер / Слайдер -->
+    <!-- Слайдер с перелистыванием фотографий -->
     <section class="hero-slider-section">
-        <div class="container slider-container">
-            <div class="slider-wrapper">
-                <div class="slide-card">
-                    <div class="slide-left-text">
+        <div class="slider-container">
+            
+            <!-- Слайд 1 -->
+            <div class="slide active" style="background-image: url('slide1.jpg');">
+                <div class="slide-overlay">
+                    <div class="slide-content">
                         <div class="slide-brand">NOVARTIS ALMATY</div>
                         <h2>ВИДЫ МЕМБРАН ОТ NOVARTIS</h2>
-                        <ul class="slide-bullets">
+                        <ul class="slide-features-list">
                             <li><i class="fa-solid fa-truck-fast"></i> Быстрая доставка</li>
                             <li><i class="fa-solid fa-tags"></i> Доступные цены</li>
                             <li><i class="fa-solid fa-shield-halved"></i> Гарантия качества</li>
@@ -135,103 +254,157 @@
                     </div>
                 </div>
             </div>
-            <button class="slider-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="slider-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
-            <div class="slider-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+
+            <!-- Слайд 2 -->
+            <div class="slide" style="background-image: url('slide2.jpg');">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <div class="slide-brand">NOVARTIS ALMATY</div>
+                        <h2>АГРОВОЛОКНО И АГРОТКАНЬ</h2>
+                        <ul class="slide-features-list">
+                            <li><i class="fa-solid fa-seedling"></i> Защита урожая от заморозков</li>
+                            <li><i class="fa-solid fa-sun"></i> Устойчивость к ультрафиолету</li>
+                            <li><i class="fa-solid fa-check"></i> Экологически чистый материал</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+
+            <!-- Слайд 3 -->
+            <div class="slide" style="background-image: url('slide3.jpg');">
+                <div class="slide-overlay">
+                    <div class="slide-content">
+                        <div class="slide-brand">NOVARTIS ALMATY</div>
+                        <h2>ТЕПЛИЧНАЯ ПЛЕНКА «ЮЖАНКА»</h2>
+                        <ul class="slide-features-list">
+                            <li><i class="fa-solid fa-warehouse"></i> Долговечность и прочность</li>
+                            <li><i class="fa-solid fa-temperature-arrow-up"></i> Стабильный микроклимат</li>
+                            <li><i class="fa-solid fa-shield"></i> Надежная защита в любой сезон</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Кнопки управления -->
+            <button class="slider-btn prev-btn" id="prevSlide"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="slider-btn next-btn" id="nextSlide"><i class="fa-solid fa-chevron-right"></i></button>
+
+            <!-- Точки переключения -->
+            <div class="slider-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+
         </div>
     </section>
 
     <!-- Полоса с преимуществами -->
-    <section class="features-bar-section">
-        <div class="container">
-            <div class="features-grid">
-                
-                <div class="feature-card">
-                    <div class="feat-icon"><i class="fa-solid fa-truck-fast"></i></div>
-                    <div class="feat-info">
-                        <h4>БЫСТРАЯ ДОСТАВКА</h4>
-                        <p>Бережно доставляем товары по всему Казахстану</p>
-                    </div>
+    <section class="features-bar-section" style="margin: 30px auto; max-width: 1200px; padding: 0 15px;">
+        <div style="background-color: #ffffff; padding: 25px 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-radius: 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+            
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <div style="font-size: 28px; color: #16a34a;"><i class="fa-solid fa-truck-fast"></i></div>
+                <div>
+                    <h4 style="font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 3px;">БЫСТРАЯ ДОСТАВКА</h4>
+                    <p style="font-size: 12px; color: #6b7280; margin: 0;">Бережно доставляем товары по всему Казахстану</p>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feat-icon"><i class="fa-solid fa-comments"></i></div>
-                    <div class="feat-info">
-                        <h4>КЛИЕНТСКИЙ СЕРВИС</h4>
-                        <p>Отвечаем на вопросы покупателей в течение 10 минут</p>
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feat-icon"><i class="fa-solid fa-award"></i></div>
-                    <div class="feat-info">
-                        <h4>ГАРАНТИЯ КАЧЕСТВА</h4>
-                        <p>Соответствуем требованиям и стандартам качества</p>
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feat-icon"><i class="fa-solid fa-tags"></i></div>
-                    <div class="feat-info">
-                        <h4>ДОСТУПНЫЕ ЦЕНЫ</h4>
-                        <p>Работаем напрямую с ведущими производителями</p>
-                    </div>
-                </div>
-
             </div>
+
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <div style="font-size: 28px; color: #16a34a;"><i class="fa-solid fa-comments"></i></div>
+                <div>
+                    <h4 style="font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 3px;">КЛИЕНТСКИЙ СЕРВИС</h4>
+                    <p style="font-size: 12px; color: #6b7280; margin: 0;">Отвечаем на вопросы покупателей в течение 10 минут</p>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <div style="font-size: 28px; color: #16a34a;"><i class="fa-solid fa-award"></i></div>
+                <div>
+                    <h4 style="font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 3px;">ГАРАНТИЯ КАЧЕСТВА</h4>
+                    <p style="font-size: 12px; color: #6b7280; margin: 0;">Соответствуем требованиям и стандартам качества</p>
+                </div>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <div style="font-size: 28px; color: #16a34a;"><i class="fa-solid fa-tags"></i></div>
+                <div>
+                    <h4 style="font-size: 14px; font-weight: 800; color: #111827; margin-bottom: 3px;">ДОСТУПНЫЕ ЦЕНЫ</h4>
+                    <p style="font-size: 12px; color: #6b7280; margin: 0;">Работаем напрямую с ведущими производителями</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <!-- Подвал сайта -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-info">
-                <h3>NOVARTIS ALMATY</h3>
-                <p class="footer-sub">Мы на рынке с 2013 года</p>
-                <p class="footer-motto">Качественный материал — залог успеха.</p>
+    <footer class="footer" style="background-color: #064e3b; color: #ffffff; padding: 40px 0 30px 0; text-align: center; margin-top: 50px;">
+        <div class="container" style="display: flex; flex-direction: column; gap: 15px;">
+            <div>
+                <h3 style="margin-bottom: 5px;">NOVARTIS ALMATY</h3>
+                <p style="color: #a8e6cf; font-weight: 600;">Мы на рынке с 2013 года</p>
+                <p style="font-style: italic; margin-top: 3px;">Качественный материал — залог успеха.</p>
             </div>
-            <div class="footer-location">
+            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 12px;">
                 <p>Работаем по Казахстану, Киргизии и Узбекистану.</p>
-                <p class="footer-company">ТОО "Торговый Дом Novartis"</p>
-                <p class="footer-address">г. Алматы, Торетай 28г</p>
+                <p style="margin-top: 6px; font-weight: 600; color: #ffffff;">ТОО "Торговый Дом Novartis"</p>
+                <p style="color: #d1d5db; font-size: 13px;">г. Алматы, Торетай 28г</p>
             </div>
         </div>
     </footer>
 
     <!-- Модалка -->
-    <div class="modal-backdrop" id="callModal">
-        <div class="modal-card">
-            <button type="button" class="modal-close" id="closeCallModal">&times;</button>
-            <h3>Связаться с нами</h3>
-            <p>Выберите удобный способ связи с отделом продаж NOVARTIS:</p>
-            <div class="modal-actions">
-                <a href="tel:+77053333606" class="modal-btn btn-phone">
-                    <i class="fa-solid fa-phone"></i> <span>Позвонить на номер</span>
-                </a>
-                <a href="https://wa.me/77053333606" target="_blank" class="modal-btn btn-wa">
-                    <i class="fa-brands fa-whatsapp"></i> <span>Написать на WhatsApp</span>
-                </a>
+    <div class="modal-backdrop" id="callModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:1000;">
+        <div class="modal-card" style="background:#fff; padding:30px; border-radius:12px; position:relative; max-width:400px; width:100%;">
+            <button type="button" class="modal-close" id="closeCallModal" style="position:absolute; top:10px; right:15px; background:none; border:none; font-size:24px; cursor:pointer;">&times;</button>
+            <h3 style="margin-bottom:10px;">Связаться с нами</h3>
+            <p style="margin-bottom:20px; color:#6b7280; font-size:14px;">Выберите удобный способ связи с отделом продаж NOVARTIS:</p>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+                <a href="tel:+77053333606" style="background:#16a34a; color:#fff; padding:12px; border-radius:8px; text-align:center; text-decoration:none; font-weight:700;"><i class="fa-solid fa-phone"></i> Позвонить</a>
+                <a href="https://wa.me/77053333606" target="_blank" style="background:#25d366; color:#fff; padding:12px; border-radius:8px; text-align:center; text-decoration:none; font-weight:700;"><i class="fa-brands fa-whatsapp"></i> Написать в WhatsApp</a>
             </div>
         </div>
     </div>
 
+    <!-- Скрипт для работы слайдера и модалки -->
     <script>
+        // Слайдер
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const nextBtn = document.getElementById('nextSlide');
+        const prevBtn = document.getElementById('prevSlide');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            if (index >= slides.length) currentSlide = 0;
+            if (index < 0) currentSlide = slides.length - 1;
+
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        if (nextBtn && prevBtn) {
+            nextBtn.addEventListener('click', () => { currentSlide++; showSlide(currentSlide); });
+            prevBtn.addEventListener('click', () => { currentSlide--; showSlide(currentSlide); });
+            dots.forEach((dot, idx) => {
+                dot.addEventListener('click', () => { currentSlide = idx; showSlide(currentSlide); });
+            });
+            // Автопрокрутка каждые 5 секунд
+            setInterval(() => { currentSlide++; showSlide(currentSlide); }, 5000);
+        }
+
+        // Модалка
         const callModal = document.getElementById('callModal');
         const openCallModalBtn = document.getElementById('openCallModal');
         const closeCallModalBtn = document.getElementById('closeCallModal');
 
-        if (openCallModalBtn) openCallModalBtn.addEventListener('click', () => callModal.classList.add('active'));
-        if (closeCallModalBtn) closeCallModalBtn.addEventListener('click', () => callModal.classList.remove('active'));
-        if (callModal) {
-            callModal.addEventListener('click', (e) => {
-                if (e.target === callModal) callModal.classList.remove('active');
-            });
-        }
+        if (openCallModalBtn) openCallModalBtn.addEventListener('click', () => callModal.style.display = 'flex');
+        if (closeCallModalBtn) closeCallModalBtn.addEventListener('click', () => callModal.style.display = 'none');
+        window.addEventListener('click', (e) => { if (e.target === callModal) callModal.style.display = 'none'; });
     </script>
 </body>
 </html>
