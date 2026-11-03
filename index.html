@@ -229,32 +229,31 @@
         </div>
     </section>
 
-    <!-- СЛАЙДЕР С ФОНОВЫМИ КАРТИНКАМИ -->
+    <!-- СЛАЙДЕР С НОВЫМ ПОРЯДКОМ КАРТИНОК -->
     <section class="hero-slider-section">
         <div class="slider-container">
             
-            <!-- Слайд 1 -->
+            <!-- Слайд 1 (Бывшая 4-я картинка с инструментами и логотипом) -->
             <div class="slide active" style="background-image: url('./slide1.jpg');">
                 <div class="slide-overlay">
                     <div class="slide-content">
                         <div class="slide-brand">TDN.KZ ALMATY</div>
-                        <h2>ВИДЫ МЕМБРАН ОТ TDN.KZ</h2>
+                        <h2>ТД «TDN.kz» — ВСЕ ДЛЯ САДА И СТРОИТЕЛЬСТВА</h2>
                         <ul class="slide-features-list">
-                            <li><i class="fa-solid fa-truck-fast"></i> Быстрая доставка</li>
-                            <li><i class="fa-solid fa-tags"></i> Доступные цены</li>
-                            <li><i class="fa-solid fa-shield-halved"></i> Гарантия качества</li>
-                            <li><i class="fa-solid fa-headset"></i> Клиентский сервис</li>
+                            <li><i class="fa-solid fa-truck-fast"></i> Быстрая доставка по Казахстану</li>
+                            <li><i class="fa-solid fa-tags"></i> Оптовые и розничные цены</li>
+                            <li><i class="fa-solid fa-shield-halved"></i> Официальная гарантия</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Слайд 2 -->
+            <!-- Слайд 2 (Парник с дугами) -->
             <div class="slide" style="background-image: url('./slide2.jpg');">
                 <div class="slide-overlay">
                     <div class="slide-content">
                         <div class="slide-brand">TDN.KZ ALMATY</div>
-                        <h2>АГРОВОЛОКНО И АГРОТКАНЬ</h2>
+                        <h2>АГРОВОЛОКНО И УКРЫВНЫЕ МАТЕРИАЛЫ</h2>
                         <ul class="slide-features-list">
                             <li><i class="fa-solid fa-seedling"></i> Защита урожая от заморозков</li>
                             <li><i class="fa-solid fa-sun"></i> Устойчивость к ультрафиолету</li>
@@ -264,12 +263,12 @@
                 </div>
             </div>
 
-            <!-- Слайд 3 -->
+            <!-- Слайд 3 (Большая теплица) -->
             <div class="slide" style="background-image: url('./slide3.jpg');">
                 <div class="slide-overlay">
                     <div class="slide-content">
                         <div class="slide-brand">TDN.KZ ALMATY</div>
-                        <h2>ТЕПЛИЧНАЯ ПЛЕНКА «ЮЖАНКА»</h2>
+                        <h2>ТЕПЛИЧНЫЕ КОМПЛЕКСЫ И ПЛЕНКИ</h2>
                         <ul class="slide-features-list">
                             <li><i class="fa-solid fa-warehouse"></i> Долговечность и прочность</li>
                             <li><i class="fa-solid fa-temperature-arrow-up"></i> Стабильный микроклимат</li>
@@ -392,7 +391,7 @@
         }
 
         function startAutoSlide() {
-            slideTimer = setInterval(nextSlide, 4000); // Интервал ровно 4 секунды
+            slideTimer = setInterval(nextSlide, 4000); // 4 секунды
         }
 
         function resetAutoSlide() {
@@ -422,7 +421,6 @@
             startAutoSlide();
         }
 
-        // Логика модального окна
         const callModal = document.getElementById('callModal');
         const openCallModalBtn = document.getElementById('openCallModal');
         const closeCallModalBtn = document.getElementById('closeCallModal');
