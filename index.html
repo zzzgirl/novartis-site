@@ -25,25 +25,21 @@
             display: none;
             width: 100%;
             height: 420px;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
             position: relative;
         }
         .slide.active {
             display: block;
         }
-        .slide-bg-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            z-index: 1;
-        }
         .slide-overlay {
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(90deg, rgba(11, 25, 44, 0.9) 0%, rgba(11, 25, 44, 0.3) 100%);
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%;
+            background: linear-gradient(90deg, rgba(11, 25, 44, 0.88) 0%, rgba(11, 25, 44, 0.25) 100%);
             display: flex;
             align-items: center;
             padding: 50px;
@@ -148,7 +144,7 @@
         </div>
     </div>
 
-    <!-- Основная шапка сайта -->
+    <!-- Шапка сайта -->
     <header class="site-header">
         <div class="container header-flex">
             <a href="index.html" class="logo-link">
@@ -233,13 +229,12 @@
         </div>
     </section>
 
-    <!-- СЛАЙДЕР С КАРТИНКАМИ ЧЕРЕЗ IMG -->
+    <!-- СЛАЙДЕР С ФОНОВЫМИ КАРТИНКАМИ -->
     <section class="hero-slider-section">
         <div class="slider-container">
             
             <!-- Слайд 1 -->
-            <div class="slide active">
-                <img src="slide1.jpg" alt="Виды мембран" class="slide-bg-img">
+            <div class="slide active" style="background-image: url('./slide1.jpg');">
                 <div class="slide-overlay">
                     <div class="slide-content">
                         <div class="slide-brand">TDN.KZ ALMATY</div>
@@ -255,8 +250,7 @@
             </div>
 
             <!-- Слайд 2 -->
-            <div class="slide">
-                <img src="slide2.jpg" alt="Агроволокно и агроткань" class="slide-bg-img">
+            <div class="slide" style="background-image: url('./slide2.jpg');">
                 <div class="slide-overlay">
                     <div class="slide-content">
                         <div class="slide-brand">TDN.KZ ALMATY</div>
@@ -271,8 +265,7 @@
             </div>
 
             <!-- Слайд 3 -->
-            <div class="slide">
-                <img src="slide3.jpg" alt="Тепличная пленка" class="slide-bg-img">
+            <div class="slide" style="background-image: url('./slide3.jpg');">
                 <div class="slide-overlay">
                     <div class="slide-content">
                         <div class="slide-brand">TDN.KZ ALMATY</div>
@@ -368,7 +361,7 @@
         </div>
     </div>
 
-    <!-- Скрипт авто-слайдера (4 сек) и модалки -->
+    <!-- Скрипт автоматического слайдера (4 секунды) -->
     <script>
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.dot');
@@ -399,7 +392,7 @@
         }
 
         function startAutoSlide() {
-            slideTimer = setInterval(nextSlide, 4000); // 4 секунды
+            slideTimer = setInterval(nextSlide, 4000); // Интервал ровно 4 секунды
         }
 
         function resetAutoSlide() {
@@ -429,6 +422,7 @@
             startAutoSlide();
         }
 
+        // Логика модального окна
         const callModal = document.getElementById('callModal');
         const openCallModalBtn = document.getElementById('openCallModal');
         const closeCallModalBtn = document.getElementById('closeCallModal');
