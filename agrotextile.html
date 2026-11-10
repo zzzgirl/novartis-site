@@ -12,8 +12,6 @@
             margin: 30px auto;
             padding: 0 15px;
         }
-        
-        /* Двухколоночный макет верхней части */
         .agro-top-grid {
             display: grid;
             grid-template-columns: 450px 1fr;
@@ -23,8 +21,6 @@
         @media (max-width: 992px) {
             .agro-top-grid { grid-template-columns: 1fr; }
         }
-
-        /* Левая галерея */
         .gallery-box {
             background: #fff;
             border: 1px solid #e5e7eb;
@@ -61,6 +57,7 @@
             border: 2px solid transparent;
             position: relative;
             flex-shrink: 0;
+            background: #000;
         }
         .thumb-item.active { border-color: #16a34a; }
         .thumb-item img { width: 100%; height: 100%; object-fit: cover; }
@@ -74,9 +71,8 @@
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
             font-size: 11px;
+            z-index: 2;
         }
-
-        /* Иконки культур */
         .crops-section {
             margin-top: 25px;
             padding-top: 20px;
@@ -98,8 +94,6 @@
             color: #4b5563;
         }
         .crop-badge i { display: block; font-size: 16px; color: #16a34a; margin-bottom: 4px; }
-
-        /* Правая сетка товаров */
         .products-box {
             background: #fff;
             border: 1px solid #e5e7eb;
@@ -109,7 +103,6 @@
         .category-title-bar { margin-bottom: 15px; }
         .category-title-bar span { color: #16a34a; font-size: 12px; font-weight: 700; text-transform: uppercase; }
         .category-title-bar h1 { font-size: 26px; color: #111827; font-weight: 800; margin-top: 2px; }
-
         .density-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -144,8 +137,6 @@
             color: #111827;
         }
         .density-card p { font-size: 12px; color: #4b5563; font-weight: 600; line-height: 1.3; margin: 0; }
-
-        /* Текстовый описательный блок */
         .agro-description-section {
             background: #ffffff;
             border: 1px solid #e5e7eb;
@@ -177,7 +168,6 @@
 </head>
 <body>
 
-    <!-- Верхняя зеленая полоса -->
     <div class="top-bar">
         <div class="container top-bar-container">
             <div class="top-bar-left">
@@ -199,7 +189,6 @@
         </div>
     </div>
 
-    <!-- Шапка сайта -->
     <header class="site-header">
         <div class="container header-flex">
             <a href="index.html" class="logo-link">
@@ -208,7 +197,7 @@
             <nav class="main-nav">
                 <ul class="nav-list">
                     <li class="nav-element has-dropdown">
-                        <a href="index.html" class="nav-a"><span>Продукция</span> <i class="fa-solid fa-chevron-down arrow-icon"></i></a>
+                        <a href="javascript:void(0);" class="nav-a"><span>Продукция</span> <i class="fa-solid fa-chevron-down arrow-icon"></i></a>
                         <div class="mega-box">
                             <div class="mega-grid-2col">
                                 <a href="membranes.html" class="mega-card"><i class="fa-solid fa-layer-group card-ic"></i><span>Строительные мембраны</span></a>
@@ -221,7 +210,7 @@
                         </div>
                     </li>
                     <li class="nav-element"><a href="about.html" class="nav-a">О нас</a></li>
-                    <li class="nav-element has-dropdown"><a href="#" class="nav-a"><span>Партнерам</span> <i class="fa-solid fa-chevron-down arrow-icon"></i></a>
+                    <li class="nav-element has-dropdown"><a href="javascript:void(0);" class="nav-a"><span>Партнерам</span> <i class="fa-solid fa-chevron-down arrow-icon"></i></a>
                         <div class="dropdown-box"><a href="wholesale.html" class="dropdown-item">Оптовым покупателям</a></div>
                     </li>
                     <li class="nav-element"><a href="contacts.html" class="nav-a">Контакты</a></li>
@@ -234,18 +223,14 @@
         </div>
     </header>
 
-    <!-- ОСНОВНОЙ КОНТЕНТ СТРАНИЦЫ -->
     <div class="page-container">
         
         <div class="agro-top-grid">
-            
-            <!-- ЛЕВАЯ КОЛОНКА: ИНТЕРАКТИВНАЯ МЕДИА ГАЛЕРЕЯ -->
             <div class="gallery-box">
                 <div class="main-media-view" id="mainMediaBox">
                     <img src="./agro-photo1.jpg" id="mainMediaTag" alt="Агроволокно">
                 </div>
 
-                <!-- Миниатюры (Фото 1-4 + Видео 1-3) -->
                 <div class="media-thumbs">
                     <div class="thumb-item active" onclick="switchMedia('img', './agro-photo1.jpg', this)">
                         <img src="./agro-photo1.jpg" alt="Укрытие грядок">
@@ -259,7 +244,6 @@
                     <div class="thumb-item" onclick="switchMedia('img', './agro-photo4.jpg', this)">
                         <img src="./agro-photo4.jpg" alt="Ростки">
                     </div>
-                    <!-- Видео материалы -->
                     <div class="thumb-item" onclick="switchMedia('video', './agro-video1.mp4', this)">
                         <img src="./agro-photo1.jpg" alt="Видео 1">
                         <div class="thumb-play-ic"><i class="fa-solid fa-play"></i></div>
@@ -274,7 +258,6 @@
                     </div>
                 </div>
 
-                <!-- Используют для выращивания -->
                 <div class="crops-section">
                     <h4>Используют для выращивания:</h4>
                     <div class="crops-grid">
@@ -290,7 +273,6 @@
                 </div>
             </div>
 
-            <!-- ПРАВАЯ КОЛОНКА: СЕТКА ВАРИАНТОВ АГРОВОЛОКНА -->
             <div class="products-box">
                 <div class="category-title-bar">
                     <span>КАТЕГОРИЯ</span>
@@ -300,51 +282,21 @@
                 <p style="color: #6b7280; font-size: 14px;">Выберите нужную плотность укрывного или мульчирующего агроволокна:</p>
 
                 <div class="density-grid">
-                    <div class="density-card">
-                        <span class="density-number">17</span>
-                        <p>Агроволокно белое 17 г/м²</p>
-                    </div>
-                    <div class="density-card">
-                        <span class="density-number">19</span>
-                        <p>Агроволокно белое 19 г/м²</p>
-                    </div>
-                    <div class="density-card">
-                        <span class="density-number">23</span>
-                        <p>Агроволокно белое 23 г/м²</p>
-                    </div>
-                    <div class="density-card">
-                        <span class="density-number">30</span>
-                        <p>Агроволокно белое 30 г/м²</p>
-                    </div>
-                    <div class="density-card">
-                        <span class="density-number">42</span>
-                        <p>Агроволокно белое 42 г/м²</p>
-                    </div>
-                    <div class="density-card">
-                        <span class="density-number">50</span>
-                        <p>Агроволокно белое 50 г/м²</p>
-                    </div>
-                    <div class="density-card black">
-                        <span class="density-number">60</span>
-                        <p>Мульчирующее черное 60 г/м²</p>
-                    </div>
-                    <div class="density-card black">
-                        <span class="density-number">80</span>
-                        <p>Мульчирующее черное 80 г/м²</p>
-                    </div>
-                    <div class="density-card black">
-                        <span class="density-number">90</span>
-                        <p>Сверхпрочное мульча 90 г/м²</p>
-                    </div>
+                    <div class="density-card"><span class="density-number">17</span><p>Агроволокно белое 17 г/м²</p></div>
+                    <div class="density-card"><span class="density-number">19</span><p>Агроволокно белое 19 г/м²</p></div>
+                    <div class="density-card"><span class="density-number">23</span><p>Агроволокно белое 23 г/м²</p></div>
+                    <div class="density-card"><span class="density-number">30</span><p>Агроволокно белое 30 г/м²</p></div>
+                    <div class="density-card"><span class="density-number">42</span><p>Агроволокно белое 42 г/м²</p></div>
+                    <div class="density-card"><span class="density-number">50</span><p>Агроволокно белое 50 г/м²</p></div>
+                    <div class="density-card black"><span class="density-number">60</span><p>Мульчирующее черное 60 г/м²</p></div>
+                    <div class="density-card black"><span class="density-number">80</span><p>Мульчирующее черное 80 г/м²</p></div>
+                    <div class="density-card black"><span class="density-number">90</span><p>Сверхпрочное мульча 90 г/м²</p></div>
                 </div>
             </div>
-
         </div>
 
-        <!-- НИЖНИЙ ПОДРОБНЫЙ ТЕКСТОВЫЙ БЛОК -->
         <div class="agro-description-section">
             <p>Агроволокно от Торгового Дома <strong>Novartis</strong> — это легкий, прочный нетканый материал из полипропилена, разработанный для защиты растений и ухода за ними с учетом климатических условий Казахстана. Продукция используется фермерами и садоводами для стабильного выращивания овощных, ягодных и декоративных культур в открытом грунте и теплицах, а также для защиты плодовых деревьев.</p>
-            
             <p>Материал отлично удерживает тепло, свободно пропускает воду и воздух, защищает от вредителей и сорняков, создавая идеальный микроклимат для роста и высокой урожайности.</p>
 
             <h2>Линейки агроволокна Novartis</h2>
@@ -356,7 +308,6 @@
 
             <h2>Белое укрывное агроволокно: защита от заморозков и погодных стрессов</h2>
             <p>Белое агроволокно формирует благоприятный микроклимат для растений: свободно пропускает свет, воду и воздух, одновременно сохраняя тепло у поверхности почвы. Это особенно важно весной и осенью, когда резкие перепады температуры могут повредить рассаду и всходы.</p>
-            
             <p>Благодаря небольшому весу материал можно укладывать непосредственно на растения без использования дуг или каркаса. Такой способ укрытия позволяет:</p>
             <ul>
                 <li>снизить риск повреждения заморозками;</li>
@@ -381,7 +332,6 @@
 
             <h2>Мульчирующее агроволокно: контроль сорняков без химии</h2>
             <p>Мульчирующее агроволокно (черного, черно-белого или коричневого цвета плотностью от 60 до 90 г/м²) используется для укладки на почву с целью блокирования роста сорняков. Материал не пропускает солнечный свет, поэтому нежелательная растительность не развивается без применения гербицидов.</p>
-            
             <p><strong>Преимущества мульчирования:</strong></p>
             <ul>
                 <li>сохранение влаги в почве;</li>
@@ -412,7 +362,6 @@
 
     </div>
 
-    <!-- Подвал сайта -->
     <footer class="footer" style="background-color: #064e3b; color: #ffffff; padding: 40px 0 30px 0; text-align: center; margin-top: 50px;">
         <div class="container" style="display: flex; flex-direction: column; gap: 15px;">
             <div>
@@ -426,7 +375,6 @@
         </div>
     </footer>
 
-    <!-- Скрипт переключения фото и видео в галерее -->
     <script>
         function switchMedia(type, src, element) {
             const box = document.getElementById('mainMediaBox');

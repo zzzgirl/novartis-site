@@ -12,7 +12,6 @@
             margin: 30px auto;
             padding: 0 15px;
         }
-        
         .agro-top-grid {
             display: grid;
             grid-template-columns: 450px 1fr;
@@ -22,7 +21,6 @@
         @media (max-width: 992px) {
             .agro-top-grid { grid-template-columns: 1fr; }
         }
-
         .gallery-box {
             background: #fff;
             border: 1px solid #e5e7eb;
@@ -75,7 +73,6 @@
             font-size: 11px;
             z-index: 2;
         }
-
         .crops-section {
             margin-top: 25px;
             padding-top: 20px;
@@ -97,7 +94,6 @@
             color: #4b5563;
         }
         .crop-badge i { display: block; font-size: 16px; color: #16a34a; margin-bottom: 4px; }
-
         .products-box {
             background: #fff;
             border: 1px solid #e5e7eb;
@@ -107,7 +103,6 @@
         .category-title-bar { margin-bottom: 15px; }
         .category-title-bar span { color: #16a34a; font-size: 12px; font-weight: 700; text-transform: uppercase; }
         .category-title-bar h1 { font-size: 26px; color: #111827; font-weight: 800; margin-top: 2px; }
-
         .density-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -138,7 +133,6 @@
             margin-bottom: 8px;
         }
         .density-card p { font-size: 12px; color: #4b5563; font-weight: 600; line-height: 1.3; margin: 0; }
-
         .agro-description-section {
             background: #ffffff;
             border: 1px solid #e5e7eb;
@@ -170,7 +164,6 @@
 </head>
 <body>
 
-    <!-- Верхняя зеленая полоса -->
     <div class="top-bar">
         <div class="container top-bar-container">
             <div class="top-bar-left">
@@ -192,7 +185,6 @@
         </div>
     </div>
 
-    <!-- Шапка сайта -->
     <header class="site-header">
         <div class="container header-flex">
             <a href="index.html" class="logo-link">
@@ -201,7 +193,7 @@
             <nav class="main-nav">
                 <ul class="nav-list">
                     <li class="nav-element has-dropdown">
-                        <a href="index.html" class="nav-a"><span>Продукция</span> <i class="fa-solid fa-chevron-down arrow-icon"></i></a>
+                        <a href="javascript:void(0);" class="nav-a"><span>Продукция</span> <i class="fa-solid fa-chevron-down arrow-icon"></i></a>
                         <div class="mega-box">
                             <div class="mega-grid-2col">
                                 <a href="membranes.html" class="mega-card"><i class="fa-solid fa-layer-group card-ic"></i><span>Строительные мембраны</span></a>
@@ -214,7 +206,7 @@
                         </div>
                     </li>
                     <li class="nav-element"><a href="about.html" class="nav-a">О нас</a></li>
-                    <li class="nav-element has-dropdown"><a href="#" class="nav-a"><span>Партнерам</span> <i class="fa-solid fa-chevron-down arrow-icon"></i></a>
+                    <li class="nav-element has-dropdown"><a href="javascript:void(0);" class="nav-a"><span>Партнерам</span> <i class="fa-solid fa-chevron-down arrow-icon"></i></a>
                         <div class="dropdown-box"><a href="wholesale.html" class="dropdown-item">Оптовым покупателям</a></div>
                     </li>
                     <li class="nav-element"><a href="contacts.html" class="nav-a">Контакты</a></li>
@@ -230,14 +222,11 @@
     <div class="page-container">
         
         <div class="agro-top-grid">
-            
-            <!-- ЛЕВАЯ КОЛОНКА: ИНТЕРАКТИВНАЯ МЕДИА ГАЛЕРЕЯ (ВИДЕО + ФОТО) -->
             <div class="gallery-box">
                 <div class="main-media-view" id="mainMediaBox">
                     <video src="./shade-video1.mp4" controls autoplay loop style="width:100%; height:100%; object-fit:cover;"></video>
                 </div>
 
-                <!-- Миниатюры: 2 видео + 2 фото -->
                 <div class="media-thumbs">
                     <div class="thumb-item active" onclick="switchMedia('video', './shade-video1.mp4', this)">
                         <div class="thumb-play-ic"><i class="fa-solid fa-play"></i></div>
@@ -279,33 +268,14 @@
                 <p style="color: #6b7280; font-size: 14px;">Выберите нужную степень затенения:</p>
 
                 <div class="density-grid">
-                    <div class="density-card">
-                        <span class="density-number">30%</span>
-                        <p>Легкое притенение для огурцов и зелени</p>
-                    </div>
-                    <div class="density-card">
-                        <span class="density-number">45%</span>
-                        <p>Притенение для кабачков и бахчевых</p>
-                    </div>
-                    <div class="density-card">
-                        <span class="density-number">60%</span>
-                        <p>Универсальная для томатов и ягод</p>
-                    </div>
-                    <div class="density-card">
-                        <span class="density-number">70%</span>
-                        <p>Оптимально для теплиц и бассейнов</p>
-                    </div>
-                    <div class="density-card">
-                        <span class="density-number">80%</span>
-                        <p>Плотная для агрокомплексов и загонов</p>
-                    </div>
-                    <div class="density-card">
-                        <span class="density-number">90%</span>
-                        <p>Максимальная для навесов и заборов</p>
-                    </div>
+                    <div class="density-card"><span class="density-number">30%</span><p>Легкое притенение для огурцов и зелени</p></div>
+                    <div class="density-card"><span class="density-number">45%</span><p>Притенение для кабачков и бахчевых</p></div>
+                    <div class="density-card"><span class="density-number">60%</span><p>Универсальная для томатов и ягод</p></div>
+                    <div class="density-card"><span class="density-number">70%</span><p>Оптимально для теплиц и бассейнов</p></div>
+                    <div class="density-card"><span class="density-number">80%</span><p>Плотная для агрокомплексов и загонов</p></div>
+                    <div class="density-card"><span class="density-number">90%</span><p>Максимальная для навесов и заборов</p></div>
                 </div>
             </div>
-
         </div>
 
         <div class="agro-description-section">

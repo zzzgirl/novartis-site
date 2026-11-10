@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TDN.kz — Главная страница</title>
+    <title>Novartis — Главная страница</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -30,86 +30,31 @@
             background-repeat: no-repeat !important;
             position: relative;
         }
-        .slide.active {
-            display: block;
-        }
+        .slide.active { display: block; }
         .slide-overlay {
             position: absolute;
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%;
+            top: 0; left: 0; width: 100%; height: 100%;
             background: linear-gradient(90deg, rgba(11, 25, 44, 0.88) 0%, rgba(11, 25, 44, 0.25) 100%);
-            display: flex;
-            align-items: center;
-            padding: 50px;
-            z-index: 2;
+            display: flex; align-items: center; padding: 50px; z-index: 2;
         }
-        .slide-content {
-            color: #ffffff;
-            max-width: 600px;
-            z-index: 3;
-        }
-        .slide-brand {
-            font-size: 14px;
-            font-weight: 700;
-            color: #4ade80;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-        }
-        .slide-content h2 {
-            font-size: 34px;
-            font-weight: 900;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        .slide-features-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .slide-features-list li {
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #f3f4f6;
-        }
-        .slide-features-list i {
-            color: #22c55e;
-        }
+        .slide-content { color: #ffffff; max-width: 600px; z-index: 3; }
+        .slide-brand { font-size: 14px; font-weight: 700; color: #4ade80; letter-spacing: 1px; margin-bottom: 10px; }
+        .slide-content h2 { font-size: 34px; font-weight: 900; margin-bottom: 20px; line-height: 1.2; }
+        .slide-features-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+        .slide-features-list li { font-size: 16px; display: flex; align-items: center; gap: 10px; color: #f3f4f6; }
+        .slide-features-list i { color: #22c55e; }
         .slider-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.25);
-            color: #ffffff;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            transition: background 0.2s;
-            z-index: 10;
+            position: absolute; top: 50%; transform: translateY(-50%);
+            width: 45px; height: 45px; border-radius: 50%;
+            background: rgba(255, 255, 255, 0.25); color: #ffffff; border: none; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; font-size: 18px; z-index: 10;
         }
         .slider-btn:hover { background: rgba(255, 255, 255, 0.5); }
         .prev-btn { left: 25px; }
         .next-btn { right: 25px; }
         .slider-dots {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 8px;
-            z-index: 10;
+            position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+            display: flex; gap: 8px; z-index: 10;
         }
         .slider-dots .dot {
             width: 10px; height: 10px; border-radius: 50%;
@@ -148,52 +93,31 @@
     <header class="site-header">
         <div class="container header-flex">
             <a href="index.html" class="logo-link">
-                <span class="logo-green">TDN.kz</span>
+                <span class="logo-green">Novartis</span>
             </a>
 
             <nav class="main-nav">
                 <ul class="nav-list">
                     <li class="nav-element has-dropdown">
-                        <a href="index.html" class="nav-a">
+                        <a href="javascript:void(0);" class="nav-a">
                             <span>Продукция</span>
                             <i class="fa-solid fa-chevron-down arrow-icon"></i>
                         </a>
                         <div class="mega-box">
                             <div class="mega-grid-2col">
-                                <a href="membranes.html" class="mega-card">
-                                    <i class="fa-solid fa-layer-group card-ic"></i>
-                                    <span>Строительные мембраны</span>
-                                </a>
-                                <a href="agrotextile.html" class="mega-card">
-                                    <i class="fa-solid fa-seedling card-ic"></i>
-                                    <span>Агроволокно и агроткань</span>
-                                </a>
-                                <a href="greenhouse-film.html" class="mega-card">
-                                    <i class="fa-solid fa-warehouse card-ic"></i>
-                                    <span>Тепличная пленка</span>
-                                </a>
-                                <a href="shade-net.html" class="mega-card">
-                                    <i class="fa-solid fa-border-all card-ic"></i>
-                                    <span>Затеняющая сетка</span>
-                                </a>
-                                <a href="fencing-net.html" class="mega-card">
-                                    <i class="fa-solid fa-shield-cat card-ic"></i>
-                                    <span>Ограждающие сетки</span>
-                                </a>
-                                <a href="poly-film.html" class="mega-card">
-                                    <i class="fa-solid fa-box-archive card-ic"></i>
-                                    <span>Полиэтиленовая пленка</span>
-                                </a>
+                                <a href="membranes.html" class="mega-card"><i class="fa-solid fa-layer-group card-ic"></i><span>Строительные мембраны</span></a>
+                                <a href="agrotextile.html" class="mega-card"><i class="fa-solid fa-seedling card-ic"></i><span>Агроволокно и агроткань</span></a>
+                                <a href="greenhouse-film.html" class="mega-card"><i class="fa-solid fa-warehouse card-ic"></i><span>Тепличная пленка</span></a>
+                                <a href="shade-net.html" class="mega-card"><i class="fa-solid fa-border-all card-ic"></i><span>Затеняющая сетка</span></a>
+                                <a href="fencing-net.html" class="mega-card"><i class="fa-solid fa-shield-cat card-ic"></i><span>Ограждающие сетки</span></a>
+                                <a href="poly-film.html" class="mega-card"><i class="fa-solid fa-box-archive card-ic"></i><span>Полиэтиленовая пленка</span></a>
                             </div>
                         </div>
                     </li>
-
-                    <li class="nav-element">
-                        <a href="about.html" class="nav-a">О нас</a>
-                    </li>
-
+                    <li class="nav-element"><a href="about.html" class="nav-a">О нас</a></li>
+                    <li class="nav-element"><a href="reviews.html" class="nav-a">Отзывы</a></li>
                     <li class="nav-element has-dropdown">
-                        <a href="#" class="nav-a">
+                        <a href="javascript:void(0);" class="nav-a">
                             <span>Партнерам</span>
                             <i class="fa-solid fa-chevron-down arrow-icon"></i>
                         </a>
@@ -201,10 +125,7 @@
                             <a href="wholesale.html" class="dropdown-item">Оптовым покупателям</a>
                         </div>
                     </li>
-
-                    <li class="nav-element">
-                        <a href="contacts.html" class="nav-a">Контакты</a>
-                    </li>
+                    <li class="nav-element"><a href="contacts.html" class="nav-a">Контакты</a></li>
                 </ul>
             </nav>
 
@@ -220,7 +141,7 @@
         <div class="container hero-top-flex" style="display: flex; justify-content: space-between; align-items: center;">
             <div class="hero-titles">
                 <h1 style="font-size: 28px; font-weight: 800; color: #111827; margin-bottom: 5px;">Качественный материал — залог успеха</h1>
-                <p style="font-size: 15px; color: #6b7280;">Продукция от ТД "TDN.kz" для сельского хозяйства и строительства.</p>
+                <p style="font-size: 15px; color: #6b7280;">Продукция от ТД "Novartis" для сельского хозяйства и строительства.</p>
             </div>
             <div class="hero-quality-badge" style="background-color: #dcfce7; color: #15803d; padding: 10px 18px; border-radius: 20px; font-weight: 700; display: flex; align-items: center; gap: 8px;">
                 <i class="fa-solid fa-circle-check"></i>
@@ -229,16 +150,14 @@
         </div>
     </section>
 
-    <!-- СЛАЙДЕР С НОВЫМ ПОРЯДКОМ КАРТИНОК -->
+    <!-- СЛАЙДЕР -->
     <section class="hero-slider-section">
         <div class="slider-container">
-            
-            <!-- Слайд 1 (Бывшая 4-я картинка с инструментами и логотипом) -->
             <div class="slide active" style="background-image: url('./slide1.jpg');">
                 <div class="slide-overlay">
                     <div class="slide-content">
-                        <div class="slide-brand">TDN.KZ ALMATY</div>
-                        <h2>ТД «TDN.kz» — ВСЕ ДЛЯ САДА И СТРОИТЕЛЬСТВА</h2>
+                        <div class="slide-brand">NOVARTIS ALMATY</div>
+                        <h2>ТД «NOVARTIS» — ВСЕ ДЛЯ САДА И СТРОИТЕЛЬСТВА</h2>
                         <ul class="slide-features-list">
                             <li><i class="fa-solid fa-truck-fast"></i> Быстрая доставка по Казахстану</li>
                             <li><i class="fa-solid fa-tags"></i> Оптовые и розничные цены</li>
@@ -247,12 +166,10 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Слайд 2 (Парник с дугами) -->
             <div class="slide" style="background-image: url('./slide2.jpg');">
                 <div class="slide-overlay">
                     <div class="slide-content">
-                        <div class="slide-brand">TDN.KZ ALMATY</div>
+                        <div class="slide-brand">NOVARTIS ALMATY</div>
                         <h2>АГРОВОЛОКНО И УКРЫВНЫЕ МАТЕРИАЛЫ</h2>
                         <ul class="slide-features-list">
                             <li><i class="fa-solid fa-seedling"></i> Защита урожая от заморозков</li>
@@ -262,12 +179,10 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Слайд 3 (Большая теплица) -->
             <div class="slide" style="background-image: url('./slide3.jpg');">
                 <div class="slide-overlay">
                     <div class="slide-content">
-                        <div class="slide-brand">TDN.KZ ALMATY</div>
+                        <div class="slide-brand">NOVARTIS ALMATY</div>
                         <h2>ТЕПЛИЧНЫЕ КОМПЛЕКСЫ И ПЛЕНКИ</h2>
                         <ul class="slide-features-list">
                             <li><i class="fa-solid fa-warehouse"></i> Долговечность и прочность</li>
@@ -277,25 +192,19 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Кнопки управления -->
             <button class="slider-btn prev-btn" id="prevSlide"><i class="fa-solid fa-chevron-left"></i></button>
             <button class="slider-btn next-btn" id="nextSlide"><i class="fa-solid fa-chevron-right"></i></button>
-
-            <!-- Точки переключения -->
             <div class="slider-dots">
                 <span class="dot active" data-index="0"></span>
                 <span class="dot" data-index="1"></span>
                 <span class="dot" data-index="2"></span>
             </div>
-
         </div>
     </section>
 
     <!-- Полоса преимуществ -->
     <section class="features-bar-section" style="margin: 30px auto; max-width: 1200px; padding: 0 15px;">
         <div style="background-color: #ffffff; padding: 25px 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border-radius: 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
-            
             <div style="display: flex; align-items: center; gap: 15px;">
                 <div style="font-size: 28px; color: #16a34a;"><i class="fa-solid fa-truck-fast"></i></div>
                 <div>
@@ -303,7 +212,6 @@
                     <p style="font-size: 12px; color: #6b7280; margin: 0;">Бережно доставляем товары по всему Казахстану</p>
                 </div>
             </div>
-
             <div style="display: flex; align-items: center; gap: 15px;">
                 <div style="font-size: 28px; color: #16a34a;"><i class="fa-solid fa-comments"></i></div>
                 <div>
@@ -311,7 +219,6 @@
                     <p style="font-size: 12px; color: #6b7280; margin: 0;">Отвечаем на вопросы покупателей в течение 10 минут</p>
                 </div>
             </div>
-
             <div style="display: flex; align-items: center; gap: 15px;">
                 <div style="font-size: 28px; color: #16a34a;"><i class="fa-solid fa-award"></i></div>
                 <div>
@@ -319,7 +226,6 @@
                     <p style="font-size: 12px; color: #6b7280; margin: 0;">Соответствуем требованиям и стандартам качества</p>
                 </div>
             </div>
-
             <div style="display: flex; align-items: center; gap: 15px;">
                 <div style="font-size: 28px; color: #16a34a;"><i class="fa-solid fa-tags"></i></div>
                 <div>
@@ -327,32 +233,234 @@
                     <p style="font-size: 12px; color: #6b7280; margin: 0;">Работаем напрямую с ведущими производителями</p>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- Подвал сайта -->
+    <!-- БЛОК ОТЗЫВОВ НА ГЛАВНОЙ (15 ОТЗЫВОВ) -->
+    <section class="home-reviews-section" style="max-width: 1200px; margin: 50px auto; padding: 0 15px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+            <div>
+                <span style="color: #16a34a; font-size: 13px; font-weight: 800; text-transform: uppercase;">РЕАЛЬНЫЕ ОТЗЫВЫ</span>
+                <h2 style="font-size: 28px; color: #111827; font-weight: 900; margin-top: 2px;">Что говорят наши клиенты</h2>
+            </div>
+            <a href="reviews.html" class="all-reviews-btn" style="background: #16a34a; color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 14px; display: inline-flex; align-items: center; gap: 8px; transition: background 0.2s;">
+                Все отзывы (129) <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="reviews-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px;">
+            
+            <!-- Отзыв 1 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">А</div>
+                    <div class="review-meta">
+                        <div class="review-author">Алихан</div>
+                        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="review-text">Использовал парники от вашего магазина для своего хозяйства и остался очень доволен. Парники прочные и легко собираются. Благодарю за качество и сервис!</p>
+            </div>
+
+            <!-- Отзыв 2 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">Е</div>
+                    <div class="review-meta">
+                        <div class="review-author">Елена_77</div>
+                        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="review-text">Брали затеняющую сетку 80% на навес для машины и беседки. Солнце вообще не пропускает, стало намного прохладнее. Доставили в Шымкент за пару дней, спасибо!</p>
+            </div>
+
+            <!-- Отзыв 3 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">М</div>
+                    <div class="review-meta">
+                        <div class="review-author">Марат_Агро</div>
+                        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="review-text">Заказывал оптом агроволокно Agrol на поля. Отличное качество, УФ-стабилизация реально работает, прошлый сезон отстояло на ура. Будем брать еще.</p>
+            </div>
+
+            <!-- Отзыв 4 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">С</div>
+                    <div class="review-meta">
+                        <div class="review-author">Светлана Данилова</div>
+                        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="review-text">Менеджеры очень вежливые, помогли рассчитать нужную плотность пленки для теплицы. Цены ниже рыночных, качество супер.</p>
+            </div>
+
+            <!-- Отзыв 5 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">Р</div>
+                    <div class="review-meta">
+                        <div class="review-author">Рустам К.</div>
+                        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="review-text">Покупал строительные мембраны Тип А и В для утепления кровли дома. Материал плотный, не рвется при монтаже. Рекомендую!</p>
+            </div>
+
+            <!-- Отзыв 6 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">Д</div>
+                    <div class="review-meta">
+                        <div class="review-author">Динара С.</div>
+                        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="review-text">Садовая решетка отлично подошла для ограждения клумб и палисадника во дворе. Аккуратный зеленый цвет, смотрится очень эстетично.</p>
+            </div>
+
+            <!-- Отзыв 7 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">Т</div>
+                    <div class="review-meta">
+                        <div class="review-author">Тимур_Алматы</div>
+                        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="review-text">Быстро оформили заказ самовывозом со склада на Торетай. Все рулоны подписаны, плотность соответствует заявленной.</p>
+            </div>
+
+            <!-- Отзыв 8 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">О</div>
+                    <div class="review-meta">
+                        <div class="review-author">Ольга Петровна</div>
+                        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="review-text">Используем черное мульчирующее агроволокно под клубнику. Травы вообще нет, ягоды чистые! Очень довольна покупкой.</p>
+            </div>
+
+            <!-- Отзыв 9 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">К</div>
+                    <div class="review-meta">
+                        <div class="review-author">Канат Ж.</div>
+                        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="review-text">Хороший выбор тепличных пленок. Взяли стабилизированную на 3 года, держится отлично даже при сильных ветрах.</p>
+            </div>
+
+            <!-- Отзыв 10 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">Н</div>
+                    <div class="review-meta">
+                        <div class="review-author">Нурлан_Строй</div>
+                        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="review-text">Постоянно берем здесь мембраны Юниспан и ленты для проклейки швов. Цены оптовые, качество неизменно высокое.</p>
+            </div>
+
+            <!-- Отзыв 11 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">З</div>
+                    <div class="review-meta">
+                        <div class="review-author">Зарина М.</div>
+                        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="review-text">Заказала затеняющую сетку 60% для томатов в теплицу. Растения перестали гореть на солнце, урожай в этом году отличный!</p>
+            </div>
+
+            <!-- Отзыв 12 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">Б</div>
+                    <div class="review-meta">
+                        <div class="review-author">Бауржан_Астана</div>
+                        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="review-text">Доставка в столицу заняла 3 дня. Упаковка надежная, все рулоны целые. Сервис на высоте.</p>
+            </div>
+
+            <!-- Отзыв 13 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">И</div>
+                    <div class="review-meta">
+                        <div class="review-author">Игорь В.</div>
+                        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="review-text">Отличные пластиковые сетки для ограждения птичника. Прочные, легкие в монтаже и не ржавеют.</p>
+            </div>
+
+            <!-- Отзыв 14 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">Л</div>
+                    <div class="review-meta">
+                        <div class="review-author">Людмила Николаевна</div>
+                        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="review-text">Спасибо за оперативность! Помогли подобрать укрывной материал от заморозков, рассада вся прижилась.</p>
+            </div>
+
+            <!-- Отзыв 15 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">А</div>
+                    <div class="review-meta">
+                        <div class="review-author">Аскар_Фермер</div>
+                        <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                </div>
+                <p class="review-text">Надежный поставщик с адекватными ценами. Работаем третий год, нареканий нет вообще.</p>
+            </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="reviews.html" style="background: #f0fdf4; color: #16a34a; border: 2px solid #16a34a; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 15px; display: inline-block; transition: all 0.2s;">
+                Смотреть все 129 отзывов
+            </a>
+        </div>
+    </section>
+
+    <!-- Подвал -->
     <footer class="footer" style="background-color: #064e3b; color: #ffffff; padding: 40px 0 30px 0; text-align: center; margin-top: 50px;">
         <div class="container" style="display: flex; flex-direction: column; gap: 15px;">
             <div>
-                <h3 style="margin-bottom: 5px;">TDN.KZ ALMATY</h3>
+                <h3 style="margin-bottom: 5px;">NOVARTIS ALMATY</h3>
                 <p style="color: #a8e6cf; font-weight: 600;">Мы на рынке с 2013 года</p>
                 <p style="font-style: italic; margin-top: 3px;">Качественный материал — залог успеха.</p>
             </div>
             <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 12px;">
                 <p>Работаем по Казахстану, Киргизии и Узбекистану.</p>
-                <p style="margin-top: 6px; font-weight: 600; color: #ffffff;">ТОО "Торговый Дом TDN.kz"</p>
+                <p style="margin-top: 6px; font-weight: 600; color: #ffffff;">ТОО "Торговый Дом Novartis"</p>
                 <p style="color: #d1d5db; font-size: 13px;">г. Алматы, Торетай 28г</p>
             </div>
         </div>
     </footer>
 
-    <!-- Модалка заказа звонка -->
+    <!-- Модалка звонка -->
     <div class="modal-backdrop" id="callModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:1000;">
         <div class="modal-card" style="background:#fff; padding:30px; border-radius:12px; position:relative; max-width:400px; width:100%;">
             <button type="button" class="modal-close" id="closeCallModal" style="position:absolute; top:10px; right:15px; background:none; border:none; font-size:24px; cursor:pointer;">&times;</button>
             <h3 style="margin-bottom:10px;">Связаться с нами</h3>
-            <p style="margin-bottom:20px; color:#6b7280; font-size:14px;">Выберите удобный способ связи с отделом продаж TDN.kz:</p>
+            <p style="margin-bottom:20px; color:#6b7280; font-size:14px;">Выберите удобный способ связи с отделом продаж Novartis:</p>
             <div style="display:flex; flex-direction:column; gap:10px;">
                 <a href="tel:+77053333606" style="background:#16a34a; color:#fff; padding:12px; border-radius:8px; text-align:center; text-decoration:none; font-weight:700;"><i class="fa-solid fa-phone"></i> Позвонить</a>
                 <a href="https://wa.me/77053333606" target="_blank" style="background:#25d366; color:#fff; padding:12px; border-radius:8px; text-align:center; text-decoration:none; font-weight:700;"><i class="fa-brands fa-whatsapp"></i> Написать в WhatsApp</a>
@@ -360,7 +468,6 @@
         </div>
     </div>
 
-    <!-- Скрипт автоматического слайдера (4 секунды) -->
     <script>
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.dot');
@@ -372,59 +479,28 @@
         function showSlide(index) {
             slides.forEach(slide => slide.classList.remove('active'));
             dots.forEach(dot => dot.classList.remove('active'));
-            
             if (index >= slides.length) currentSlide = 0;
             if (index < 0) currentSlide = slides.length - 1;
-
             slides[currentSlide].classList.add('active');
             dots[currentSlide].classList.add('active');
         }
-
-        function nextSlide() {
-            currentSlide++;
-            showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-            currentSlide--;
-            showSlide(currentSlide);
-        }
-
-        function startAutoSlide() {
-            slideTimer = setInterval(nextSlide, 4000); // 4 секунды
-        }
-
-        function resetAutoSlide() {
-            clearInterval(slideTimer);
-            startAutoSlide();
-        }
+        function nextSlide() { currentSlide++; showSlide(currentSlide); }
+        function prevSlide() { currentSlide--; showSlide(currentSlide); }
+        function startAutoSlide() { slideTimer = setInterval(nextSlide, 4000); }
+        function resetAutoSlide() { clearInterval(slideTimer); startAutoSlide(); }
 
         if (nextBtn && prevBtn) {
-            nextBtn.addEventListener('click', () => {
-                nextSlide();
-                resetAutoSlide();
-            });
-
-            prevBtn.addEventListener('click', () => {
-                prevSlide();
-                resetAutoSlide();
-            });
-
+            nextBtn.addEventListener('click', () => { nextSlide(); resetAutoSlide(); });
+            prevBtn.addEventListener('click', () => { prevSlide(); resetAutoSlide(); });
             dots.forEach((dot, idx) => {
-                dot.addEventListener('click', () => {
-                    currentSlide = idx;
-                    showSlide(currentSlide);
-                    resetAutoSlide();
-                });
+                dot.addEventListener('click', () => { currentSlide = idx; showSlide(currentSlide); resetAutoSlide(); });
             });
-
             startAutoSlide();
         }
 
         const callModal = document.getElementById('callModal');
         const openCallModalBtn = document.getElementById('openCallModal');
         const closeCallModalBtn = document.getElementById('closeCallModal');
-
         if (openCallModalBtn) openCallModalBtn.addEventListener('click', () => callModal.style.display = 'flex');
         if (closeCallModalBtn) closeCallModalBtn.addEventListener('click', () => callModal.style.display = 'none');
         window.addEventListener('click', (e) => { if (e.target === callModal) callModal.style.display = 'none'; });
