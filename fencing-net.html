@@ -3,26 +3,399 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ограждающие сетки — NOVARTIS</title>
+    <title>Ограждающие сетки и садовые решетки — Novartis</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+        
+        /* Двухколоночный макет верхней части */
+        .agro-top-grid {
+            display: grid;
+            grid-template-columns: 450px 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        @media (max-width: 992px) {
+            .agro-top-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Левая галерея */
+        .gallery-box {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .main-media-view {
+            width: 100%;
+            height: 320px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            background: #000;
+        }
+        .main-media-view img, .main-media-view video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .media-thumbs {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+        .thumb-item {
+            width: 70px;
+            height: 70px;
+            border-radius: 6px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            position: relative;
+            flex-shrink: 0;
+            background: #000;
+        }
+        .thumb-item.active { border-color: #16a34a; }
+        .thumb-item img { width: 100%; height: 100%; object-fit: cover; }
+        .thumb-play-ic {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            background: rgba(22, 163, 74, 0.85);
+            width: 26px; height: 26px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 11px;
+            z-index: 2;
+        }
+
+        /* Иконки применения */
+        .crops-section {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #f3f4f6;
+        }
+        .crops-section h4 { font-size: 14px; color: #374151; margin-bottom: 12px; }
+        .crops-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .crop-badge {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 8px 4px;
+            text-align: center;
+            font-size: 11px;
+            color: #4b5563;
+        }
+        .crop-badge i { display: block; font-size: 16px; color: #16a34a; margin-bottom: 4px; }
+
+        /* Правая сетка товаров */
+        .products-box {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .category-title-bar { margin-bottom: 15px; }
+        .category-title-bar span { color: #16a34a; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+        .category-title-bar h1 { font-size: 26px; color: #111827; font-weight: 800; margin-top: 2px; }
+
+        .density-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .density-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 15px 10px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        .density-card:hover {
+            border-color: #16a34a;
+            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.12);
+            transform: translateY(-2px);
+        }
+        .density-number {
+            display: inline-block;
+            border: 2px solid #16a34a;
+            color: #16a34a;
+            font-weight: 900;
+            font-size: 16px;
+            padding: 2px 8px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+        .density-card p { font-size: 12px; color: #4b5563; font-weight: 600; line-height: 1.3; margin: 0; }
+
+        /* Описательный блок */
+        .agro-description-section {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 30px;
+            line-height: 1.7;
+            color: #374151;
+        }
+        .agro-description-section h2 {
+            font-size: 22px;
+            color: #111827;
+            margin: 30px 0 15px 0;
+            font-weight: 800;
+        }
+        .agro-description-section h2:first-of-type { margin-top: 0; }
+        .agro-description-section ul, .agro-description-section ol { padding-left: 20px; margin-bottom: 20px; }
+        .agro-description-section li { margin-bottom: 8px; }
+        .agro-quote-box {
+            background: #f0fdf4;
+            border-left: 4px solid #16a34a;
+            padding: 15px 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+            font-weight: 600;
+            color: #15803d;
+        }
+    </style>
 </head>
 <body>
-    <div class="top-bar"><div class="container top-bar-container"><div class="top-bar-left"><span>ЛИДЕР НА РЫНКЕ КАЗАХСТАНА С 2013 ГОДА</span></div></div></div>
-    <header class="site-header">
-        <div class="container header-flex">
-            <a href="index.html" class="logo-link"><span class="logo-green">NOVARTIS</span></a>
-            <nav class="main-nav"><ul class="nav-list"><li class="nav-element"><a href="index.html" class="nav-a">Главная</a></li></ul></nav>
-        </div>
-    </header>
-    <main class="product-detail-page">
-        <div class="container">
-            <nav class="breadcrumbs"><a href="index.html">Главная</a> &gt; <span>Ограждающие сетки</span></nav>
-            <h1 class="page-title">Ограждающие сетки</h1>
-            <div class="product-content-box">
-                <p>Надежные ограждающие сетки для разграничения территорий, защиты строительных объектов и ограждения участков.</p>
+
+    <!-- Верхняя зеленая полоса -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="top-bar-left">
+                <span>ЛИДЕР НА РЫНКЕ КАЗАХСТАНА С 2013 ГОДА</span>
+            </div>
+            <div class="top-bar-right">
+                <div class="social-icons">
+                    <a href="https://instagram.com/novartis_almaty" target="_blank" class="social-icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="lang-select-box">
+                    <i class="fa-solid fa-globe"></i>
+                    <select id="langSelect">
+                        <option value="ru" selected>RU</option>
+                        <option value="kk">KK</option>
+                        <option value="en">EN</option>
+                    </select>
+                </div>
             </div>
         </div>
-    </main>
+    </div>
+
+    <!-- Шапка сайта -->
+    <header class="site-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo-link">
+                <span class="logo-green">Novartis</span>
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-element has-dropdown">
+                        <a href="index.html" class="nav-a"><span>Продукция</span> <i class="fa-solid fa-chevron-down arrow-icon"></i></a>
+                        <div class="mega-box">
+                            <div class="mega-grid-2col">
+                                <a href="membranes.html" class="mega-card"><i class="fa-solid fa-layer-group card-ic"></i><span>Строительные мембраны</span></a>
+                                <a href="agrotextile.html" class="mega-card"><i class="fa-solid fa-seedling card-ic"></i><span>Агроволокно и агроткань</span></a>
+                                <a href="greenhouse-film.html" class="mega-card"><i class="fa-solid fa-warehouse card-ic"></i><span>Тепличная пленка</span></a>
+                                <a href="shade-net.html" class="mega-card"><i class="fa-solid fa-border-all card-ic"></i><span>Затеняющая сетка</span></a>
+                                <a href="fencing-net.html" class="mega-card"><i class="fa-solid fa-shield-cat card-ic"></i><span>Ограждающие сетки</span></a>
+                                <a href="poly-film.html" class="mega-card"><i class="fa-solid fa-box-archive card-ic"></i><span>Полиэтиленовая пленка</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-element"><a href="about.html" class="nav-a">О нас</a></li>
+                    <li class="nav-element has-dropdown"><a href="#" class="nav-a"><span>Партнерам</span> <i class="fa-solid fa-chevron-down arrow-icon"></i></a>
+                        <div class="dropdown-box"><a href="wholesale.html" class="dropdown-item">Оптовым покупателям</a></div>
+                    </li>
+                    <li class="nav-element"><a href="contacts.html" class="nav-a">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="phone-block">
+                <a href="tel:+77053333606" class="phone-link">+7 (705) 333 36 06</a>
+                <button type="button" class="callback-btn" id="openCallModal">Заказать звонок</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ СТРАНИЦЫ -->
+    <div class="page-container">
+        
+        <div class="agro-top-grid">
+            
+            <!-- ЛЕВАЯ КОЛОНКА: ИНТЕРАКТИВНАЯ МЕДИА ГАЛЕРЕЯ (3 ВИДЕО + 3 ФОТО) -->
+            <div class="gallery-box">
+                <div class="main-media-view" id="mainMediaBox">
+                    <img src="./fence-photo1.jpg" id="mainMediaTag" alt="Ограждающие сетки">
+                </div>
+
+                <!-- Миниатюры: 3 фото + 3 видео -->
+                <div class="media-thumbs">
+                    <div class="thumb-item active" onclick="switchMedia('img', './fence-photo1.jpg', this)">
+                        <img src="./fence-photo1.jpg" alt="Зеленые рулоны сетки">
+                    </div>
+                    <div class="thumb-item" onclick="switchMedia('img', './fence-photo2.jpg', this)">
+                        <img src="./fence-photo2.jpg" alt="Садовая решетка квадратная">
+                    </div>
+                    <div class="thumb-item" onclick="switchMedia('img', './fence-photo3.jpg', this)">
+                        <img src="./fence-photo3.jpg" alt="Садовая решетка ромб">
+                    </div>
+                    <div class="thumb-item" onclick="switchMedia('video', './fence-video1.mp4', this)">
+                        <img src="./fence-photo1.jpg" alt="Видео 1">
+                        <div class="thumb-play-ic"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                    <div class="thumb-item" onclick="switchMedia('video', './fence-video2.mp4', this)">
+                        <img src="./fence-photo2.jpg" alt="Видео 2">
+                        <div class="thumb-play-ic"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                    <div class="thumb-item" onclick="switchMedia('video', './fence-video3.mp4', this)">
+                        <img src="./fence-photo3.jpg" alt="Видео 3">
+                        <div class="thumb-play-ic"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </div>
+
+                <!-- Сфера применения -->
+                <div class="crops-section">
+                    <h4>Сферы применения:</h4>
+                    <div class="crops-grid">
+                        <div class="crop-badge"><i class="fa-solid fa-house-chimney"></i> Участки</div>
+                        <div class="crop-badge"><i class="fa-solid fa-wheat-awn"></i> Огороды</div>
+                        <div class="crop-badge"><i class="fa-solid fa-feather"></i> Птичники</div>
+                        <div class="crop-badge"><i class="fa-solid fa-helmet-safety"></i> Стройки</div>
+                        <div class="crop-badge"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Площадки</div>
+                        <div class="crop-badge"><i class="fa-solid fa-bicycle"></i> Трассы</div>
+                        <div class="crop-badge"><i class="fa-solid fa-warehouse"></i> Склады</div>
+                        <div class="crop-badge"><i class="fa-solid fa-shield-halved"></i> Барьеры</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ПРАВАЯ КОЛОНКА: СЕТКА ВАРИАНТОВ СЕТОК -->
+            <div class="products-box">
+                <div class="category-title-bar">
+                    <span>КАТЕГОРИЯ</span>
+                    <h1>Ограждающие сетки и садовые решетки Novartis</h1>
+                </div>
+
+                <p style="color: #6b7280; font-size: 14px;">Выберите размер рулона и ячейки:</p>
+
+                <div class="density-grid">
+                    <div class="density-card">
+                        <span class="density-number">0.8 м × 20 м</span>
+                        <p>Ячейка 15×20 мм (для клумб и птичников)</p>
+                    </div>
+                    <div class="density-card">
+                        <span class="density-number">1.0 м × 20 м</span>
+                        <p>Ячейка 90×90 мм (для заборов и растений)</p>
+                    </div>
+                    <div class="density-card">
+                        <span class="density-number">Пластик</span>
+                        <p>Коррозийно-стойкая садовая решетка</p>
+                    </div>
+                    <div class="density-card">
+                        <span class="density-number">Вольеры</span>
+                        <p>Ограждения для птиц и животных</p>
+                    </div>
+                    <div class="density-card">
+                        <span class="density-number">Временные</span>
+                        <p>Аварийные и строительные сетки</p>
+                    </div>
+                    <div class="density-card">
+                        <span class="density-number">Зонирование</span>
+                        <p>Сетки для разделительных зон</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- НИЖНИЙ ПОДРОБНЫЙ ТЕКСТОВЫЙ БЛОК -->
+        <div class="agro-description-section">
+            <h2>Ограждающие сетки и садовые решетки Novartis — надежная защита и эстетика вашего участка</h2>
+            <p>Ограждающие пластиковые сетки и садовые решетки от Торгового Дома <strong>Novartis</strong> — это практичное, прочное и долговечное решение для зонирования территории, создания безопасного пространства и защиты растений. Они сочетают высокий уровень функциональности и эстетичный внешний вид, помогая поддерживать порядок и уют в саду, на даче, а также на строительных и промышленных объектах без ущерба для экстерьера.</p>
+            <p>В отличие от металлических ограждений, пластиковая садовая решетка не подвержена коррозии, не ржавеет и выдерживает любые погодные условия климата Казахстана.</p>
+
+            <h2>Преимущества пластиковых ограждающих сеток Novartis</h2>
+            <ul>
+                <li><strong>Коррозийная стойкость:</strong> не ржавеют под воздействием влаги и химических средств, не требуют ежегодной покраски.</li>
+                <li><strong>Устойчивость к погодным факторам:</strong> выдерживают климатические перепады температур и служат преградой без потери внешнего вида.</li>
+                <li><strong>Простой и быстрый монтаж:</strong> легко устанавливаются, подгоняются под нужный размер и крепятся к любым опорным столбам или каркасу.</li>
+                <li><strong>Надежная защита:</strong> эффективно защищают сад и огород от животных, птиц и нежелательных гостей.</li>
+                <li><strong>Безопасность и экологичность:</strong> материалы безопасны для растений, не имеют острых краев и травмобезопасны.</li>
+                <li><strong>Эстетичный внешний вид:</strong> аккуратные зеленые решетки органично дополняют ландшафтный дизайн участка.</li>
+            </ul>
+
+            <h2>Размеры рулонов и ячеек садовой решетки</h2>
+            <p>В ассортименте представлены садовые решетки различных модификаций для тонкого зонирования или создания крупных барьеров:</p>
+            <ul>
+                <li><strong>Рулон 0.8 м × 20 м</strong> — размер ячейки 15 мм × 20 мм (подходит для аккуратного ограждения клумб, защиты саженцев и обустройства птичников).</li>
+                <li><strong>Рулон 1.0 м × 20 м</strong> — размер ячейки 90 мм × 90 мм (оптимально для создания разделительных заборов, поддержки вьющихся растений и крупных зон).</li>
+            </ul>
+
+            <h2>Области применения</h2>
+            <p>Садовые решетки и ограждающие сетки универсальны и используются во многих сферах:</p>
+            <ol>
+                <li><strong>Жилые территории и благоустройство:</strong> огорожение частных домовладений, внутренних дворов, палисадников и парковых зон.</li>
+                <li><strong>Садовые территории и сельское хозяйство:</strong> защита урожая и плодовых деревьев от животных и птиц, ограждение садов, огородов, теплиц и пастбищ.</li>
+                <li><strong>Птичники и животноводство:</strong> обустройство вольеров, загонов и птичьих дворов.</li>
+                <li><strong>Строительные объекты:</strong> устройство временных ограждений рабочих зон и защита площадок.</li>
+                <li><strong>Детские и спортивно-игровые площадки:</strong> ограждение игровых зон, футбольных полей и теннисных кортов для безопасности.</li>
+                <li><strong>Велосипедные и мототрассы:</strong> обозначение границ специализированных спортивных трасс и зон движения.</li>
+                <li><strong>Промышленность и транспорт:</strong> разделение складских зон, защита оборудования, а также установка вдоль дорог для предотвращения выхода животных.</li>
+                <li><strong>Сфера безопасности:</strong> выставление временных барьеров при проведении массовых мероприятий.</li>
+            </ol>
+
+            <h2>Купить ограждающую сетку в ТД Novartis</h2>
+            <p>Торговый Дом <strong>Novartis</strong> гарантирует высокое качество материалов, доступные цены, быструю доставку и профессиональный клиентский сервис.</p>
+
+            <div class="agro-quote-box">
+                Ограждающие сетки и садовые решетки Novartis — инвестируйте в надежную защиту вашего участка, сохранность урожая и красоту территории!
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Подвал сайта -->
+    <footer class="footer" style="background-color: #064e3b; color: #ffffff; padding: 40px 0 30px 0; text-align: center; margin-top: 50px;">
+        <div class="container" style="display: flex; flex-direction: column; gap: 15px;">
+            <div>
+                <h3 style="margin-bottom: 5px;">NOVARTIS ALMATY</h3>
+                <p style="color: #a8e6cf; font-weight: 600;">Мы на рынке с 2013 года</p>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 12px;">
+                <p style="margin-top: 6px; font-weight: 600; color: #ffffff;">ТОО "Торговый Дом Novartis"</p>
+                <p style="color: #d1d5db; font-size: 13px;">г. Алматы, Торетай 28г</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипт переключения фото и видео в галерее -->
+    <script>
+        function switchMedia(type, src, element) {
+            const box = document.getElementById('mainMediaBox');
+            document.querySelectorAll('.thumb-item').forEach(el => el.classList.remove('active'));
+            element.classList.add('active');
+
+            if (type === 'img') {
+                box.innerHTML = `<img src="${src}" alt="Ограждающие сетки">`;
+            } else if (type === 'video') {
+                box.innerHTML = `<video src="${src}" controls autoplay loop style="width:100%; height:100%; object-fit:cover;"></video>`;
+            }
+        }
+    </script>
 </body>
 </html>
