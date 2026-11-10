@@ -3,26 +3,389 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Затеняющая сетка — NOVARTIS</title>
+    <title>Затеняющая сетка — Novartis</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+        
+        .agro-top-grid {
+            display: grid;
+            grid-template-columns: 450px 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        @media (max-width: 992px) {
+            .agro-top-grid { grid-template-columns: 1fr; }
+        }
+
+        .gallery-box {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .main-media-view {
+            width: 100%;
+            height: 320px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            background: #000;
+        }
+        .main-media-view img, .main-media-view video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .media-thumbs {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+        .thumb-item {
+            width: 70px;
+            height: 70px;
+            border-radius: 6px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            position: relative;
+            flex-shrink: 0;
+            background: #000;
+        }
+        .thumb-item.active { border-color: #16a34a; }
+        .thumb-item img { width: 100%; height: 100%; object-fit: cover; }
+        .thumb-play-ic {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            background: rgba(22, 163, 74, 0.85);
+            width: 26px; height: 26px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 11px;
+            z-index: 2;
+        }
+
+        .crops-section {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #f3f4f6;
+        }
+        .crops-section h4 { font-size: 14px; color: #374151; margin-bottom: 12px; }
+        .crops-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .crop-badge {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 8px 4px;
+            text-align: center;
+            font-size: 11px;
+            color: #4b5563;
+        }
+        .crop-badge i { display: block; font-size: 16px; color: #16a34a; margin-bottom: 4px; }
+
+        .products-box {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .category-title-bar { margin-bottom: 15px; }
+        .category-title-bar span { color: #16a34a; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+        .category-title-bar h1 { font-size: 26px; color: #111827; font-weight: 800; margin-top: 2px; }
+
+        .density-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .density-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 15px 10px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        .density-card:hover {
+            border-color: #16a34a;
+            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.12);
+            transform: translateY(-2px);
+        }
+        .density-number {
+            display: inline-block;
+            border: 2px solid #16a34a;
+            color: #16a34a;
+            font-weight: 900;
+            font-size: 20px;
+            padding: 2px 10px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+        .density-card p { font-size: 12px; color: #4b5563; font-weight: 600; line-height: 1.3; margin: 0; }
+
+        .agro-description-section {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 30px;
+            line-height: 1.7;
+            color: #374151;
+        }
+        .agro-description-section h2 {
+            font-size: 22px;
+            color: #111827;
+            margin: 30px 0 15px 0;
+            font-weight: 800;
+        }
+        .agro-description-section h2:first-of-type { margin-top: 0; }
+        .agro-description-section ul, .agro-description-section ol { padding-left: 20px; margin-bottom: 20px; }
+        .agro-description-section li { margin-bottom: 8px; }
+        .agro-quote-box {
+            background: #f0fdf4;
+            border-left: 4px solid #16a34a;
+            padding: 15px 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+            font-weight: 600;
+            color: #15803d;
+        }
+    </style>
 </head>
 <body>
-    <div class="top-bar"><div class="container top-bar-container"><div class="top-bar-left"><span>ЛИДЕР НА РЫНКЕ КАЗАХСТАНА С 2013 ГОДА</span></div></div></div>
-    <header class="site-header">
-        <div class="container header-flex">
-            <a href="index.html" class="logo-link"><span class="logo-green">NOVARTIS</span></a>
-            <nav class="main-nav"><ul class="nav-list"><li class="nav-element"><a href="index.html" class="nav-a">Главная</a></li></ul></nav>
-        </div>
-    </header>
-    <main class="product-detail-page">
-        <div class="container">
-            <nav class="breadcrumbs"><a href="index.html">Главная</a> &gt; <span>Затеняющая сетка</span></nav>
-            <h1 class="page-title">Затеняющая сетка</h1>
-            <div class="product-content-box">
-                <p>Затеняющая сетка защищает растения от палящего солнца, создавая оптимальный уровень инсоляции для теплиц, садов и зон отдыха.</p>
+
+    <!-- Верхняя зеленая полоса -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="top-bar-left">
+                <span>ЛИДЕР НА РЫНКЕ КАЗАХСТАНА С 2013 ГОДА</span>
+            </div>
+            <div class="top-bar-right">
+                <div class="social-icons">
+                    <a href="https://instagram.com/novartis_almaty" target="_blank" class="social-icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="lang-select-box">
+                    <i class="fa-solid fa-globe"></i>
+                    <select id="langSelect">
+                        <option value="ru" selected>RU</option>
+                        <option value="kk">KK</option>
+                        <option value="en">EN</option>
+                    </select>
+                </div>
             </div>
         </div>
-    </main>
+    </div>
+
+    <!-- Шапка сайта -->
+    <header class="site-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo-link">
+                <span class="logo-green">Novartis</span>
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-element has-dropdown">
+                        <a href="index.html" class="nav-a"><span>Продукция</span> <i class="fa-solid fa-chevron-down arrow-icon"></i></a>
+                        <div class="mega-box">
+                            <div class="mega-grid-2col">
+                                <a href="membranes.html" class="mega-card"><i class="fa-solid fa-layer-group card-ic"></i><span>Строительные мембраны</span></a>
+                                <a href="agrotextile.html" class="mega-card"><i class="fa-solid fa-seedling card-ic"></i><span>Агроволокно и агроткань</span></a>
+                                <a href="greenhouse-film.html" class="mega-card"><i class="fa-solid fa-warehouse card-ic"></i><span>Тепличная пленка</span></a>
+                                <a href="shade-net.html" class="mega-card"><i class="fa-solid fa-border-all card-ic"></i><span>Затеняющая сетка</span></a>
+                                <a href="fencing-net.html" class="mega-card"><i class="fa-solid fa-shield-cat card-ic"></i><span>Ограждающие сетки</span></a>
+                                <a href="poly-film.html" class="mega-card"><i class="fa-solid fa-box-archive card-ic"></i><span>Полиэтиленовая пленка</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-element"><a href="about.html" class="nav-a">О нас</a></li>
+                    <li class="nav-element has-dropdown"><a href="#" class="nav-a"><span>Партнерам</span> <i class="fa-solid fa-chevron-down arrow-icon"></i></a>
+                        <div class="dropdown-box"><a href="wholesale.html" class="dropdown-item">Оптовым покупателям</a></div>
+                    </li>
+                    <li class="nav-element"><a href="contacts.html" class="nav-a">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="phone-block">
+                <a href="tel:+77053333606" class="phone-link">+7 (705) 333 36 06</a>
+                <button type="button" class="callback-btn" id="openCallModal">Заказать звонок</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-container">
+        
+        <div class="agro-top-grid">
+            
+            <!-- ЛЕВАЯ КОЛОНКА: ИНТЕРАКТИВНАЯ МЕДИА ГАЛЕРЕЯ (ВИДЕО + ФОТО) -->
+            <div class="gallery-box">
+                <div class="main-media-view" id="mainMediaBox">
+                    <video src="./shade-video1.mp4" controls autoplay loop style="width:100%; height:100%; object-fit:cover;"></video>
+                </div>
+
+                <!-- Миниатюры: 2 видео + 2 фото -->
+                <div class="media-thumbs">
+                    <div class="thumb-item active" onclick="switchMedia('video', './shade-video1.mp4', this)">
+                        <div class="thumb-play-ic"><i class="fa-solid fa-play"></i></div>
+                        <video src="./shade-video1.mp4" style="width:100%; height:100%; object-fit:cover;"></video>
+                    </div>
+                    <div class="thumb-item" onclick="switchMedia('video', './shade-video2.mp4', this)">
+                        <div class="thumb-play-ic"><i class="fa-solid fa-play"></i></div>
+                        <video src="./shade-video2.mp4" style="width:100%; height:100%; object-fit:cover;"></video>
+                    </div>
+                    <div class="thumb-item" onclick="switchMedia('img', './shade-photo1.jpg', this)">
+                        <img src="./shade-photo1.jpg" alt="Теневой навес">
+                    </div>
+                    <div class="thumb-item" onclick="switchMedia('img', './shade-photo2.jpg', this)">
+                        <img src="./shade-photo2.jpg" alt="Теплица с сеткой">
+                    </div>
+                </div>
+
+                <div class="crops-section">
+                    <h4>Используют для выращивания:</h4>
+                    <div class="crops-grid">
+                        <div class="crop-badge"><i class="fa-solid fa-seedling"></i> Огурцов</div>
+                        <div class="crop-badge"><i class="fa-solid fa-lemon"></i> Томатов</div>
+                        <div class="crop-badge"><i class="fa-solid fa-pepper-hot"></i> Перца</div>
+                        <div class="crop-badge"><i class="fa-solid fa-leaf"></i> Капусты</div>
+                        <div class="crop-badge"><i class="fa-solid fa-apple-whole"></i> Клубники</div>
+                        <div class="crop-badge"><i class="fa-solid fa-spa"></i> Салата</div>
+                        <div class="crop-badge"><i class="fa-solid fa-water"></i> Бахчевых</div>
+                        <div class="crop-badge"><i class="fa-solid fa-cloud-sun"></i> Теплиц</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products-box">
+                <div class="category-title-bar">
+                    <span>КАТЕГОРИЯ</span>
+                    <h1>Сетка затеняющая Novartis</h1>
+                </div>
+
+                <p style="color: #6b7280; font-size: 14px;">Выберите нужную степень затенения:</p>
+
+                <div class="density-grid">
+                    <div class="density-card">
+                        <span class="density-number">30%</span>
+                        <p>Легкое притенение для огурцов и зелени</p>
+                    </div>
+                    <div class="density-card">
+                        <span class="density-number">45%</span>
+                        <p>Притенение для кабачков и бахчевых</p>
+                    </div>
+                    <div class="density-card">
+                        <span class="density-number">60%</span>
+                        <p>Универсальная для томатов и ягод</p>
+                    </div>
+                    <div class="density-card">
+                        <span class="density-number">70%</span>
+                        <p>Оптимально для теплиц и бассейнов</p>
+                    </div>
+                    <div class="density-card">
+                        <span class="density-number">80%</span>
+                        <p>Плотная для агрокомплексов и загонов</p>
+                    </div>
+                    <div class="density-card">
+                        <span class="density-number">90%</span>
+                        <p>Максимальная для навесов и заборов</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="agro-description-section">
+            <h2>Затеняющая сетка Novartis — надежная защита от солнца</h2>
+            <p>Затеняющая сетка от Торгового Дома <strong>Novartis</strong> — это специализированный прочный полимерный материал, разработанный для эффективной защиты растений, теплиц, людей и различных объектов от избыточного солнечного излучения. Солнцезащитная сетка уменьшает интенсивность прямого света и равномерно рассеивает его, помогая создать оптимальный микроклимат и предотвращая перегрев почвы, культур и конструкций.</p>
+            <p>Материал изготавливается из высококачественного полимера с высокой устойчивостью к ультрафиолетовому излучению и погодным условиям. Это долговечное, экономичное и экологичное решение от поставщика, рассчитанное на длительную эксплуатацию и многосезонное использование.</p>
+
+            <h2>Сетка для затенения от солнца: выбор степени плотности</h2>
+            <p>Правильно подобранная затеняющая сетка позволяет регулировать уровень освещенности и температуру под укрытием. В ассортименте Торгового Дома Novartis представлены варианты с плотностью затенения от 30% до 90% для выполнения самых разных задач:</p>
+            <ul>
+                <li><strong>30–45%</strong> — легкое притенение для светолюбивых культур (огурцы, кабачки, бахчевые, салат).</li>
+                <li><strong>60%</strong> — универсальная теневая сетка для защиты большинства овощных и ягодных культур (томаты, перец, капуста, клубника).</li>
+                <li><strong>70%</strong> — оптимальный вариант для укрытия теплиц, парников, а также бассейнов, спортивных площадок и парковок.</li>
+                <li><strong>80%</strong> — плотная защита для агрокомплексов, коммерческих объектов, ферм и животноводческих загонов.</li>
+                <li><strong>90%</strong> — максимальная плотность затенения для создания комфортных зон отдыха, защиты фасадов зданий, парковочных навесов, а также использования на заборов и строительных лесах для обеспечения приватности и защиты от пыли.</li>
+            </ul>
+            <p>Чем выше плотность, тем эффективнее блокируется прямой солнечный свет и тем ниже температура под сеткой.</p>
+
+            <h2>Зачем нужны затеняющие сетки Novartis</h2>
+            <ol>
+                <li><strong>Защита растений:</strong> уменьшают воздействие прямых солнечных лучей, предотвращают солнечные ожоги и перегрев, продлевают жизнь растениям и улучшают их рост в теплицах, садах и огородах.</li>
+                <li><strong>Снижение температуры:</strong> обеспечивают надежную тень и заметно уменьшают нагрев воздуха под сеткой, идеально подходя для охлаждения террас, парковок и открытых площадок.</li>
+                <li><strong>Энергосбережение:</strong> при установке на фасады зданий и теплиц уменьшают нагрев внутренних помещений и снижают расходы на кондиционирование.</li>
+                <li><strong>Защита от ветра и пыли:</strong> снижают силу порывов ветра, улавливают пыль и мелкий мусор, защищая посевы, сады или стройплощадки.</li>
+                <li><strong>Укрытие зон и объектов:</strong> отлично подходят для создания теней над бассейнами, навесами кафе, рынками, а также на фермах для защиты животных от жары.</li>
+            </ol>
+
+            <h2>Преимущества солнцезащитной сетки Novartis</h2>
+            <ul>
+                <li><strong>Контроль микроклимата:</strong> устойчивое уменьшение нагрева воздуха и защиты посадок от выгорания.</li>
+                <li><strong>Экономия ресурсов:</strong> сокращение испарения влаги из почвы и снижение частоты поливов.</li>
+                <li><strong>Повышение урожайности:</strong> защита от солнечного стресса ускоряет созревание и улучшает качество плодов.</li>
+                <li><strong>Надежность и стойкость:</strong> высокая устойчивость к УФ-излучению и разным погодным условиям.</li>
+                <li><strong>Универсальность и простота:</strong> легкий монтаж и демонтаж на любые каркасы, заборные стойки или фасады.</li>
+            </ul>
+
+            <h2>Где применяется затеняющая сетка Novartis</h2>
+            <ul>
+                <li><strong>Сельское хозяйство:</strong> защита теплиц, парников, открытого грунта и фруктовых садов.</li>
+                <li><strong>Строительство:</strong> затенение стройплощадок, защита лесов и фасадов зданий.</li>
+                <li><strong>Ландшафтный дизайн:</strong> создание комфортных тенистых зон в садах, парках и на дачных участках.</li>
+                <li><strong>Коммерческие и бытовые объекты:</strong> навесы для автопарковок, рынков, летних кафе, террас, бассейнов и спортивных площадок.</li>
+            </ul>
+
+            <h2>Монтаж и заказ продукции</h2>
+            <p>Монтаж затеняющей сетки Novartis не требует специальных инструментов — материал удобно крепится к каркасу из любого материала (металл, дерево, пластик) с помощью стяжек, клипс или троса.</p>
+            <p>Купить затеняющую сетку Novartis по выгодной цене с доставкой по Алматы и всему Казахстану вы можете, обратившись к нашим менеджерам или сформировав заказ в каталоге.</p>
+
+            <div class="agro-quote-box">
+                Затеняющие сетки от ТД Novartis — это универсальный и надежный инструмент для обеспечения комфорта, защиты растений и создания идеальной тени в любой сезон!
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer" style="background-color: #064e3b; color: #ffffff; padding: 40px 0 30px 0; text-align: center; margin-top: 50px;">
+        <div class="container" style="display: flex; flex-direction: column; gap: 15px;">
+            <div>
+                <h3 style="margin-bottom: 5px;">NOVARTIS ALMATY</h3>
+                <p style="color: #a8e6cf; font-weight: 600;">Мы на рынке с 2013 года</p>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 12px;">
+                <p style="margin-top: 6px; font-weight: 600; color: #ffffff;">ТОО "Торговый Дом Novartis"</p>
+                <p style="color: #d1d5db; font-size: 13px;">г. Алматы, Торетай 28г</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function switchMedia(type, src, element) {
+            const box = document.getElementById('mainMediaBox');
+            document.querySelectorAll('.thumb-item').forEach(el => el.classList.remove('active'));
+            element.classList.add('active');
+
+            if (type === 'img') {
+                box.innerHTML = `<img src="${src}" alt="Затеняющая сетка">`;
+            } else if (type === 'video') {
+                box.innerHTML = `<video src="${src}" controls autoplay loop style="width:100%; height:100%; object-fit:cover;"></video>`;
+            }
+        }
+    </script>
 </body>
 </html>
