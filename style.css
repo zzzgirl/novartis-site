@@ -1275,3 +1275,138 @@ body {
 }
 .footer-company { margin-top: 6px; font-weight: 600; color: #ffffff; }
 .footer-address { color: #d1d5db; font-size: 13px; }
+/* ==========================================
+   АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ И ПЛАНШЕТОВ
+   ========================================== */
+
+/* 1. Планшеты и небольшие экраны (до 1024px) */
+@media (max-width: 1024px) {
+    .container, 
+    .hero-slider-section, 
+    .features-bar-section, 
+    .page-container {
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .agro-top-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    .main-media-view {
+        height: 360px;
+    }
+}
+
+/* 2. Мобильные телефоны (до 768px) */
+@media (max-width: 768px) {
+    /* Верхняя полоса шапки */
+    .top-bar-container {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    .top-bar-left span {
+        font-size: 11px;
+    }
+
+    /* Шапка сайта */
+    .header-flex {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-between;
+    }
+    .phone-block {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        border-top: 1px solid #f3f4f6;
+    }
+
+    /* Навигация и меню */
+    .main-nav {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+    .nav-list {
+        display: flex;
+        gap: 15px;
+        white-space: nowrap;
+    }
+
+    /* Главный слайдер */
+    .slider-container, 
+    .slide {
+        height: 320px !important;
+        min-height: 320px !important;
+    }
+    .slide-overlay {
+        padding: 25px 20px !important;
+    }
+    .slide-content h2 {
+        font-size: 22px !important;
+        margin-bottom: 12px !important;
+    }
+    .slide-features-list li {
+        font-size: 13px !important;
+    }
+    .slider-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+    .prev-btn { left: 10px; }
+    .next-btn { right: 10px; }
+
+    /* Медиагалерея и миниатюры */
+    .main-media-view {
+        height: 240px !important;
+    }
+    .thumb-item {
+        width: 55px !important;
+        height: 55px !important;
+    }
+
+    /* Иконки культур */
+    .crops-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Сетка вариантов плотности (карточки) */
+    .density-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+    .density-card {
+        padding: 12px 8px !important;
+    }
+    .density-number {
+        font-size: 16px !important;
+    }
+
+    /* Описательные текстовые блоки */
+    .agro-description-section {
+        padding: 20px !important;
+    }
+    .agro-description-section h2 {
+        font-size: 18px !important;
+    }
+}
+
+/* 3. Маленькие экраны телефонов (до 480px) */
+@media (max-width: 480px) {
+    .slide-content h2 {
+        font-size: 18px !important;
+    }
+    .main-media-view {
+        height: 200px !important;
+    }
+    .density-grid {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
