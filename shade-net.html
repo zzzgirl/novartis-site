@@ -206,6 +206,7 @@
                         </div>
                     </li>
                     <li class="nav-element"><a href="about.html" class="nav-a">О нас</a></li>
+                    <li class="nav-element"><a href="reviews.html" class="nav-a">Отзывы</a></li>
                     <li class="nav-element has-dropdown"><a href="javascript:void(0);" class="nav-a"><span>Партнерам</span> <i class="fa-solid fa-chevron-down arrow-icon"></i></a>
                         <div class="dropdown-box"><a href="wholesale.html" class="dropdown-item">Оптовым покупателям</a></div>
                     </li>
@@ -222,25 +223,26 @@
     <div class="page-container">
         
         <div class="agro-top-grid">
+            <!-- ЛЕВАЯ КОЛОНКА: ГАЛЕРЕЯ (2 ФОТО + 2 ВИДЕО) -->
             <div class="gallery-box">
                 <div class="main-media-view" id="mainMediaBox">
-                    <video src="./shade-video1.mp4" controls autoplay loop style="width:100%; height:100%; object-fit:cover;"></video>
+                    <img src="./shade-photo1.jpg" id="mainMediaTag" alt="Теневой навес из затеняющей сетки">
                 </div>
 
                 <div class="media-thumbs">
-                    <div class="thumb-item active" onclick="switchMedia('video', './shade-video1.mp4', this)">
-                        <div class="thumb-play-ic"><i class="fa-solid fa-play"></i></div>
-                        <video src="./shade-video1.mp4" style="width:100%; height:100%; object-fit:cover;"></video>
-                    </div>
-                    <div class="thumb-item" onclick="switchMedia('video', './shade-video2.mp4', this)">
-                        <div class="thumb-play-ic"><i class="fa-solid fa-play"></i></div>
-                        <video src="./shade-video2.mp4" style="width:100%; height:100%; object-fit:cover;"></video>
-                    </div>
-                    <div class="thumb-item" onclick="switchMedia('img', './shade-photo1.jpg', this)">
+                    <div class="thumb-item active" onclick="switchMedia('img', './shade-photo1.jpg', this)">
                         <img src="./shade-photo1.jpg" alt="Теневой навес">
                     </div>
                     <div class="thumb-item" onclick="switchMedia('img', './shade-photo2.jpg', this)">
                         <img src="./shade-photo2.jpg" alt="Теплица с сеткой">
+                    </div>
+                    <div class="thumb-item" onclick="switchMedia('video', './shade-video1.mp4', this)">
+                        <img src="./shade-photo1.jpg" alt="Видео 1">
+                        <div class="thumb-play-ic"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                    <div class="thumb-item" onclick="switchMedia('video', './shade-video2.mp4', this)">
+                        <img src="./shade-photo2.jpg" alt="Видео 2">
+                        <div class="thumb-play-ic"><i class="fa-solid fa-play"></i></div>
                     </div>
                 </div>
 
@@ -259,6 +261,7 @@
                 </div>
             </div>
 
+            <!-- ПРАВАЯ КОЛОНКА: ПЛОТНОСТИ -->
             <div class="products-box">
                 <div class="category-title-bar">
                     <span>КАТЕГОРИЯ</span>
