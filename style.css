@@ -728,3 +728,19 @@ body {
         grid-template-columns: 1fr 1fr !important;
     }
 }
+@media (max-width: 768px) {
+    .mega-box {
+        position: fixed !important;
+        top: 125px !important;
+        left: 5% !important;
+        right: 5% !important;
+        width: 90% !important;
+        max-height: 70vh !important;
+        overflow-y: auto !important;
+        z-index: 9999 !important;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.3) !important;
+        border-radius: 14px !important;
+        padding: 15px !important;
+        background: #ffffff !important;
+    }
+}

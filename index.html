@@ -507,3 +507,50 @@
     </script>
 </body>
 </html>
+<script>
+    // Исправление для открытия выпадающего меню на мобильных устройствах по тапу
+    document.addEventListener('DOMContentLoaded', function () {
+        const dropdowns = document.querySelectorAll('.has-dropdown');
+        
+        dropdowns.forEach(dropdown => {
+            const link = dropdown.querySelector('.nav-a');
+            const megaBox = dropdown.querySelector('.mega-box') || dropdown.querySelector('.dropdown-box');
+            
+            if (link && megaBox) {
+                link.addEventListener('click', function (e) {
+                    // Проверяем, мобильное ли устройство или ширина экрана меньше 1024px
+                    if (window.innerWidth <= 1024) {
+                        e.preventDefault(); // Останавливаем переход по ссылке
+                        e.stopPropagation();
+                        
+                        // Закрываем остальные открытые меню
+                        dropdowns.forEach(d => {
+                            if (d !== dropdown) {
+                                const box = d.querySelector('.mega-box') || d.querySelector('.dropdown-box');
+                                if (box) box.style.display = 'none';
+                            }
+                        });
+                        
+                        // Переключаем текущее меню
+                        if (megaBox.style.display === 'block') {
+                            megaBox.style.display = 'none';
+                        } else {
+                            megaBox.style.display = 'block';
+                        }
+                    }
+                });
+            }
+        });
+
+        // Закрывать меню при клике в любое другое место экрана
+        document.addEventListener('click', function (e) {
+            if (window.innerWidth <= 1024) {
+                if (!e.target.closest('.has-dropdown')) {
+                    document.querySelectorAll('.mega-box, .dropdown-box').forEach(box => {
+                        box.style.display = 'none';
+                    });
+                }
+            }
+        });
+    });
+</script>
