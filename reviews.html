@@ -46,7 +46,6 @@
                                 <a href="greenhouse-film.html" class="mega-card"><i class="fa-solid fa-warehouse card-ic"></i><span>Тепличная пленка</span></a>
                                 <a href="shade-net.html" class="mega-card"><i class="fa-solid fa-border-all card-ic"></i><span>Затеняющая сетка</span></a>
                                 <a href="fencing-net.html" class="mega-card"><i class="fa-solid fa-shield-cat card-ic"></i><span>Ограждающие сетки</span></a>
-                                <a href="poly-film.html" class="mega-card"><i class="fa-solid fa-box-archive card-ic"></i><span>Полиэтиленовая пленка</span></a>
                             </div>
                         </div>
                     </li>
@@ -72,10 +71,7 @@
             <p style="color: #6b7280; font-size: 15px; margin-top: 8px;">Реальные мнения клиентов со всего Казахстана, купивших наши материалы</p>
         </div>
 
-        <!-- Сетка всех 129 отзывов -->
-        <div class="reviews-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px;" id="allReviewsContainer">
-            <!-- Скрипт ниже автоматически сгенерирует все 129 уникальных отзывов с разными именами, текстами и звездами -->
-        </div>
+        <div class="reviews-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;" id="allReviewsContainer"></div>
     </div>
 
     <footer class="footer" style="background-color: #064e3b; color: #ffffff; padding: 40px 0 30px 0; text-align: center; margin-top: 50px;">
@@ -91,7 +87,6 @@
         </div>
     </footer>
 
-    <!-- Скрипт автоматического формирования 129 реалистичных отзывов -->
     <script>
         const names = [
             "Алихан", "Елена_77", "Марат_Агро", "Светлана Данилова", "Рустам К.", "Динара С.", "Тимур_Алматы", "Ольга Петровна", 
@@ -157,8 +152,35 @@
                 </div>
             `;
         }
-
         container.innerHTML = htmlContent;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdowns = document.querySelectorAll('.has-dropdown');
+            dropdowns.forEach(dropdown => {
+                const link = dropdown.querySelector('.nav-a');
+                const megaBox = dropdown.querySelector('.mega-box') || dropdown.querySelector('.dropdown-box');
+                if (link && megaBox) {
+                    link.addEventListener('click', function (e) {
+                        if (window.innerWidth <= 1024) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            dropdowns.forEach(d => {
+                                if (d !== dropdown) {
+                                    const box = d.querySelector('.mega-box') || d.querySelector('.dropdown-box');
+                                    if (box) box.style.display = 'none';
+                                }
+                            });
+                            megaBox.style.display = (megaBox.style.display === 'block') ? 'none' : 'block';
+                        }
+                    });
+                }
+            });
+            document.addEventListener('click', function (e) {
+                if (window.innerWidth <= 1024 && !e.target.closest('.has-dropdown')) {
+                    document.querySelectorAll('.mega-box, .dropdown-box').forEach(box => box.style.display = 'none');
+                }
+            });
+        });
     </script>
 </body>
 </html>

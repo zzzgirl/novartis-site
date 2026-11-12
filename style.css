@@ -1,7 +1,3 @@
-/* ==========================================
-   ОСНОВНЫЕ СТИЛИ САЙТА NOVARTIS (FULL VERSION)
-   ========================================== */
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -26,9 +22,6 @@ body {
     padding: 0 15px;
 }
 
-/* ==========================================
-   ВЕРХНЯЯ ПОЛОСА (TOP BAR)
-   ========================================== */
 .top-bar {
     background-color: #16a34a;
     color: #ffffff;
@@ -42,10 +35,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.top-bar-left span {
-    display: inline-block;
 }
 
 .top-bar-right {
@@ -99,10 +88,6 @@ body {
     color: #ffffff;
 }
 
-
-/* ==========================================
-   ШАПКА САЙТА И НАВИГАЦИЯ (HEADER & MENU)
-   ========================================== */
 .site-header {
     background-color: #ffffff;
     border-bottom: 1px solid #e2e8f0;
@@ -175,7 +160,6 @@ body {
     transform: rotate(180deg);
 }
 
-/* Выпадающие мега-меню (Mega Box) */
 .mega-box {
     display: none;
     position: absolute;
@@ -230,7 +214,6 @@ body {
     flex-shrink: 0;
 }
 
-/* Обычное выпадающее меню (Dropdown) */
 .dropdown-box {
     display: none;
     position: absolute;
@@ -262,13 +245,11 @@ body {
     color: #16a34a;
 }
 
-/* Активация ховера для ПК */
 .has-dropdown:hover .mega-box,
 .has-dropdown:hover .dropdown-box {
     display: block;
 }
 
-/* Правый блок (Телефон и кнопка звонка) */
 .phone-block {
     display: flex;
     align-items: center;
@@ -307,10 +288,6 @@ body {
     transform: translateY(-1px);
 }
 
-
-/* ==========================================
-   КОМПОНЕНТЫ СТРАНИЦ И ГАЛЕРЕЙ (COMMONS)
-   ========================================== */
 .page-container {
     max-width: 1200px;
     margin: 30px auto;
@@ -324,7 +301,6 @@ body {
     margin-bottom: 40px;
 }
 
-/* Галерея товаров */
 .gallery-box {
     background: #fff;
     border: 1px solid #e5e7eb;
@@ -398,7 +374,6 @@ body {
     z-index: 2;
 }
 
-/* Бейджи применений */
 .crops-section {
     margin-top: 25px;
     padding-top: 20px;
@@ -443,7 +418,6 @@ body {
     margin-bottom: 5px;
 }
 
-/* Карточки продукции (Плотности / Виды) */
 .products-box {
     background: #fff;
     border: 1px solid #e5e7eb;
@@ -498,7 +472,7 @@ body {
     border: 2px solid #16a34a;
     color: #16a34a;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 18px;
     padding: 2px 10px;
     border-radius: 6px;
     margin-bottom: 8px;
@@ -517,7 +491,6 @@ body {
     margin: 0;
 }
 
-/* Большой блок описания и статей */
 .agro-description-section {
     background: #ffffff;
     border: 1px solid #e5e7eb;
@@ -565,17 +538,66 @@ body {
     color: #15803d;
 }
 
+.review-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
 
-/* ==========================================
-   АДАПТИВНОСТЬ И МОБИЛЬНЫЕ УСТРОЙСТВА
-   ========================================== */
+.review-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    border-color: #d1d5db;
+}
 
-/* Поддержка тач-кликов на смартфонах для меню */
-.has-dropdown:focus-within .mega-box,
-.has-dropdown:active .mega-box,
-.has-dropdown:focus-within .dropdown-box,
-.has-dropdown:active .dropdown-box {
-    display: block !important;
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.review-avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #0f172a;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.review-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.review-author {
+    font-weight: 800;
+    font-size: 16px;
+    color: #111827;
+}
+
+.review-stars {
+    color: #f59e0b;
+    font-size: 13px;
+    display: flex;
+    gap: 2px;
+}
+
+.review-text {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
 }
 
 @media (max-width: 1024px) {
@@ -609,6 +631,11 @@ body {
         font-size: 11px;
     }
 
+    .site-header {
+        position: relative;
+        z-index: 1000;
+    }
+
     .header-flex {
         flex-wrap: wrap;
         gap: 15px;
@@ -637,19 +664,23 @@ body {
         white-space: nowrap;
     }
 
-    /* Мобильное всплывающее окно продуктов */
+    .has-dropdown {
+        position: static !important;
+    }
+
     .mega-box {
-        position: fixed !important;
-        top: 125px !important;
-        left: 5% !important;
-        right: 5% !important;
-        width: 90% !important;
-        max-height: 70vh !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 15px !important;
+        right: 15px !important;
+        width: auto !important;
+        max-height: 65vh !important;
         overflow-y: auto !important;
-        z-index: 9999 !important;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.3) !important;
-        border-radius: 14px !important;
+        z-index: 99999 !important;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.25) !important;
+        border-radius: 12px !important;
         padding: 15px !important;
+        background: #ffffff !important;
     }
 
     .mega-grid-2col {
@@ -659,13 +690,12 @@ body {
     .dropdown-box {
         position: absolute !important;
         top: 100% !important;
-        left: 0 !important;
-        z-index: 9999 !important;
+        left: 15px !important;
+        z-index: 99999 !important;
         background: #ffffff !important;
         box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
     }
 
-    /* Слайдер главной */
     .slider-container, 
     .slide {
         height: 320px !important;
@@ -685,7 +715,6 @@ body {
         font-size: 13px !important;
     }
 
-    /* Медиагалерея */
     .main-media-view {
         height: 240px !important;
     }
@@ -726,30 +755,5 @@ body {
     }
     .density-grid {
         grid-template-columns: 1fr 1fr !important;
-    }
-}
-@media (max-width: 768px) {
-    .site-header {
-        position: relative;
-        z-index: 1000;
-    }
-    
-    .has-dropdown {
-        position: static !important;
-    }
-
-    .mega-box {
-        position: absolute !important;
-        top: 100% !important;
-        left: 15px !important;
-        right: 15px !important;
-        width: auto !important;
-        max-height: 65vh !important;
-        overflow-y: auto !important;
-        z-index: 99999 !important;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.25) !important;
-        border-radius: 12px !important;
-        padding: 15px !important;
-        background: #ffffff !important;
     }
 }

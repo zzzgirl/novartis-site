@@ -6,176 +6,9 @@
     <title>Строительные мембраны Techno, Unispan & Новитекс — Novartis</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .page-container {
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 0 15px;
-        }
-        
-        /* Двухколоночный макет верхней части */
-        .agro-top-grid {
-            display: grid;
-            grid-template-columns: 450px 1fr;
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        @media (max-width: 992px) {
-            .agro-top-grid { grid-template-columns: 1fr; }
-        }
-
-        /* Левая галерея */
-        .gallery-box {
-            background: #fff;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-        }
-        .main-media-view {
-            width: 100%;
-            height: 320px;
-            border-radius: 8px;
-            overflow: hidden;
-            position: relative;
-            background: #000;
-        }
-        .main-media-view img, .main-media-view video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .media-thumbs {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-            overflow-x: auto;
-            padding-bottom: 5px;
-        }
-        .thumb-item {
-            width: 70px;
-            height: 70px;
-            border-radius: 6px;
-            overflow: hidden;
-            cursor: pointer;
-            border: 2px solid transparent;
-            position: relative;
-            flex-shrink: 0;
-            background: #000;
-        }
-        .thumb-item.active { border-color: #16a34a; }
-        .thumb-item img { width: 100%; height: 100%; object-fit: cover; }
-        .thumb-play-ic {
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            background: rgba(22, 163, 74, 0.85);
-            width: 26px; height: 26px;
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 11px;
-            z-index: 2;
-        }
-
-        /* Иконки применения */
-        .crops-section {
-            margin-top: 25px;
-            padding-top: 20px;
-            border-top: 1px solid #f3f4f6;
-        }
-        .crops-section h4 { font-size: 14px; color: #374151; margin-bottom: 12px; }
-        .crops-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-        }
-        .crop-badge {
-            background: #f9fafb;
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            padding: 8px 4px;
-            text-align: center;
-            font-size: 11px;
-            color: #4b5563;
-        }
-        .crop-badge i { display: block; font-size: 16px; color: #16a34a; margin-bottom: 4px; }
-
-        /* Правая сетка товаров */
-        .products-box {
-            background: #fff;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 20px;
-        }
-        .category-title-bar { margin-bottom: 15px; }
-        .category-title-bar span { color: #16a34a; font-size: 12px; font-weight: 700; text-transform: uppercase; }
-        .category-title-bar h1 { font-size: 26px; color: #111827; font-weight: 800; margin-top: 2px; }
-
-        .density-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .density-card {
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 10px;
-            padding: 15px 10px;
-            text-align: center;
-            transition: all 0.2s ease;
-        }
-        .density-card:hover {
-            border-color: #16a34a;
-            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.12);
-            transform: translateY(-2px);
-        }
-        .density-number {
-            display: inline-block;
-            border: 2px solid #16a34a;
-            color: #16a34a;
-            font-weight: 900;
-            font-size: 18px;
-            padding: 2px 8px;
-            border-radius: 6px;
-            margin-bottom: 8px;
-        }
-        .density-card p { font-size: 12px; color: #4b5563; font-weight: 600; line-height: 1.3; margin: 0; }
-
-        /* Описательный блок */
-        .agro-description-section {
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 40px;
-            margin-top: 30px;
-            line-height: 1.7;
-            color: #374151;
-        }
-        .agro-description-section h2 {
-            font-size: 22px;
-            color: #111827;
-            margin: 30px 0 15px 0;
-            font-weight: 800;
-        }
-        .agro-description-section h2:first-of-type { margin-top: 0; }
-        .agro-description-section ul, .agro-description-section ol { padding-left: 20px; margin-bottom: 20px; }
-        .agro-description-section li { margin-bottom: 8px; }
-        .agro-quote-box {
-            background: #f0fdf4;
-            border-left: 4px solid #16a34a;
-            padding: 15px 20px;
-            margin: 25px 0;
-            border-radius: 0 8px 8px 0;
-            font-weight: 600;
-            color: #15803d;
-        }
-    </style>
 </head>
 <body>
 
-    <!-- Верхняя зеленая полоса -->
     <div class="top-bar">
         <div class="container top-bar-container">
             <div class="top-bar-left">
@@ -197,7 +30,6 @@
         </div>
     </div>
 
-    <!-- Шапка сайта -->
     <header class="site-header">
         <div class="container header-flex">
             <a href="index.html" class="logo-link">
@@ -214,7 +46,6 @@
                                 <a href="greenhouse-film.html" class="mega-card"><i class="fa-solid fa-warehouse card-ic"></i><span>Тепличная пленка</span></a>
                                 <a href="shade-net.html" class="mega-card"><i class="fa-solid fa-border-all card-ic"></i><span>Затеняющая сетка</span></a>
                                 <a href="fencing-net.html" class="mega-card"><i class="fa-solid fa-shield-cat card-ic"></i><span>Ограждающие сетки</span></a>
-                                <a href="poly-film.html" class="mega-card"><i class="fa-solid fa-box-archive card-ic"></i><span>Полиэтиленовая пленка</span></a>
                             </div>
                         </div>
                     </li>
@@ -233,18 +64,13 @@
         </div>
     </header>
 
-    <!-- ОСНОВНОЙ КОНТЕНТ СТРАНИЦЫ -->
     <div class="page-container">
-        
         <div class="agro-top-grid">
-            
-            <!-- ЛЕВАЯ КОЛОНКА: ИНТЕРАКТИВНАЯ ГАЛЕРЕЯ (4 ФОТО + 1 ВИДЕО) -->
             <div class="gallery-box">
                 <div class="main-media-view" id="mainMediaBox">
                     <img src="./mem-photo1.jpg" id="mainMediaTag" alt="Строительные мембраны">
                 </div>
 
-                <!-- Миниатюры -->
                 <div class="media-thumbs">
                     <div class="thumb-item active" onclick="switchMedia('img', './mem-photo1.jpg', this)">
                         <img src="./mem-photo1.jpg" alt="Рулоны Новитекс, Techno, Unispan">
@@ -255,17 +81,12 @@
                     <div class="thumb-item" onclick="switchMedia('img', './mem-photo3.jpg', this)">
                         <img src="./mem-photo3.jpg" alt="Монтаж мембраны">
                     </div>
-                    <div class="thumb-item" onclick="switchMedia('img', './mem-photo4.jpg', this)">
-                        <img src="./mem-photo4.jpg" alt="Склад Novartis">
-                    </div>
-                    <!-- Рабочее видео -->
                     <div class="thumb-item" onclick="switchMedia('video', './video_1.mp4', this)">
                         <img src="./mem-photo1.jpg" alt="Видео мембраны">
                         <div class="thumb-play-ic"><i class="fa-solid fa-play"></i></div>
                     </div>
                 </div>
 
-                <!-- Сфера применения -->
                 <div class="crops-section">
                     <h4>Области применения:</h4>
                     <div class="crops-grid">
@@ -281,7 +102,6 @@
                 </div>
             </div>
 
-            <!-- ПРАВАЯ КОЛОНКА: СЕТКА ВАРИАНТОВ МЕМБРАН -->
             <div class="products-box">
                 <div class="category-title-bar">
                     <span>КАТЕГОРИЯ</span>
@@ -291,36 +111,16 @@
                 <p style="color: #6b7280; font-size: 14px;">Выберите тип мембраны для кровли, стен и фасада:</p>
 
                 <div class="density-grid">
-                    <div class="density-card">
-                        <span class="density-number">Тип A</span>
-                        <p>Ветро-влагозащитная мембрана</p>
-                    </div>
-                    <div class="density-card">
-                        <span class="density-number">Тип B</span>
-                        <p>Пароизоляционная мембрана</p>
-                    </div>
-                    <div class="density-card">
-                        <span class="density-number">Тип D</span>
-                        <p>Универсальная гидро-пароизоляция</p>
-                    </div>
-                    <div class="density-card">
-                        <span class="density-number">Techno</span>
-                        <p>Пленки и мембраны Техно</p>
-                    </div>
-                    <div class="density-card">
-                        <span class="density-number">Unispan</span>
-                        <p>Строительные мембраны Юниспан</p>
-                    </div>
-                    <div class="density-card">
-                        <span class="density-number">Новитекс</span>
-                        <p>Паро-гидроизоляция Novitex</p>
-                    </div>
+                    <div class="density-card"><span class="density-number">Тип A</span><p>Ветро-влагозащитная мембрана</p></div>
+                    <div class="density-card"><span class="density-number">Тип B</span><p>Пароизоляционная мембрана</p></div>
+                    <div class="density-card"><span class="density-number">Тип D</span><p>Универсальная гидро-пароизоляция</p></div>
+                    <div class="density-card"><span class="density-number">Techno</span><p>Пленки и мембраны Техно</p></div>
+                    <div class="density-card"><span class="density-number">Unispan</span><p>Строительные мембраны Юниспан</p></div>
+                    <div class="density-card"><span class="density-number">Новитекс</span><p>Паро-гидроизоляция Novitex</p></div>
                 </div>
             </div>
-
         </div>
 
-        <!-- НИЖНИЙ ПОДРОБНЫЙ ТЕКСТОВЫЙ БЛОК -->
         <div class="agro-description-section">
             <h2>Строительные мембраны Novartis — надежная защита и энергоэффективность вашего дома</h2>
             <p>Строительные мембраны от Торгового Дома <strong>Novartis</strong> — это незаменимые материалы, которые обеспечивают надежную защиту зданий, продлевают срок службы несущих конструкций и создают комфортный микроклимат внутри помещений. Они защищают объект от комплекса негативных факторов: влаги, водяных паров, пронизывающего ветра, холода, ультрафиолета и механических повреждений.</p>
@@ -366,10 +166,8 @@
                 Торговый Дом Novartis — высокое качество, надежная защита вашего дома и выгодные цены на каждый метр!
             </div>
         </div>
-
     </div>
 
-    <!-- Подвал сайта -->
     <footer class="footer" style="background-color: #064e3b; color: #ffffff; padding: 40px 0 30px 0; text-align: center; margin-top: 50px;">
         <div class="container" style="display: flex; flex-direction: column; gap: 15px;">
             <div>
@@ -383,19 +181,44 @@
         </div>
     </footer>
 
-    <!-- Скрипт переключения фото и видео -->
     <script>
         function switchMedia(type, src, element) {
             const box = document.getElementById('mainMediaBox');
             document.querySelectorAll('.thumb-item').forEach(el => el.classList.remove('active'));
             element.classList.add('active');
-
             if (type === 'img') {
                 box.innerHTML = `<img src="${src}" alt="Строительные мембраны">`;
             } else if (type === 'video') {
-                box.innerHTML = `<video src="${src}" controls autoplay loop style="width:100%; height:100%; object-type:cover;"></video>`;
+                box.innerHTML = `<video src="${src}" controls autoplay loop style="width:100%; height:100%; object-fit:cover;"></video>`;
             }
         }
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdowns = document.querySelectorAll('.has-dropdown');
+            dropdowns.forEach(dropdown => {
+                const link = dropdown.querySelector('.nav-a');
+                const megaBox = dropdown.querySelector('.mega-box') || dropdown.querySelector('.dropdown-box');
+                if (link && megaBox) {
+                    link.addEventListener('click', function (e) {
+                        if (window.innerWidth <= 1024) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            dropdowns.forEach(d => {
+                                if (d !== dropdown) {
+                                    const box = d.querySelector('.mega-box') || d.querySelector('.dropdown-box');
+                                    if (box) box.style.display = 'none';
+                                }
+                            });
+                            megaBox.style.display = (megaBox.style.display === 'block') ? 'none' : 'block';
+                        }
+                    });
+                }
+            });
+            document.addEventListener('click', function (e) {
+                if (window.innerWidth <= 1024 && !e.target.closest('.has-dropdown')) {
+                    document.querySelectorAll('.mega-box, .dropdown-box').forEach(box => box.style.display = 'none');
+                }
+            });
+        });
     </script>
 </body>
 </html>
