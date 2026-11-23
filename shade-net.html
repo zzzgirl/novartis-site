@@ -226,6 +226,65 @@
             });
         });
     </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdowns = document.querySelectorAll('.has-dropdown');
+    const header = document.querySelector('.site-header');
+
+    function updateMenuTop(box) {
+        if (window.innerWidth <= 768 && header && box) {
+            const bottom = Math.round(header.getBoundingClientRect().bottom);
+            box.style.top = (bottom + 6) + 'px';
+            box.style.maxHeight = 'calc(100vh - ' + (bottom + 18) + 'px)';
+        } else if (box) {
+            box.style.top = '';
+            box.style.maxHeight = '';
+        }
+    }
+
+    function closeMenus(exceptBox) {
+        document.querySelectorAll('.mega-box, .dropdown-box').forEach(box => {
+            if (box !== exceptBox) {
+                box.classList.remove('mobile-open');
+                box.style.display = '';
+            }
+        });
+    }
+
+    dropdowns.forEach(item => {
+        const trigger = item.querySelector('.nav-a');
+        const menuBox = item.querySelector('.mega-box, .dropdown-box');
+        if (!trigger || !menuBox) return;
+
+        trigger.addEventListener('click', function (e) {
+            if (window.innerWidth <= 1024) {
+                e.preventDefault();
+                e.stopPropagation();
+                const willOpen = !menuBox.classList.contains('mobile-open');
+                closeMenus(menuBox);
+                if (willOpen) {
+                    updateMenuTop(menuBox);
+                    menuBox.classList.add('mobile-open');
+                    menuBox.style.display = 'block';
+                } else {
+                    menuBox.classList.remove('mobile-open');
+                    menuBox.style.display = '';
+                }
+            }
+        });
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.has-dropdown')) {
+            closeMenus(null);
+        }
+    });
+
+    window.addEventListener('resize', function () {
+        document.querySelectorAll('.mega-box.mobile-open, .dropdown-box.mobile-open').forEach(updateMenuTop);
+    });
+});
+</script>
 </body>
 <script>
     function switchMedia(type, src, element) {
