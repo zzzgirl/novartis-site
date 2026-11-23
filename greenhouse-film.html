@@ -3,44 +3,356 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тепличная пленка — NOVARTIS</title>
+    <title>Тепличная пленка «Южанка» — Novartis</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
     <div class="top-bar">
         <div class="container top-bar-container">
-            <div class="top-bar-left"><span>ЛИДЕР НА РЫНКЕ КАЗАХСТАНА С 2013 ГОДА</span></div>
+            <div class="top-bar-left">
+                <span>ЛИДЕР НА РЫНКЕ КАЗАХСТАНА С 2013 ГОДА</span>
+            </div>
+            <div class="top-bar-right">
+                <div class="social-icons">
+                    <a href="https://instagram.com/novartis_almaty" target="_blank" class="social-icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="lang-select-box">
+                    <i class="fa-solid fa-globe"></i>
+                    <select id="langSelect">
+                        <option value="ru" selected>RU</option>
+                        <option value="kk">KK</option>
+                        <option value="en">EN</option>
+                    </select>
+                </div>
+            </div>
         </div>
     </div>
+
     <header class="site-header">
         <div class="container header-flex">
-            <a href="index.html" class="logo-link"><span class="logo-green">NOVARTIS</span></a>
+            <a href="index.html" class="logo-link">
+                <span class="logo-green">Novartis</span>
+            </a>
             <nav class="main-nav">
                 <ul class="nav-list">
-                    <li class="nav-element"><a href="index.html" class="nav-a">Главная</a></li>
+                    <li class="nav-element has-dropdown">
+                        <a href="javascript:void(0);" class="nav-a"><span>Продукция</span> <i class="fa-solid fa-chevron-down arrow-icon"></i></a>
+                        <div class="mega-box">
+                            <div class="mega-grid-2col">
+                                <a href="membranes.html" class="mega-card"><i class="fa-solid fa-layer-group card-ic"></i><span>Строительные мембраны</span></a>
+                                <a href="agrotextile.html" class="mega-card"><i class="fa-solid fa-seedling card-ic"></i><span>Агроволокно и агроткань</span></a>
+                                <a href="greenhouse-film.html" class="mega-card"><i class="fa-solid fa-warehouse card-ic"></i><span>Тепличная пленка</span></a>
+                                <a href="shade-net.html" class="mega-card"><i class="fa-solid fa-border-all card-ic"></i><span>Затеняющая сетка</span></a>
+                                <a href="fencing-net.html" class="mega-card"><i class="fa-solid fa-shield-cat card-ic"></i><span>Ограждающие сетки</span></a>
+                            </div>
+                        </div>
+                    </li>
                     <li class="nav-element"><a href="about.html" class="nav-a">О нас</a></li>
-                    <li class="nav-element"><a href="wholesale.html" class="nav-a">Партнерам</a></li>
+                    <li class="nav-element"><a href="reviews.html" class="nav-a">Отзывы</a></li>
+                    <li class="nav-element has-dropdown"><a href="javascript:void(0);" class="nav-a"><span>Партнерам</span> <i class="fa-solid fa-chevron-down arrow-icon"></i></a>
+                        <div class="dropdown-box"><a href="wholesale.html" class="dropdown-item">Оптовым покупателям</a></div>
+                    </li>
                     <li class="nav-element"><a href="contacts.html" class="nav-a">Контакты</a></li>
                 </ul>
             </nav>
-        </div>
-    </header>
-    <main class="product-detail-page">
-        <div class="container">
-            <nav class="breadcrumbs"><a href="index.html">Главная</a> &gt; <span>Тепличная пленка</span></nav>
-            <h1 class="page-title">Тепличная пленка</h1>
-            <div class="product-content-box">
-                <p>Тепличная пленка «Южанка» от Novartis — это современное и надежное решение для сельскохозяйственных нужд, разработанное с учетом климатических условий.</p>
-                <p>Материал отличается высокой прочностью, долговечностью и устойчивостью к разрывам, а специальная ультрафиолетовая добавка защищает растения от палящего солнца.</p>
-                <h3 style="margin-top: 20px; color: #15803d;">Применение пленки актуально в любой сезон:</h3>
-                <ul class="product-specs-list">
-                    <li><strong>Весной и осенью</strong> — защищает от внезапных заморозков и перепадов температур.</li>
-                    <li><strong>Зимой</strong> — удерживает тепло и поддерживает стабильный микроклимат.</li>
-                    <li><strong>Летом</strong> — оберегает от сильных ветров, дождей и избыточного ультрафиолета.</li>
-                </ul>
+            <div class="phone-block">
+                <a href="tel:+77053333606" class="phone-link">+7 (705) 333 36 06</a>
+                <button type="button" class="callback-btn" id="openCallModal">Заказать звонок</button>
             </div>
         </div>
-    </main>
+    </header>
+
+    <div class="page-container">
+        <div class="agro-top-grid">
+            <div class="gallery-box">
+                <div class="main-media-view" id="mainMediaBox">
+                    <img src="./film-photo1.jpg" id="mainMediaTag" alt="Тепличная пленка Южанка Люкс">
+                </div>
+
+                <div class="media-thumbs">
+                    <div class="thumb-item active" onclick="switchMedia('img', './film-photo1.jpg', this)">
+                        <img src="./film-photo1.jpg" alt="Рулоны Южанка Люкс">
+                    </div>
+                    <div class="thumb-item" onclick="switchMedia('img', './film-photo2.jpg', this)">
+                        <img src="./film-photo2.jpg" alt="Арочная теплица">
+                    </div>
+                    <div class="thumb-item" onclick="switchMedia('img', './film-photo3.jpg', this)">
+                        <img src="./film-photo3.jpg" alt="Теплица с рассадой">
+                    </div>
+                    <div class="thumb-item" onclick="switchMedia('img', './film-photo4.jpg', this)">
+                        <img src="./film-photo4.jpg" alt="Посадки в теплице">
+                    </div>
+                    <div class="thumb-item" onclick="switchMedia('img', './film-photo5.jpg', this)">
+                        <img src="./film-photo5.jpg" alt="Теплица с грядками">
+                    </div>
+                    <div class="thumb-item" onclick="switchMedia('img', './film-photo6.jpg', this)">
+                        <img src="./film-photo6.jpg" alt="Каркас и пленка">
+                    </div>
+                    <div class="thumb-item" onclick="switchMedia('img', './film-photo7.jpg', this)">
+                        <img src="./film-photo7.jpg" alt="Молодые ростки">
+                    </div>
+                    <div class="thumb-item" onclick="switchMedia('video', './film-video1.mp4', this)">
+                        <img src="./film-photo1.jpg" alt="Видео 1">
+                        <div class="thumb-play-ic"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                    <div class="thumb-item" onclick="switchMedia('video', './film-video2.mp4', this)">
+                        <img src="./film-photo2.jpg" alt="Видео 2">
+                        <div class="thumb-play-ic"><i class="fa-solid fa-play"></i></div>
+                    </div>
+                </div>
+
+                <div class="crops-section">
+                    <h4>Сезоны и применение:</h4>
+                    <div class="crops-grid">
+                        <div class="crop-badge"><i class="fa-solid fa-seedling"></i> Весна</div>
+                        <div class="crop-badge"><i class="fa-solid fa-sun"></i> Лето</div>
+                        <div class="crop-badge"><i class="fa-solid fa-leaf"></i> Осень</div>
+                        <div class="crop-badge"><i class="fa-solid fa-snowflake"></i> Зима</div>
+                        <div class="crop-badge"><i class="fa-solid fa-warehouse"></i> Теплицы</div>
+                        <div class="crop-badge"><i class="fa-solid fa-archway"></i> Парники</div>
+                        <div class="crop-badge"><i class="fa-solid fa-spa"></i> Оранжереи</div>
+                        <div class="crop-badge"><i class="fa-solid fa-strawberry"></i> Мульча</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products-box">
+                <div class="category-title-bar">
+                    <span>КАТЕГОРИЯ</span>
+                    <h1>Тепличные пленки Novartis («Южанка»)</h1>
+                </div>
+
+                <p style="color: #6b7280; font-size: 14px;">Выберите толщину, формат или решение под ваши задачи:</p>
+
+                <div class="density-grid">
+                    <div class="density-card"><span class="density-number">120 мкр</span><p>Многолетняя пленка «Южанка»</p></div>
+                    <div class="density-card"><span class="density-number">150 мкр</span><p>Усиленная пленка «Южанка» и Люкс</p></div>
+                    <div class="density-card"><span class="density-number">3–5 лет</span><p>Срок службы с УФ-стабилизаторами</p></div>
+                    <div class="density-card"><span class="density-number">6×10 м</span><p>Популярные рулоны и намотки</p></div>
+                    <div class="density-card"><span class="density-number">Без снятия</span><p>Эксплуатация круглый год на зиму</p></div>
+                    <div class="density-card black"><span class="density-number">Клубника</span><p>Черная и черно-белая мульчирующая</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="agro-description-section">
+            <h2>Тепличные пленки Novartis — надежная защита и высокий урожай вашего сада</h2>
+            <p>Тепличная пленка «Южанка» от Торгового Дома <strong>Novartis</strong> — это современное профессиональное решение для сельскохозяйственных нужд, разработанное с учетом климатических условий Казахстана[cite: 10]. Она используется для покрытия парников, теплиц и оранжерей, а также широко применяется в регионах с холодным климатом, помогая вырастить богатый урожай независимо от погоды за окном. Пленка надежно защищает посадки от неблагоприятных внешних факторов: низких температур, дождей, сильных ветров, града и избыточного солнечного излучения.</p>
+            <p>Материалы производятся с добавлением специальных УФ-стабилизаторов, что гарантирует высокую устойчивость к солнечному излучению и долгий срок службы в течение нескольких сезонов.</p>
+
+            <h2>Преимущества тепличных пленок Novartis («Южанка»)</h2>
+            <ul>
+                <li><strong>Прочность и долговечность:</strong> высокая устойчивость к разрывам, механическим повреждениям и сильным ветрам.</li>
+                <li><strong>Светопропускание:</strong> прозрачная пленка пропускает достаточное количество солнечного света, обеспечивая оптимальные условия для нормального фотосинтеза и активного роста растений.</li>
+                <li><strong>Устойчивость к ультрафиолету:</strong> специальная УФ-добавка защищает материал от разрушения под палящим солнцем и продлевает срок эксплуатации.</li>
+                <li><strong>Теплоизоляция и энергосбережение:</strong> пленка создает теплоизоляционный эффект, хорошо сохраняет тепло внутри теплицы в холодное время года и снижает затраты на отопление.</li>
+                <li><strong>Влагонепроницаемость:</strong> удерживает влагу, предотвращает накопление конденсата и защищает растения от плесени.</li>
+                <li><strong>Легкость и гибкость в установке:</strong> материал легко натягивается на любые каркасные конструкции (позволяя строить теплицы разной формы и размеров) и подходит как для крыши, так и для боковых стенок.</li>
+                <li><strong>Устойчивость к химическим веществам:</strong> не боится воздействия большинства агрохимикатов, что важно при использовании удобрений и средств защиты растений.</li>
+                <li><strong>Удобство в обслуживании и ремонте:</strong> в случае повреждения отдельного участка его легко заменить без больших затрат усилий и средств.</li>
+            </ul>
+
+            <h2>Когда и зачем использовать укрывную тепличную пленку</h2>
+            <ol>
+                <li><strong>Весной и осенью:</strong> защита рассады и нежных всходов от внезапных заморозков, ночных перепадов температур, позволяя значительно продлить вегетационный период.</li>
+                <li><strong>Зимой:</strong> удержание тепла и поддержание стабильного микроклимата для холодостойких культур (в многолетнем режиме без снятия на зиму).</li>
+                <li><strong>Летом:</strong> защита посадок от сильных ветров, проливных дождей и града, а также регулирование интенсивности солнечного излучения для предотвращения ожогов листьев.</li>
+            </ol>
+
+            <h2>Как правильно укладывать тепличную пленку</h2>
+            <p>Для достижения максимального эффекта важно соблюдать правила монтажа:</p>
+            <ul>
+                <li><strong>Натягивание пленки:</strong> материал следует аккуратно и равномерно натянуть по каркасу теплицы, избегая образования складок и сильных перетягиваний, чтобы обеспечить правильное и равномерное распределение тепла и света внутри.</li>
+            </ul>
+
+            <h2>Ассортимент и характеристики</h2>
+            <p>В каталоге Торгового Дома Novartis представлены востребованные варианты укрывных пленок под любые масштабы задач:</p>
+            <ul>
+                <li><strong>Многолетняя пленка «Южанка» (в том числе серии Люкс):</strong> толщина от 120 мкр до 150 мкр.</li>
+                <li><strong>Срок службы:</strong> от 3 до 5 лет с возможностью эксплуатации без снятия на зиму.</li>
+                <li><strong>Популярные форматы:</strong> рулоны удобных размеров (например, 6×10 м) и промышленные намотки.</li>
+                <li><strong>Специальные решения:</strong> черная и черно-белая клубничная пленка для мульчирования почвы, защиты урожая и эффективного подавления сорняков без применения химии.</li>
+            </ul>
+
+            <h2>Купить тепличную пленку в ТД Novartis</h2>
+            <p>Торговый Дом Novartis предлагает сертифицированную продукцию по доступным ценам с гарантией качества, быстрой доставкой и высоким уровнем клиентского сервиса.</p>
+
+            <div class="agro-quote-box">
+                Тепличные пленки Novartis — надежная основа для богатого урожая и долговечности ваших теплиц!
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" style="background-color: #064e3b; color: #ffffff; padding: 40px 0 30px 0; text-align: center; margin-top: 50px;">
+        <div class="container" style="display: flex; flex-direction: column; gap: 15px;">
+            <div>
+                <h3 style="margin-bottom: 5px;">NOVARTIS ALMATY</h3>
+                <p style="color: #a8e6cf; font-weight: 600;">Мы на рынке с 2013 года</p>
+            </div>
+            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 12px;">
+                <p style="margin-top: 6px; font-weight: 600; color: #ffffff;">ТОО "Торговый Дом Novartis"</p>
+                <p style="color: #d1d5db; font-size: 13px;">г. Алматы, Торетай 28г</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-backdrop" id="callModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:10000;">
+        <div class="modal-card" style="background:#fff; padding:30px; border-radius:12px; position:relative; max-width:400px; width:90%;">
+            <button type="button" class="modal-close" id="closeCallModal" style="position:absolute; top:10px; right:15px; background:none; border:none; font-size:24px; cursor:pointer;">&times;</button>
+            <h3 style="margin-bottom:10px;">Связаться с нами</h3>
+            <p style="margin-bottom:20px; color:#6b7280; font-size:14px;">Выберите удобный способ связи с отделом продаж Novartis:</p>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+                <a href="tel:+77053333606" style="background:#16a34a; color:#fff; padding:12px; border-radius:8px; text-align:center; text-decoration:none; font-weight:700;"><i class="fa-solid fa-phone"></i> Позвонить</a>
+                <a href="https://wa.me/77053333606" target="_blank" style="background:#25d366; color:#fff; padding:12px; border-radius:8px; text-align:center; text-decoration:none; font-weight:700;"><i class="fa-brands fa-whatsapp"></i> Написать в WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchMedia(type, src, element) {
+            const box = document.getElementById('mainMediaBox');
+            if (!box) return;
+            document.querySelectorAll('.thumb-item').forEach(el => el.classList.remove('active'));
+            if (element) element.classList.add('active');
+
+            if (type === 'img') {
+                box.innerHTML = `<img src="${src}" alt="Тепличная пленка Южанка">`;
+            } else if (type === 'video') {
+                box.innerHTML = `<video src="${src}" controls autoplay loop playsinline style="width:100%; height:100%; object-fit:cover;"></video>`;
+            }
+        }
+
+        const callModal = document.getElementById('callModal');
+        const openCallModalBtn = document.getElementById('openCallModal');
+        const closeCallModalBtn = document.getElementById('closeCallModal');
+        if (openCallModalBtn) openCallModalBtn.addEventListener('click', () => callModal.style.display = 'flex');
+        if (closeCallModalBtn) closeCallModalBtn.addEventListener('click', () => callModal.style.display = 'none');
+        window.addEventListener('click', (e) => { if (e.target === callModal) callModal.style.display = 'none'; });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdowns = document.querySelectorAll('.has-dropdown');
+
+            function positionMobileBox(box) {
+                const header = document.querySelector('.site-header');
+                if (window.innerWidth <= 768 && header && box) {
+                    const rect = header.getBoundingClientRect();
+                    box.style.top = `${Math.max(0, Math.round(rect.bottom + 4))}px`;
+                }
+            }
+
+            function closeAllDropdowns() {
+                document.querySelectorAll('.mega-box, .dropdown-box').forEach(box => {
+                    box.style.display = 'none';
+                });
+            }
+
+            dropdowns.forEach(dropdown => {
+                const link = dropdown.querySelector('.nav-a');
+                const box = dropdown.querySelector('.mega-box') || dropdown.querySelector('.dropdown-box');
+                if (link && box) {
+                    link.addEventListener('click', function (e) {
+                        if (window.innerWidth <= 1024) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            const isOpen = box.style.display === 'block';
+                            closeAllDropdowns();
+                            if (!isOpen) {
+                                positionMobileBox(box);
+                                box.style.display = 'block';
+                            }
+                        }
+                    });
+                }
+            });
+
+            document.addEventListener('click', function (e) {
+                if (window.innerWidth <= 1024 && !e.target.closest('.has-dropdown')) {
+                    closeAllDropdowns();
+                }
+            });
+
+            window.addEventListener('scroll', function () {
+                if (window.innerWidth <= 768) {
+                    document.querySelectorAll('.mega-box, .dropdown-box').forEach(box => {
+                        if (box.style.display === 'block') {
+                            positionMobileBox(box);
+                        }
+                    });
+                }
+            }, { passive: true });
+        });
+    </script>
 </body>
+<script>
+    function switchMedia(type, src, element) {
+        const box = document.getElementById('mainMediaBox');
+        if (!box) return;
+        document.querySelectorAll('.thumb-item').forEach(el => el.classList.remove('active'));
+        if (element) element.classList.add('active');
+
+        if (type === 'img') {
+            box.innerHTML = `<img src="${src}" alt="Галерея продукции">`;
+        } else if (type === 'video') {
+            box.innerHTML = `<video src="${src}" controls autoplay loop playsinline style="width:100%; height:100%; object-fit:cover;"></video>`;
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const dropdowns = document.querySelectorAll('.has-dropdown');
+
+        function positionMobileBox(box) {
+            const header = document.querySelector('.site-header');
+            if (window.innerWidth <= 768 && header && box) {
+                const rect = header.getBoundingClientRect();
+                box.style.top = `${Math.max(0, Math.round(rect.bottom + 4))}px`;
+            }
+        }
+
+        function closeAllDropdowns() {
+            document.querySelectorAll('.mega-box, .dropdown-box').forEach(box => {
+                box.style.display = 'none';
+            });
+        }
+
+        dropdowns.forEach(dropdown => {
+            const link = dropdown.querySelector('.nav-a');
+            const box = dropdown.querySelector('.mega-box') || dropdown.querySelector('.dropdown-box');
+
+            if (link && box) {
+                link.addEventListener('click', function (e) {
+                    if (window.innerWidth <= 1024) {
+                        e.preventDefault();
+                        e.stopPropagation();
+
+                        const isOpen = box.style.display === 'block';
+                        closeAllDropdowns();
+
+                        if (!isOpen) {
+                            positionMobileBox(box);
+                            box.style.display = 'block';
+                        }
+                    }
+                });
+            }
+        });
+
+        document.addEventListener('click', function (e) {
+            if (window.innerWidth <= 1024 && !e.target.closest('.has-dropdown')) {
+                closeAllDropdowns();
+            }
+        });
+
+        window.addEventListener('scroll', function () {
+            if (window.innerWidth <= 768) {
+                document.querySelectorAll('.mega-box, .dropdown-box').forEach(box => {
+                    if (box.style.display === 'block') {
+                        positionMobileBox(box);
+                    }
+                });
+            }
+        }, { passive: true });
+    });
+</script>
 </html>
