@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Все отзывы клиентов (129) — Novartis</title>
+    <title>Отзывы клиентов (25) — Novartis</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -67,7 +67,7 @@
     <div class="page-container">
         <div style="margin-bottom: 30px; text-align: center;">
             <span style="color: #16a34a; font-size: 13px; font-weight: 800; text-transform: uppercase;">ОТЗЫВЫ ПОКУПАТЕЛЕЙ</span>
-            <h1 style="font-size: 32px; color: #111827; font-weight: 900; margin-top: 5px;">Все отзывы о продукции Novartis (129)</h1>
+            <h1 style="font-size: 32px; color: #111827; font-weight: 900; margin-top: 5px;">Отзывы о продукции Novartis (25)</h1>
             <p style="color: #6b7280; font-size: 15px; margin-top: 8px;">Реальные мнения клиентов со всего Казахстана, купивших наши материалы</p>
         </div>
 
@@ -87,58 +87,56 @@
         </div>
     </footer>
 
-    <script>
-        const names = [
-            "Алихан", "Елена_77", "Марат_Агро", "Светлана Данилова", "Рустам К.", "Динара С.", "Тимур_Алматы", "Ольга Петровна", 
-            "Канат Ж.", "Нурлан_Строй", "Зарина М.", "Бауржан_Астана", "Игорь В.", "Людмила Николаевна", "Аскар_Фермер",
-            "Алексей П.", "Марина У.", "Евгений Б.", "Гульнара Т.", "Арман К.", "Татьяна С.", "Сергей М.", "Айгуль Ж.",
-            "Дмитрий Л.", "Наталья В.", "Ринат Ш.", "Жанна К.", "Павел Р.", "Оксана Т.", "Максим Н.", "Екатерина Д.",
-            "Бекжан С.", "Алена Ф.", "Владимир К.", "Дина Б.", "Серик А.", "Юлия П.", "Андрей В.", "Венера М.",
-            "Ербол Т.", "Светлана К.", "Иван Г.", "Арайлым С.", "Михаил Р.", "Мадина Ш.", "Талгат К.", "Олеся Н.",
-            "Егор С.", "Кристина В.", "Дамир А.", "Алина Т.", "Артур К.", "Виктория М.", "Нурсултан Б.", "Анастасия П.",
-            "Валерий С.", "Дильназ К.", "Олег В.", "Елена М.", "Баглан Т.", "София Р.", "Равиль Ш.", "Амина Д.",
-            "Константин Л.", "Алена С.", "Айдын К.", "Вероника П.", "Руслан М.", "Айжан Б.", "Денис Т.", "Карина С.",
-            "Евгения К.", "Аскар Т.", "Диана М.", "Тимур Р.", "Полина В.", "Жанат А.", "Марат С.", "Лариса П.",
-            "Виктор Н.", "Алия Ш.", "Григорий К.", "Аделина Т.", "Роман Б.", "Зухра М.", "Арсен К.", "Ксения В.",
-            "Ерлан С.", "Тамара П.", "Александр В.", "Дана М.", "Илья Р.", "Асель К.", "Владислав Т.", "Надежда С.",
-            "Болат Ж.", "Елизавета Н.", "Айдар К.", "Валентина П.", "Антон М.", "Диляра С.", "Максат Б.", "Ольга Р.",
-            "Николай К.", "Айнур Т.", "Станислав В.", "Алина С.", "Ержан М.", "Василий П.", "Алтынай К.", "Кирилл Т.",
-            "Зарина Б.", "Андрей С.", "Айсулу М.", "Евгений Н.", "Маргарита П.", "Берик К.", "Виктория С.", "Артур Т.",
-            "Гульмира А.", "Дмитрий П.", "Анара К.", "Павел М.", "Айгерим С.", "Сергей В.", "Лейла Т.", "Азамат К."
-        ];
+    <div class="modal-backdrop" id="callModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:10000;">
+        <div class="modal-card" style="background:#fff; padding:30px; border-radius:12px; position:relative; max-width:400px; width:90%;">
+            <button type="button" class="modal-close" id="closeCallModal" style="position:absolute; top:10px; right:15px; background:none; border:none; font-size:24px; cursor:pointer;">&times;</button>
+            <h3 style="margin-bottom:10px;">Связаться с нами</h3>
+            <p style="margin-bottom:20px; color:#6b7280; font-size:14px;">Выберите удобный способ связи с отделом продаж Novartis:</p>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+                <a href="tel:+77053333606" style="background:#16a34a; color:#fff; padding:12px; border-radius:8px; text-align:center; text-decoration:none; font-weight:700;"><i class="fa-solid fa-phone"></i> Позвонить</a>
+                <a href="https://wa.me/77053333606" target="_blank" style="background:#25d366; color:#fff; padding:12px; border-radius:8px; text-align:center; text-decoration:none; font-weight:700;"><i class="fa-brands fa-whatsapp"></i> Написать в WhatsApp</a>
+            </div>
+        </div>
+    </div>
 
-        const comments = [
-            "Использовал парники от вашего магазина для своего хозяйства и остался очень доволен. Прочные и легко собираются!",
-            "Брали затеняющую сетку на навес. Солнце вообще не пропускает, стало намного прохладнее. Доставили очень быстро!",
-            "Заказывал оптом агроволокно на поля. Отличное качество, УФ-стабилизация работает отлично, прошлый сезон отстояло супер.",
-            "Менеджеры очень вежливые, помогли рассчитать нужную плотность пленки. Цены ниже рыночных, качество отличное.",
-            "Покупал строительные мембраны для утепления кровли дома. Материал плотный, не рвется при монтаже. Рекомендую!",
-            "Садовая решетка отлично подошла для ограждения клумб во дворе. Аккуратный зеленый цвет, смотрится красиво.",
-            "Быстро оформил заказ самовывозом. Все рулоны подписаны, плотность полностью соответствует заявленной.",
-            "Используем черное мульчирующее агроволокно под клубнику. Травы нет, ягоды чистые! Очень довольна покупкой.",
-            "Хороший выбор тепличных пленок. Взяли стабилизированную, держится крепко даже при сильных ветрах.",
-            "Постоянно берем здесь мембраны и ленты для швов. Цены оптовые, качество неизменно высокое.",
-            "Заказала затеняющую сетку для томатов в теплицу. Растения перестали гореть на солнце, урожай отличный!",
-            "Доставка в другой город заняла всего 3 дня. Упаковка надежная, все рулоны целые. Сервис на высоте.",
-            "Отличные пластиковые сетки для ограждения птичника. Прочные, легкие в монтаже и абсолютно не ржавеют.",
-            "Спасибо за оперативность! Помогли подобрать укрывной материал от заморозков, рассада вся принялась.",
-            "Надежный поставщик с адекватными ценами. Работаем третий год, нареканий нет вообще."
+    <script>
+        const reviewsList = [
+            { author: "Алихан", text: "Использовал парники от вашего магазина для своего хозяйства и остался очень доволен. Парники прочные и легко собираются. Благодарю за качество и сервис!" },
+            { author: "Елена_77", text: "Брали затеняющую сетку 80% на навес для машины и беседки. Солнце вообще не пропускает, стало намного прохладнее. Доставили в Шымкент за пару дней, спасибо!" },
+            { author: "Марат_Агро", text: "Заказывал оптом агроволокно Agrol на поля. Отличное качество, УФ-стабилизация реально работает, прошлый сезон отстояло на ура. Будем брать еще." },
+            { author: "Светлана Данилова", text: "Менеджеры очень вежливые, помогли рассчитать нужную плотность пленки «Южанка» для теплицы. Цены ниже рыночных, качество супер." },
+            { author: "Рустам К.", text: "Покупал строительные мембраны Тип А и В для утепления кровли дома. Материал плотный, не рвется при монтаже. Рекомендую!" },
+            { author: "Динара С.", text: "Садовая решетка отлично подошла для ограждения клумб и палисадника во дворе. Аккуратный зеленый цвет, смотрится очень эстетично." },
+            { author: "Тимур_Алматы", text: "Быстро оформили заказ самовывозом со склада на Торетай. Все рулоны подписаны, плотность полностью соответствует заявленной." },
+            { author: "Ольга Петровна", text: "Используем черное мульчирующее агроволокно под клубнику. Травы вообще нет, ягоды чистые! Очень довольна покупкой." },
+            { author: "Канат Ж.", text: "Хороший выбор тепличных пленок. Взяли «Южанку Люкс» 150 мкр, держится отлично даже при сильных ветрах и не снимали на зиму." },
+            { author: "Нурлан_Строй", text: "Постоянно берем здесь мембраны Юниспан и Новитекс для объектов. Цены оптовые, качество неизменно высокое." },
+            { author: "Зарина М.", text: "Заказала затеняющую сетку 60% для томатов в теплицу. Растения перестали гореть на солнце, урожай в этом году отличный!" },
+            { author: "Бауржан_Астана", text: "Доставка в столицу заняла 3 дня. Упаковка надежная, все рулоны целые. Сервис на высоте." },
+            { author: "Игорь В.", text: "Отличные пластиковые сетки для ограждения птичника. Прочные, легкие в монтаже и совсем не ржавеют." },
+            { author: "Людмила Николаевна", text: "Спасибо за оперативность! Помогли подобрать укрывной материал от весенних заморозков, рассада вся прижилась." },
+            { author: "Аскар_Фермер", text: "Надежный поставщик с адекватными ценами. Работаем третий год, нареканий по качеству нет вообще." },
+            { author: "Алексей П.", text: "Брал рулон пленки 6×10 метров для дачной теплицы. Натягивается ровно, свет пропускает отлично, конденсата почти нет." },
+            { author: "Гульнара Т.", text: "Черно-белая клубничная пленка просто спасение от сорняков. Ягода крупная, чистая, поливать приходится реже." },
+            { author: "Сергей М.", text: "Утепляли мансарду, брали пароизоляцию и ветрозащиту Техно. Плотность честная, работать удобно." },
+            { author: "Айгуль Ж.", text: "Затеняющая сетка 90% отлично закрыла забор от пыли с дороги и лишних глаз. Крепили обычными стяжками, держится крепко." },
+            { author: "Дмитрий Л.", text: "Хорошая консультация по телефону — сразу подсказали, чем отличается Agrol от Agril и какую плотность взять на дуги." },
+            { author: "Наталья В.", text: "Укрывали весной клубнику и огурцы белым агроволокном 30 г/м². Пережили ночные заморозки без потерь." },
+            { author: "Ринат Ш.", text: "Заказывали партию затеняющей сетки для фермы в Туркестанской области. Все пришло точно в срок, без пересорта." },
+            { author: "Екатерина Д.", text: "Брали садовую решетку с мелкой ячейкой, чтобы закрыть грядки от соседских кур. Выглядит аккуратно и со своей задачей справляется." },
+            { author: "Бекжан С.", text: "Пленка «Южанка» реально крепкая — в прошлом году прошел сильный град, выдержала без единого разрыва." },
+            { author: "Марина У.", text: "Приятно иметь дело с компанией, где всё есть в наличии на складе. Приехали, оплатили и сразу забрали." }
         ];
 
         const container = document.getElementById('allReviewsContainer');
-        let htmlContent = '';
-
-        for (let i = 0; i < 129; i++) {
-            const author = names[i % names.length] + (i >= names.length ? '_' + (i+1) : '');
-            const comment = comments[i % comments.length];
-            const firstLetter = author.charAt(0).toUpperCase();
-
-            htmlContent += `
+        container.innerHTML = reviewsList.map(item => {
+            const firstLetter = item.author.charAt(0).toUpperCase();
+            return `
                 <div class="review-card">
                     <div class="review-header">
                         <div class="review-avatar">${firstLetter}</div>
                         <div class="review-meta">
-                            <div class="review-author">${author}</div>
+                            <div class="review-author">${item.author}</div>
                             <div class="review-stars">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -148,109 +146,70 @@
                             </div>
                         </div>
                     </div>
-                    <p class="review-text">${comment}</p>
+                    <p class="review-text">${item.text}</p>
                 </div>
             `;
-        }
-        container.innerHTML = htmlContent;
+        }).join('');
+
+        const callModal = document.getElementById('callModal');
+        const openCallModalBtn = document.getElementById('openCallModal');
+        const closeCallModalBtn = document.getElementById('closeCallModal');
+        if (openCallModalBtn) openCallModalBtn.addEventListener('click', () => callModal.style.display = 'flex');
+        if (closeCallModalBtn) closeCallModalBtn.addEventListener('click', () => callModal.style.display = 'none');
+        window.addEventListener('click', (e) => { if (e.target === callModal) callModal.style.display = 'none'; });
 
         document.addEventListener('DOMContentLoaded', function () {
             const dropdowns = document.querySelectorAll('.has-dropdown');
+
+            function positionMobileBox(box) {
+                const header = document.querySelector('.site-header');
+                if (window.innerWidth <= 768 && header && box) {
+                    const rect = header.getBoundingClientRect();
+                    box.style.top = `${Math.max(0, Math.round(rect.bottom + 4))}px`;
+                }
+            }
+
+            function closeAllDropdowns() {
+                document.querySelectorAll('.mega-box, .dropdown-box').forEach(box => {
+                    box.style.display = 'none';
+                });
+            }
+
             dropdowns.forEach(dropdown => {
                 const link = dropdown.querySelector('.nav-a');
-                const megaBox = dropdown.querySelector('.mega-box') || dropdown.querySelector('.dropdown-box');
-                if (link && megaBox) {
+                const box = dropdown.querySelector('.mega-box') || dropdown.querySelector('.dropdown-box');
+                if (link && box) {
                     link.addEventListener('click', function (e) {
                         if (window.innerWidth <= 1024) {
                             e.preventDefault();
                             e.stopPropagation();
-                            dropdowns.forEach(d => {
-                                if (d !== dropdown) {
-                                    const box = d.querySelector('.mega-box') || d.querySelector('.dropdown-box');
-                                    if (box) box.style.display = 'none';
-                                }
-                            });
-                            megaBox.style.display = (megaBox.style.display === 'block') ? 'none' : 'block';
+                            const isOpen = box.style.display === 'block';
+                            closeAllDropdowns();
+                            if (!isOpen) {
+                                positionMobileBox(box);
+                                box.style.display = 'block';
+                            }
                         }
                     });
                 }
             });
+
             document.addEventListener('click', function (e) {
                 if (window.innerWidth <= 1024 && !e.target.closest('.has-dropdown')) {
-                    document.querySelectorAll('.mega-box, .dropdown-box').forEach(box => box.style.display = 'none');
+                    closeAllDropdowns();
                 }
             });
+
+            window.addEventListener('scroll', function () {
+                if (window.innerWidth <= 768) {
+                    document.querySelectorAll('.mega-box, .dropdown-box').forEach(box => {
+                        if (box.style.display === 'block') {
+                            positionMobileBox(box);
+                        }
+                    });
+                }
+            }, { passive: true });
         });
     </script>
 </body>
-<script>
-    function switchMedia(type, src, element) {
-        const box = document.getElementById('mainMediaBox');
-        if (!box) return;
-        document.querySelectorAll('.thumb-item').forEach(el => el.classList.remove('active'));
-        if (element) element.classList.add('active');
-
-        if (type === 'img') {
-            box.innerHTML = `<img src="${src}" alt="Галерея продукции">`;
-        } else if (type === 'video') {
-            box.innerHTML = `<video src="${src}" controls autoplay loop playsinline style="width:100%; height:100%; object-fit:cover;"></video>`;
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const dropdowns = document.querySelectorAll('.has-dropdown');
-
-        function positionMobileBox(box) {
-            const header = document.querySelector('.site-header');
-            if (window.innerWidth <= 768 && header && box) {
-                const rect = header.getBoundingClientRect();
-                box.style.top = `${Math.max(0, Math.round(rect.bottom + 4))}px`;
-            }
-        }
-
-        function closeAllDropdowns() {
-            document.querySelectorAll('.mega-box, .dropdown-box').forEach(box => {
-                box.style.display = 'none';
-            });
-        }
-
-        dropdowns.forEach(dropdown => {
-            const link = dropdown.querySelector('.nav-a');
-            const box = dropdown.querySelector('.mega-box') || dropdown.querySelector('.dropdown-box');
-
-            if (link && box) {
-                link.addEventListener('click', function (e) {
-                    if (window.innerWidth <= 1024) {
-                        e.preventDefault();
-                        e.stopPropagation();
-
-                        const isOpen = box.style.display === 'block';
-                        closeAllDropdowns();
-
-                        if (!isOpen) {
-                            positionMobileBox(box);
-                            box.style.display = 'block';
-                        }
-                    }
-                });
-            }
-        });
-
-        document.addEventListener('click', function (e) {
-            if (window.innerWidth <= 1024 && !e.target.closest('.has-dropdown')) {
-                closeAllDropdowns();
-            }
-        });
-
-        window.addEventListener('scroll', function () {
-            if (window.innerWidth <= 768) {
-                document.querySelectorAll('.mega-box, .dropdown-box').forEach(box => {
-                    if (box.style.display === 'block') {
-                        positionMobileBox(box);
-                    }
-                });
-            }
-        }, { passive: true });
-    });
-</script>
 </html>
